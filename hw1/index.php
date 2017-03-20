@@ -58,4 +58,4 @@ include("errors.php");
 
 //Test\Test::dbTest();
 
-//include __DIR__ . '/Js/index.html';
+include __DIR__ . '/Js/index.html';
