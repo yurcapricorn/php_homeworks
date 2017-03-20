@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>AJAX</title>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
+        <script type="text/javascript" src="/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+
+<table class='dataoutput'>
+    <caption>News</caption>
+    <thead>
+    <th>id</th>
+    <th>author</th>
+    <th>title</th>
+    <th>text</th>
+    <th>date</th>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<form class="buttons"></form>
+
+<script>
+
+    var btn;
+    var pg;
+    var size;
+
+    request(1,0);
+
+    function before(){
+        console.log('pg= ' + pg + 'btn= ' + btn);
+    }
+    function success(data) {
+        pg=jsonParse(data);
+        console.log('success' + pg);
+    }
+    function jsonParse(data) {
+        console.log(data);
+        $("table.dataoutput tbody tr,td").remove();
+        $("form.buttons :button").remove();
+        $.each( data, function( key, value ) {
+            if(key==0){pg = value.id}
+            if(key==20){size = parseInt(value);return;}
+            $( "table.dataoutput tbody" ).append('\
+            <tr> \
+                <td>' + value.id + '</td> \
+                <td>' + value.author + '</td> \
+                <td>' + value.header + '</td> \
+                <td>' + value.body + '</td> \
+                <td>' + value.date + '</td> \
+            </tr>');
+        });
+
+        $( "form.buttons" ).append('\<input type="button" value=prev>');
+        var j=1;
+        for (var i=0;i<=size;i+=20){
+            $( "form.buttons" ).append('\<input type="button" value=' + j + '>');
+            j++;
+        }
+        $( "form.buttons" ).append('\<input type="button" value=next>');
+    return pg;
+    }
+
+    function request(btn, pg) {
+        $.ajax({
+            url: '/Js/script.php',
+            type: "POST",
+            data: ({btn: btn, pg: pg}),
+            dataType: 'json',
+            beforeSend: before(btn, pg),
+            success: success
+        });
+    }
+
+    onClick();
+
+    $(document).ready(function() {
+        console.log('ready' + pg);
+        onClick();
+//        listener();
+    });
+
+function onClick() {
+    $(".buttons").on('click', ":button", function () {
+        console.log('onclick' + 'this=' + this.value + 'pg' + pg);
+        request(this.value, pg);
+    })
+}
+
+function listener(){
+    var buttons = $(".buttons :button");
+        addEventListener('click', function() {
+            console.log('listener' + 'this=' + this.value + 'pg' + pg);
+            request(this.value, pg);
+        }, false);
+}
+
+</script>
+
+</body>
+</html>
+
+
