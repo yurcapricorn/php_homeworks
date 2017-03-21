@@ -1,54 +1,16 @@
 <?php
 
-//include __DIR__ . '/autoload.php';
+require_once __DIR__ . '/Article.php';
+require_once __DIR__ . '/tests/Test.php';
+use tests\Test;
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
-include("errors.php");
+$data = Article::findLastArticles(3);
+include __DIR__ . '\templates\news_index.html';
 
+/**
+ * WARNING!
+ * dbTestExecute() method adds a test record into your database!
+ * make sure you want it before running!
+ */
+//Test::testAll();
 
-//ДОМАШНЯЯ РАБОТА
-//
-//1. В качестве основы своего проекта возьмите то, что сделано нами на уроке.
-// Ссылка на репозиторий - кнопка "Методические материалы"
-//2. Улучшите класс Db. Сейчас мы не имеем с вами возможности передать подстановки в подготовленный SQL-запрос.
-// Добавьте к методам execute() и query() еще по одному аргументу - массив подстановок, по умолчанию пустой.
-// Протестируйте работу новых методов, для чего заведите в проекте папку tests
-// и в ней размещайте скрипты, которые наглядно докажут работоспособность вашего кода.
-//3. В абстрактной модели добавьте метод public static findById($id).
-// Он должен вернуть ОДНУ запись из таблицы данной модели, с указанным первичным ключом. Или false, если таковой записи не нашлось.
-//4. Сделайте таблицу новостей. Добавьте в нее 3-4 новости.
-// На главной странице сайта (index.php) сделайте вывод 3 последних новостей.
-// Используйте модель News для получения данных (возможно, вам придется добавить какой-то еще метод в эту модель).
-// Для передачи данных в шаблон - просто include файла с шаблоном.
-//5. Каждая новость на главной странице должна быть снабжена ссылкой на страницу article.php?id=NNN, где NNN - номер этой новости.
-// Разработайте полностью страницу article.php
-//Домашнее задание сдается в виде ссылки на ваш репозиторий на GitHub.
-
-//class A
-//{
-//    public $a;
-//    public $name;
-//}
-//$c= new A();
-//$name='a';
-//$value=1;
-//$c->{$name} = $value;
-//
-//var_dump($c);
-
-//$a=parse_ini_file('config/config.ini');
-
-//var_dump($a);
-//\App\DbNewsFiller::fill(150);
-
-//\App\Models\News::displayAll();
-
-
-//echo '<pre>';
-//var_dump($article);
-//echo '</pre>';
-
-//Test\Test::dbTest();
-
-include __DIR__ . '/Js/index.html';

@@ -1,7 +1,18 @@
 <?php
-//include __DIR__ . '\App\Models\News.php';
-include __DIR__ . '/autoload.php';
 
-$id = htmlspecialchars($_GET["id"]);
+require_once __DIR__ . '/Db.php';
+require_once __DIR__ . '/Model.php';
 
-\App\Models\News::displayOne($id);
+/**
+ * Model Article
+ * depends on Model
+ * contains 3 fields
+ * serves to make structurised requests to database
+ */
+class Article extends Model
+{
+    protected const TABLE = 'news';
+
+    public $title;
+    public $lead;
+}
