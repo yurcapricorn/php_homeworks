@@ -41,12 +41,24 @@ abstract class Test
     }
 
     /**
+     * findLastArticles method testing
+     */
+    private static function modelTestfindLastArticles()
+    {
+        $data = \Article::findLastArticles(1);
+        if ($data == false) {
+            echo 'modelTestFindById Error';
+        }
+    }
+
+    /**
      * All tests running
      */
     public static function testAll(){
         static::dbTestExecute();
         static::dbTestQuery();
         static::modelTestFindById();
+        static::modelTestfindLastArticles();
     }
 
 }
