@@ -15,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
-              <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -35,16 +35,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+            <state relative-caret-position="359">
+              <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
               <folding>
-                <marker date="1490201211438" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
-                <marker date="1490201211438" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
-                <marker date="1490201211438" expanded="true" signature="178:201" ph="INSERT INTO " />
-                <marker date="1490201211438" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
+                <marker date="1490201580004" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
+                <marker date="1490201580004" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
+                <marker date="1490201580004" expanded="true" signature="178:201" ph="INSERT INTO " />
+                <marker date="1490201580004" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
               </folding>
             </state>
           </provider>
@@ -53,17 +53,17 @@
       <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            <state relative-caret-position="359">
+              <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
               <folding>
-                <marker date="1490116442551" expanded="true" signature="416:430" ph="SELECT * FRO... ${static::TABLE}" />
-                <marker date="1490116442551" expanded="true" signature="756:804" ph="SELECT * FRO... ${static::TABLE}" />
-                <marker date="1490116442551" expanded="true" signature="1117:1130" ph="SELECT * FRO... " />
-                <marker date="1490116442551" expanded="true" signature="1117:1131" ph="SELECT * FRO... ${`news`}" />
-                <marker date="1490116442551" expanded="true" signature="1117:1175" ph="SELECT * FRO... news" />
-                <marker date="1490116442551" expanded="true" signature="1117:1176" ph="SELECT * FRO... ${`news`}" />
-                <marker date="1490116442551" expanded="true" signature="1117:1180" ph="SELECT * FRO... news" />
-                <marker date="1490116442551" expanded="true" signature="1184:1237" ph="SELECT TOP 3... Object" />
+                <marker date="1490201483495" expanded="true" signature="416:430" ph="SELECT * FRO... ${static::TABLE}" />
+                <marker date="1490201483495" expanded="true" signature="756:804" ph="SELECT * FRO... ${static::TABLE}" />
+                <marker date="1490201483495" expanded="true" signature="1116:1129" ph="SELECT * FRO... " />
+                <marker date="1490201483495" expanded="true" signature="1116:1130" ph="SELECT * FRO... ${`news`}" />
+                <marker date="1490201483495" expanded="true" signature="1116:1174" ph="SELECT * FRO... news" />
+                <marker date="1490201483495" expanded="true" signature="1116:1175" ph="SELECT * FRO... ${`news`}" />
+                <marker date="1490201483495" expanded="true" signature="1116:1179" ph="SELECT * FRO... news" />
+                <marker date="1490201483495" expanded="true" signature="1183:1236" ph="SELECT TOP 3... Object" />
               </folding>
             </state>
           </provider>
@@ -99,11 +99,11 @@
         <option value="$PROJECT_DIR$/templates/news_index.html" />
         <option value="$PROJECT_DIR$/Db.php" />
         <option value="$PROJECT_DIR$/templates/article.php" />
-        <option value="$PROJECT_DIR$/Model.php" />
         <option value="$PROJECT_DIR$/autoload.php" />
         <option value="$PROJECT_DIR$/Article.php" />
-        <option value="$PROJECT_DIR$/tests/Test.php" />
+        <option value="$PROJECT_DIR$/Model.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/tests/Test.php" />
       </list>
     </option>
   </component>
@@ -252,12 +252,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490082484905</updated>
       <workItem from="1490082486456" duration="22298000" />
-      <workItem from="1490117345510" duration="1768000" />
+      <workItem from="1490117345510" duration="2021000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24066000" />
+    <option name="totallyTimeSpent" value="24319000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -342,23 +342,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="7" lean-forward="true" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding>
-            <marker date="1490116442551" expanded="true" signature="416:430" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1490116442551" expanded="true" signature="756:804" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1490116442551" expanded="true" signature="1117:1130" ph="SELECT * FRO... " />
-            <marker date="1490116442551" expanded="true" signature="1117:1131" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1490116442551" expanded="true" signature="1117:1175" ph="SELECT * FRO... news" />
-            <marker date="1490116442551" expanded="true" signature="1117:1176" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1490116442551" expanded="true" signature="1117:1180" ph="SELECT * FRO... news" />
-            <marker date="1490116442551" expanded="true" signature="1184:1237" ph="SELECT TOP 3... Object" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Article.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -367,15 +350,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Test.php">
+    <entry file="file://$PROJECT_DIR$/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="359">
+          <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
-            <marker date="1490201211438" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
-            <marker date="1490201211438" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490201211438" expanded="true" signature="178:201" ph="INSERT INTO " />
-            <marker date="1490201211438" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
+            <marker date="1490201483495" expanded="true" signature="416:430" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1490201483495" expanded="true" signature="756:804" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1490201483495" expanded="true" signature="1116:1129" ph="SELECT * FRO... " />
+            <marker date="1490201483495" expanded="true" signature="1116:1130" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1490201483495" expanded="true" signature="1116:1174" ph="SELECT * FRO... news" />
+            <marker date="1490201483495" expanded="true" signature="1116:1175" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1490201483495" expanded="true" signature="1116:1179" ph="SELECT * FRO... news" />
+            <marker date="1490201483495" expanded="true" signature="1183:1236" ph="SELECT TOP 3... Object" />
           </folding>
         </state>
       </provider>
@@ -383,8 +370,21 @@
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="359">
+          <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+          <folding>
+            <marker date="1490201580004" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
+            <marker date="1490201580004" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1490201580004" expanded="true" signature="178:201" ph="INSERT INTO " />
+            <marker date="1490201580004" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
+          </folding>
         </state>
       </provider>
     </entry>

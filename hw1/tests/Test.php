@@ -42,9 +42,9 @@ abstract class Test
     /**
      * findLastArticles method testing
      */
-    private static function modelTestfindLastArticles()
+    private static function modelTestfindLastEntries()
     {
-        $data = \Article::findLastArticles(1);
+        $data = \Article::findLastEntries(1);
         if ($data == false) {
             echo 'modelTestFindById Error';
         }
@@ -57,7 +57,7 @@ abstract class Test
         static::dbTestExecute();
         static::dbTestQuery();
         static::modelTestFindById();
-        static::modelTestfindLastArticles();
+        static::modelTestfindLastEntries();
     }
 
 }

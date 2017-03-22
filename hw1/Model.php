@@ -41,7 +41,7 @@ abstract class Model
      * @param int $num
      * @return array
      */
-    public static function findLastArticles($num)
+    public static function findLastEntries($num)
     {
         $db = new Db();
         //SELECT * FROM `news` WHERE id = (select max(id) from news)
