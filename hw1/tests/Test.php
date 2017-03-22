@@ -40,7 +40,7 @@ abstract class Test
     }
 
     /**
-     * findLastArticles method testing
+     * findLastEntries method testing
      */
     private static function modelTestfindLastEntries()
     {

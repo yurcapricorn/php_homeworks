@@ -38,13 +38,13 @@
       <file leaf-file-name="Test.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/tests/Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
-              <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+            <state relative-caret-position="325">
+              <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
               <folding>
-                <marker date="1490201580004" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
-                <marker date="1490201580004" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
-                <marker date="1490201580004" expanded="true" signature="178:201" ph="INSERT INTO " />
-                <marker date="1490201580004" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
+                <marker date="1490201693923" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
+                <marker date="1490201693923" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
+                <marker date="1490201693923" expanded="true" signature="178:201" ph="INSERT INTO " />
+                <marker date="1490201693923" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
               </folding>
             </state>
           </provider>
@@ -252,12 +252,12 @@
       <option name="presentableId" value="Default" />
       <updated>1490082484905</updated>
       <workItem from="1490082486456" duration="22298000" />
-      <workItem from="1490117345510" duration="2021000" />
+      <workItem from="1490117345510" duration="2141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24319000" />
+    <option name="totallyTimeSpent" value="24439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -377,13 +377,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/tests/Test.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="53" column="24" lean-forward="true" selection-start-line="53" selection-start-column="24" selection-end-line="53" selection-end-column="24" />
+        <state relative-caret-position="325">
+          <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
           <folding>
-            <marker date="1490201580004" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
-            <marker date="1490201580004" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490201580004" expanded="true" signature="178:201" ph="INSERT INTO " />
-            <marker date="1490201580004" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
+            <marker date="1490201693923" expanded="true" signature="172:201" ph="SELECT * FRO... news" />
+            <marker date="1490201693923" expanded="true" signature="178:189" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1490201693923" expanded="true" signature="178:201" ph="INSERT INTO " />
+            <marker date="1490201693923" expanded="true" signature="531:562" ph="SELECT * FRO... news" />
           </folding>
         </state>
       </provider>
