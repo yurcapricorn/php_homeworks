@@ -2,7 +2,6 @@
 
 namespace tests;
 
-require_once __DIR__ . '/../Db.php';
 
 abstract class Test
 {

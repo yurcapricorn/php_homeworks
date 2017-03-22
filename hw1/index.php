@@ -1,11 +1,11 @@
 <?php
 
-require_once __DIR__ . '/Article.php';
-require_once __DIR__ . '/tests/Test.php';
+include __DIR__ . '/autoload.php';
+
 use tests\Test;
 
 $data = Article::findLastArticles(3);
-include __DIR__ . '\templates\news_index.html';
+include 'templates\news_index.html';
 
 /**
  * WARNING!
