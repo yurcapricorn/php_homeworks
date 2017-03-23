@@ -1,7 +1,10 @@
 <?php
 
-require_once __DIR__ . '/Db.php';
-require_once __DIR__ . '/Model.php';
+namespace Models;
+
+require_once __DIR__ . '/../Db.php';
+require_once __DIR__ . '/../Model.php';
+
 
 /**
  * Model Article
@@ -9,7 +12,7 @@ require_once __DIR__ . '/Model.php';
  * contains 3 fields
  * serves to make structurised requests to database
  */
-class Article extends Model
+class Article extends \Model
 {
     protected const TABLE = 'news';
 

@@ -22,6 +22,14 @@ function autoload_3($class){
     }
 }
 
+function autoload_4($class){
+    $filename = __DIR__ . '/Models/'. str_replace('\\' , '/' ,$class) . '.php';
+    if (file_exists($filename)){
+        include $filename;
+    }
+}
+
 spl_autoload_register('autoload_1');
 spl_autoload_register('autoload_2');
 spl_autoload_register('autoload_3');
+spl_autoload_register('autoload_4');

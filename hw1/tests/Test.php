@@ -2,6 +2,7 @@
 
 namespace tests;
 
+include __DIR__ . '/../autoload.php';
 
 abstract class Test
 {
