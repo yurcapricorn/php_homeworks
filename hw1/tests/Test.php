@@ -2,7 +2,11 @@
 
 namespace tests;
 
-include __DIR__ . '/../autoload.php';
+require_once __DIR__ . '/../Db.php';
+require_once __DIR__ . '/../Model.php';
+require_once __DIR__ . '/../Models/Article.php';
+
+use Models\Article;
 
 abstract class Test
 {
@@ -33,10 +37,10 @@ abstract class Test
      */
     private static function modelTestFindById(){
         $id=1;
-        $data=\Article::findById($id);
+        $data=Article::findById($id);
         if ($data==false){echo 'modelTestFindById Error';}
         $id=0;
-        $data=\Article::findById($id);
+        $data=Article::findById($id);
         if ($data!=false){echo 'modelTestFindById Error';}
     }
 
@@ -45,7 +49,7 @@ abstract class Test
      */
     private static function modelTestfindLastEntries()
     {
-        $data = \Article::findLastEntries(1);
+        $data = Article::findLastEntries(1);
         if ($data == false) {
             echo 'modelTestFindById Error';
         }
@@ -62,3 +66,5 @@ abstract class Test
     }
 
 }
+
+Test::testAll();
