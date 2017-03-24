@@ -9,7 +9,7 @@
 foreach($data as $art){
     foreach($art as $name=>$val){
         if($name=='id'){?> <a href="<?php echo '/article.php?id=' . $val ?> ">
-        <?php echo 'Article ' . $val?> </a> <br><?php; continue;}
+        <?php echo 'Article ' . $val?> </a> <br><?php continue;}
 
         echo $name . ' ';
         echo $val . '<br>';
