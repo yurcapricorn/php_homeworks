@@ -43,7 +43,7 @@ class Db
         } else {
             $res = $sth->execute($params);
         }
-        if (!$res) {
+        if ($res==false) {
             return false;
         }
         if (empty($class)) {

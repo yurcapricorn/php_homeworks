@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAST NEWS</title>
+</head>
+<body>
+<?php
+foreach($data as $name=>$val) {
+if ($name == 'id') { echo 'You are reading article ' . $id . '<br>' . '<br>'; continue; }
+echo $name . ' ';
+echo $val . '<br>' . '<br>';
+}
+?> <a href="/index.php">Main Page</a>
+
+</body>
+</html>
