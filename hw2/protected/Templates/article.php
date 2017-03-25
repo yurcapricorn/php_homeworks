@@ -8,7 +8,7 @@ if(isset($_GET['id'])){
 }
 else{echo 'incorrect request';}
 echo 'You are reading article ' . $id . '<br>' . '<br>';
-$data = hidden\Models\Article::findById($id);
+$data = \Models\Article::findById($id);
 if($data==false){echo 'Article' . $id . ' not found';}
 foreach($data as $name=>$val) {
     if ($name == 'id') { continue; }

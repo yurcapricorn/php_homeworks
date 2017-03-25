@@ -51,7 +51,7 @@ abstract class Test
     /**
      * findLastEntries method test
      */
-    public static function modelTestfindLastEntries()
+    public static function modelTestFindLastEntries()
     {
         $data = Article::findLastEntries(1);
         if ($data == false) {
@@ -106,8 +106,8 @@ abstract class Test
         static::dbTestExecute();
         static::dbTestQuery();
         static::modelTestFindById();
-        static::modelTestfindLastEntries();
-        static::classconfigTest();
+        static::modelTestFindLastEntries();
+        static::classConfigTest();
         static::modelInsertMethodTest();
         static::modelUpdateMethodTest();
         static::modelDeleteMethodTest();
