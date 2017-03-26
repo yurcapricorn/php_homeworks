@@ -31,7 +31,7 @@ class Db
         } else {
             $res = $sth->execute($params);
         }
-        if (!$res) {
+        if (false===$res) {
             return false;
         }
         if (empty($class)) {
