@@ -9,7 +9,7 @@ if (isset($_GET['id'])) {
     include_once __DIR__ . '/../index.php';
     die();
 }
-$data = \Models\Article::findById($id);
+$data = App\Models\Article::findById($id);
 if (false === $data | empty($data)) {
     echo 'Article ' . $id . ' not found' . '<br><br>';
     include_once __DIR__ . '/../index.php';

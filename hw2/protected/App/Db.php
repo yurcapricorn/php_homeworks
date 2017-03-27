@@ -12,7 +12,6 @@ require_once __DIR__ . '/Singleton.php';
  * has methods query and execute
  * keeps PDO in field $dbh
  */
-
 class Db
 {
     use \App\Singleton;
@@ -22,10 +21,10 @@ class Db
     public function __construct()
     {
         require_once __DIR__ . '/Config.php';
-        $config=Config::instance();
-        $name=$config->data['db']['name'];
-        $host=$config->data['db']['host'];
-        $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name , 'root', '');
+        $config = Config::instance();
+        $name = $config->data['db']['name'];
+        $host = $config->data['db']['host'];
+        $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name, 'root', '');
     }
 
     /**
@@ -43,7 +42,7 @@ class Db
         } else {
             $res = $sth->execute($params);
         }
-        if ($res==false) {
+        if ($res == false) {
             return false;
         }
         if (empty($class)) {

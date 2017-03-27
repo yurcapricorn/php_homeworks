@@ -1,13 +1,14 @@
 <?php
 
-namespace Models;
+namespace App\Models;
 
 require_once __DIR__ . '/Model.php';
 
 /**
- * Model Article
+ * Class Article
  * depends on Model
  * serves to make structurised requests to database
+ * @package App\Models
  */
 class Article extends Model
 {

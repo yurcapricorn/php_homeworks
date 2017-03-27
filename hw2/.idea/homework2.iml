@@ -6,9 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/protected" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/App" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/protected/Models" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/protected" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/protected/Models" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/protected/App/Models" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
