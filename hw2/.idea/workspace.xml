@@ -54,7 +54,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Test.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Test.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminscript.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="adminscript.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/adminscript.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="962">
-              <caret line="60" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+            <state relative-caret-position="1156">
+              <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -101,8 +101,8 @@
       <file leaf-file-name="Model.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/App/Models/Model.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-738">
-              <caret line="76" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="147" selection-end-column="1" />
+            <state relative-caret-position="333">
+              <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="40" />
               <folding>
                 <marker date="1490603494702" expanded="true" signature="502:516" ph="SELECT * FRO... ${static::TABLE}" />
                 <marker date="1490603494702" expanded="true" signature="882:930" ph="SELECT * FRO... ${static::TABLE}" />
@@ -208,8 +208,8 @@
         <option value="$PROJECT_DIR$/protected/templates/admin.html" />
         <option value="$PROJECT_DIR$/protected/App/Db.php" />
         <option value="$PROJECT_DIR$/protected/App/Models/Model.php" />
-        <option value="$PROJECT_DIR$/protected/adminscript.php" />
         <option value="$PROJECT_DIR$/tests/Test.php" />
+        <option value="$PROJECT_DIR$/protected/adminscript.php" />
       </list>
     </option>
   </component>
@@ -463,7 +463,7 @@
       <workItem from="1490205425000" duration="58000" />
       <workItem from="1490207266439" duration="1247000" />
       <workItem from="1490334474521" duration="43295000" />
-      <workItem from="1490597928998" duration="4963000" />
+      <workItem from="1490597928998" duration="5484000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487941813358</created>
@@ -539,7 +539,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="281843000" />
+    <option name="totallyTimeSpent" value="282364000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1378" height="735" extended-state="0" />
@@ -760,28 +760,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/App/Models/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/App/Models/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-738">
-          <caret line="76" column="21" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="147" selection-end-column="1" />
-          <folding>
-            <marker date="1490603494702" expanded="true" signature="502:516" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1490603494702" expanded="true" signature="882:930" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1490603494702" expanded="true" signature="1317:1376" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1490603494702" expanded="true" signature="1826:1959" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490603494702" expanded="true" signature="3174:3217" ph="DELETE FROM " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/App/Config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -794,14 +772,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="44" column="20" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/adminscript.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="962">
-          <caret line="60" column="32" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -823,6 +793,36 @@
             <marker date="1490603638230" expanded="true" signature="326:391" ph="INSERT INTO ${news}... " />
             <marker date="1490603638230" expanded="true" signature="716:747" ph="SELECT * FRO... news" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/App/Models/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="39" column="27" lean-forward="false" selection-start-line="39" selection-start-column="27" selection-end-line="39" selection-end-column="40" />
+          <folding>
+            <marker date="1490603494702" expanded="true" signature="502:516" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1490603494702" expanded="true" signature="882:930" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1490603494702" expanded="true" signature="1317:1376" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1490603494702" expanded="true" signature="1826:1959" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1490603494702" expanded="true" signature="3174:3217" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/App/Models/Article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/adminscript.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="44" lean-forward="true" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

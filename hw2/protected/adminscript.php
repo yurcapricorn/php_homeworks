@@ -55,6 +55,11 @@ if (isset($_GET['button'])) {
             } else {
                 echo 'no id specified';
             }
+            $res = Article::findById($id);
+            if (empty($res)) {
+                echo 'Article ' . $id . ' not found';
+                die();
+            }
             $article = new Article;
             $article->id = $id;
             $res = $article->delete();
