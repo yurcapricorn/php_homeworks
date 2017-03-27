@@ -16,4 +16,4 @@ if (false === $data | empty($data)) {
     die();
 }
 
-include __DIR__ . '/Templates/article.html';
+include __DIR__ . '/templates/article.html';

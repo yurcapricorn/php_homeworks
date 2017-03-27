@@ -16,7 +16,6 @@ if(isset($_GET['button'])){
             $article->title=$title;
             $article->lead=$lead;
             $res=$article->save();
-//            var_dump($article);
             if($res){echo 'Article ' . $article->id . ' added succesfully';}
             else{echo 'something went wrong';}
             break;
