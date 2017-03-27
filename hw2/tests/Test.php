@@ -106,7 +106,7 @@ abstract class Test
         $article = new Article();
         $article->id = '100';
         $res = $article->save();
-        if ($res===false) {
+        if ($res === false) {
             echo 'modelUpdateMethodTest error';
         }
     }
@@ -119,7 +119,7 @@ abstract class Test
         $article = new Article();
         $article->id = '100';
         $res = $article->delete();
-        if ($res===false) {
+        if ($res === false) {
             echo 'modelUpdateMethodTest error';
         }
     }

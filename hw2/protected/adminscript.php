@@ -18,7 +18,7 @@ if (isset($_GET['button'])) {
             $article->title = $title;
             $article->lead = $lead;
             $res = $article->save();
-            if ($res===true) {
+            if ($res === true) {
                 echo 'Article ' . $article->id . ' added succesfully';
             } else {
                 echo 'something went wrong';
@@ -42,7 +42,7 @@ if (isset($_GET['button'])) {
             $article->title = $title;
             $article->lead = $lead;
             $res = $article->save();
-            if ($res===true) {
+            if ($res === true) {
                 echo 'Article ' . $id . ' edited succesfully';
             } else {
                 echo 'something went wrong';
@@ -58,7 +58,7 @@ if (isset($_GET['button'])) {
             $article = new Article;
             $article->id = $id;
             $res = $article->delete();
-            if ($res===true) {
+            if ($res === true) {
                 echo 'Article ' . $id . ' removed succesfully';
             } else {
                 echo 'something went wrong';
