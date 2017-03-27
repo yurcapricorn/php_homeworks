@@ -49,7 +49,7 @@ abstract class Test
     {
         $id = 1;
         $data = Article::findById($id);
-        if ($data == false) {
+        if ($data === false) {
             echo 'modelTestFindById Error';
         }
         $id = 0;
@@ -64,7 +64,7 @@ abstract class Test
      */
     public static function modelTestFindLastEntries()
     {
-        $data = Article::findLastEntries(1);
+        $data = Article::findLastEntries();
         if ($data === false) {
             echo 'modelTestFindById Error';
         }

@@ -16,9 +16,8 @@ class Config
 
     public function __construct()
     {
-        include __DIR__ . '\..\..\Config_file.php';
-        $this->data['db']['host'] = $host;
-        $this->data['db']['name'] = $name;
+        $data = include __DIR__ . '\..\..\Config_file.php';
+        $this->data['db'] = $data;
     }
 }
 

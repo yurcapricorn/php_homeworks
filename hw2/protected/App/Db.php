@@ -12,7 +12,7 @@ require_once __DIR__ . '/Singleton.php';
  * has methods query and execute
  * keeps PDO in field $dbh
  */
-class Db
+class Db extends \PDO
 {
     use \App\Singleton;
 
@@ -24,7 +24,9 @@ class Db
         $config = Config::instance();
         $name = $config->data['db']['name'];
         $host = $config->data['db']['host'];
-        $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name, 'root', '');
+        $user = $config->data['db']['user'];
+        $pass = $config->data['db']['pass'];
+        $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name, $user, $pass);
     }
 
     /**
@@ -54,12 +56,11 @@ class Db
 
     /**
      * Db Class Method execute()
-     * @param string $query
+     * @param $query
      * @param array $params
-     * @return bool
+     * @return bool|\PDOStatement
      */
-    public
-    function execute($query, $params = [])
+    public function execute($query, $params = [])
     {
         $sth = $this->dbh->prepare($query);
         if (!empty($params)) {
@@ -68,5 +69,13 @@ class Db
             $res = $sth->execute();
         }
         return $res;
+    }
+
+    /**
+     * method to use PDO::lastInsertId() with protected Db field $dbh
+     * @return string
+     */
+    public function lastDbInsertId(){
+        return $this->dbh->lastInsertId();
     }
 }

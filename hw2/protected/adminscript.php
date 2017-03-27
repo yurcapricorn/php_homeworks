@@ -55,7 +55,7 @@ if (isset($_GET['button'])) {
             } else {
                 echo 'no id specified';
             }
-            $res = Article::findById($id);
+            $res = App\Models\Article::findById($id);
             if (empty($res)) {
                 echo 'Article ' . $id . ' not found';
                 die();

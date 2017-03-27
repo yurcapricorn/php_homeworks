@@ -56,11 +56,11 @@ abstract class Model
      * @param int $num
      * @return array
      */
-    public static function findLastEntries($num)
+    public static function findLastEntries()
     {
         $db = Db::instance();
         //SELECT * FROM `news` WHERE id = (select max(id) from news)
-        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT ' . $num;
+        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT 3';
         return $db->query($sql, [], static::class);
     }
 
@@ -85,11 +85,13 @@ abstract class Model
             VALUES
             (' . implode(',', array_keys($val)) . ')
             ';
-        $db = new Db();
+        $db = Db::instance();
         $res = $db->execute($sql, $val);
-        $article = static::findLastEntries(1)[0];
-        $this->id = $article->id;
-        return $res;
+        if ($res === false) {
+            return false;
+        }
+        $this->id = $db->lastDbInsertId();
+        return true;
     }
 
     /**
@@ -102,15 +104,12 @@ abstract class Model
         $col = [];
         $val = [];
         foreach ($this as $k => $v) {
-            if ($k == 'id') {
-                continue;
-            }
             $col[$k . '=:' . $k] = $k;
             $val[':' . $k] = $v;
         }
         $sql = '
-            UPDATE ' . static::TABLE . ' SET ' . implode(',', array_keys($col)) . ' WHERE id=' . $this->id;
-        $db = new Db();
+            UPDATE ' . static::TABLE . ' SET ' . implode(',', array_keys($col)) . ' WHERE id=:id';
+        $db = Db::instance();
         return $db->execute($sql, $val);
     }
 
@@ -128,7 +127,7 @@ abstract class Model
      */
     public function save()
     {
-        if ($this->IsNew()) {
+        if ($this->isNew()) {
             return $this->insert();
         } else {
             return $this->update();
@@ -141,8 +140,9 @@ abstract class Model
      */
     public function delete()
     {
-        $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=' . $this->id;
-        $db = new Db();
-        return $db->execute($sql);
+        $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=:id';
+        $db = Db::instance();
+        $args = [':id' => $this->id];
+        return $db->execute($sql, $args);
     }
 }

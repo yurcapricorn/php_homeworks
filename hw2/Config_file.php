@@ -1,4 +1,3 @@
 <?php
 
-$name='php2';
-$host='127.0.0.1';
+return ['host' => 'localhost', 'name' => 'php2', 'user' => 'root', 'pass' => ''];
