@@ -6,7 +6,6 @@
  * has methods query and execute
  * keeps PDO in field $dbh
  */
-
 class Db
 {
     protected $dbh;
@@ -31,7 +30,7 @@ class Db
         } else {
             $res = $sth->execute($params);
         }
-        if (false===$res) {
+        if (false === $res) {
             return false;
         }
         if (empty($class)) {

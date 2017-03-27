@@ -2,9 +2,7 @@
 
 namespace tests;
 
-require_once __DIR__ . '/../Db.php';
-require_once __DIR__ . '/../Model.php';
-require_once __DIR__ . '/../Models/Article.php';
+require_once __DIR__ . '/../autoload.php';
 
 use Models\Article;
 
@@ -13,35 +11,46 @@ abstract class Test
     /**
      * execute method testing
      */
-    private static function dbTestExecute(){
+    private static function dbTestExecute()
+    {
         $db = new \Db();
-        $sql='INSERT INTO ' . news . " (title,lead)" . ' VALUES (:title, :lead)';
-        $args=[':title'=>'testtitle', ':lead'=>'testlead'];
-        $res=$db->execute($sql,$args);
-        if ($res==false){echo 'dbTestExecute Error';}
+        $sql = 'INSERT INTO ' . news . " (title,lead)" . ' VALUES (:title, :lead)';
+        $args = [':title' => 'testtitle', ':lead' => 'testlead'];
+        $res = $db->execute($sql, $args);
+        if ($res === false) {
+            echo 'dbTestExecute Error';
+        }
     }
 
     /*
      * query method testing
      */
-    private static function dbTestQuery(){
+    private static function dbTestQuery()
+    {
         $db = new \Db();
-        $sql="SELECT * FROM news WHERE id=:id";
-        $args=[':id'=>1];
-        $res=$db->query($sql,$args);
-        if (empty($res)){echo 'dbTestQuery Error';}
+        $sql = "SELECT * FROM news WHERE id=:id";
+        $args = [':id' => 1];
+        $res = $db->query($sql, $args);
+        if (empty($res)) {
+            echo 'dbTestQuery Error';
+        }
     }
 
     /**
      * findById method testing
      */
-    private static function modelTestFindById(){
-        $id=1;
-        $data=Article::findById($id);
-        if ($data==false){echo 'modelTestFindById Error';}
-        $id=0;
-        $data=Article::findById($id);
-        if ($data!=false){echo 'modelTestFindById Error';}
+    private static function modelTestFindById()
+    {
+        $id = 1;
+        $data = Article::findById($id);
+        if ($data === false) {
+            echo 'modelTestFindById Error';
+        }
+        $id = 0;
+        $data = Article::findById($id);
+        if ($data !== false) {
+            echo 'modelTestFindById Error';
+        }
     }
 
     /**
@@ -50,7 +59,7 @@ abstract class Test
     private static function modelTestfindLastEntries()
     {
         $data = Article::findLastEntries(1);
-        if ($data == false) {
+        if ($data === false) {
             echo 'modelTestFindById Error';
         }
     }
@@ -58,7 +67,8 @@ abstract class Test
     /**
      * All tests running
      */
-    public static function testAll(){
+    public static function testAll()
+    {
         static::dbTestExecute();
         static::dbTestQuery();
         static::modelTestFindById();
@@ -68,3 +78,5 @@ abstract class Test
 }
 
 Test::testAll();
+
+echo 'Test done';

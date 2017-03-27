@@ -28,25 +28,31 @@ abstract class Model
      * @param int $id
      * @return array|bool
      */
-    public static function findById($id){
-        if (empty($id)){return false;}
+    public static function findById($id)
+    {
+        if (empty($id)) {
+            return false;
+        }
         $db = new Db();
-        $args=[':id'=>$id];
-        $data=$db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', $args, static::class);
-        if($data===false){return false;}
+        $args = [':id' => $id];
+        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', $args, static::class);
+        if ($data === false) {
+            return false;
+        }
         return $data[0];
     }
 
     /**
      * finds $num last articles
-     * @param int $num
-     * @return array
+     * @param $num
+     * @return array|bool
      */
+
     public static function findLastEntries($num)
     {
         $db = new Db();
         //SELECT * FROM `news` WHERE id = (select max(id) from news)
-        $sql='SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT ' . $num;
+        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT ' . $num;
         return $db->query($sql, [], static::class);
     }
 }
