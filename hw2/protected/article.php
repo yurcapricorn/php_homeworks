@@ -1,16 +1,19 @@
 <?php
 
-include_once __DIR__ . '/Models/Article.php';
+require_once __DIR__ . '/autoload.php';
 
-$id=1;
-if(isset($_GET['id'])){
-    $id=$_GET['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+} else {
+    echo 'incorrect request' . '<br><br>';
+    include_once __DIR__ . '/../index.php';
+    die();
 }
-else{echo 'incorrect request';}
 $data = \Models\Article::findById($id);
-if($data==false){echo 'Article' . $id . ' not found';}
+if (false === $data | empty($data)) {
+    echo 'Article ' . $id . ' not found' . '<br><br>';
+    include_once __DIR__ . '/../index.php';
+    die();
+}
 
 include __DIR__ . '/Templates/article.html';
-
-
-
