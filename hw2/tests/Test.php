@@ -23,7 +23,7 @@ abstract class Test
         $sql = 'INSERT INTO ' . news . " (title,lead)" . ' VALUES (:title, :lead)';
         $args = [':title' => 'testtitle', ':lead' => 'testlead'];
         $res = $db->execute($sql, $args);
-        if ($res == false) {
+        if ($res === false) {
             echo 'dbTestExecute Error';
         }
     }
@@ -54,7 +54,7 @@ abstract class Test
         }
         $id = 0;
         $data = Article::findById($id);
-        if ($data != false) {
+        if ($data !== false) {
             echo 'modelTestFindById Error';
         }
     }
@@ -65,7 +65,7 @@ abstract class Test
     public static function modelTestFindLastEntries()
     {
         $data = Article::findLastEntries(1);
-        if ($data == false) {
+        if ($data === false) {
             echo 'modelTestFindById Error';
         }
     }
@@ -93,7 +93,7 @@ abstract class Test
         $article = new Article();
         $article->title = 'test';
         $article->save();
-        if ($article->id == null) {
+        if ($article->id === null) {
             echo 'modelInsertMethodTest error';
         }
     }
@@ -106,7 +106,7 @@ abstract class Test
         $article = new Article();
         $article->id = '100';
         $res = $article->save();
-        if (!$res) {
+        if ($res===false) {
             echo 'modelUpdateMethodTest error';
         }
     }
@@ -119,7 +119,7 @@ abstract class Test
         $article = new Article();
         $article->id = '100';
         $res = $article->delete();
-        if (!$res) {
+        if ($res===false) {
             echo 'modelUpdateMethodTest error';
         }
     }
