@@ -91,7 +91,8 @@ abstract class Test
     public static function modelInsertMethodTest()
     {
         $article = new Article();
-        $article->title = 'test';
+        $article->title = 'title test';
+        $article->lead = 'lead test';
         $article->save();
         if ($article->id === null) {
             echo 'modelInsertMethodTest error';
