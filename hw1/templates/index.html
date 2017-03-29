@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NEWS</title>
+</head>
+<body>
+
+<?php
+    foreach($data as $article){
+?>
+<div>
+    <h1>
+        <a href="
+            <?php
+                echo '/article.php?id=' . $article->id;
+            ?>
+        ">
+            <?php
+                echo $article->title;
+            ?>
+        </a>
+    </h1>
+
+    <p>
+        <?php
+            echo $article->lead ;}
+        ?>
+    </p>
+
+</div>
+
+</body>
+</html>

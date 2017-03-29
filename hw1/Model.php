@@ -47,7 +47,6 @@ abstract class Model
      * @param $num
      * @return array|bool
      */
-
     public static function findLastEntries($num)
     {
         $db = new Db();
