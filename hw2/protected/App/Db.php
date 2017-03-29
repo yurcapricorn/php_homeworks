@@ -76,6 +76,8 @@ class Db extends \PDO
      * @return string
      */
     public function lastDbInsertId(){
-        return $this->dbh->lastInsertId();
+        $res = $this->dbh->lastInsertId();
+        return $res;
+
     }
 }
