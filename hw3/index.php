@@ -2,19 +2,13 @@
 
 require_once __DIR__ . '/protected/autoload.php';
 
-//include __DIR__ . '/protected/templates/admin.html';
-//
-//$data = App\Models\Article::findLastEntries();
-//
-//include __DIR__ . '/protected/templates/news_index.html';
+$data=\App\Models\Article::findLastEntries();
+$view = new App\View($data);
+//var_dump($view);
+echo count($view);
+$template=__DIR__ . '/protected/templates/index.html';
+echo $view->render($template);
 
-
-//$article= \App\Models\Article::findById(1);
-////var_dump($article);
-//$res=$article->author;
-//var_dump($res);
-
-include __DIR__ . '\protected\View.php';
 /**
  * Повторите код, изученный на уроке.
  * Выделите ту часть, которая управляет установкой и чтением произвольных свойств объекта в трейт.

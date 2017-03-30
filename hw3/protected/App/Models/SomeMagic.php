@@ -2,7 +2,12 @@
 
 namespace App\Models;
 
-
+/**
+ * Trait SomeMagic
+ * implements magic methods for its users
+ * may fill fields in constructor
+ * @package App\Models
+ */
 trait SomeMagic
 {
     protected $data = [];
@@ -31,7 +36,7 @@ trait SomeMagic
 
     public function __get($key)
     {
-        if (isset($this->key)) {
+        if (isset($this->data[$key])) {
             return $this->data[$key];
         }
         return false;

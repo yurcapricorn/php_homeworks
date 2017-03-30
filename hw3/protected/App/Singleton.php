@@ -8,12 +8,20 @@ namespace App;
  */
 trait Singleton
 {
+    /**
+     * keeps instance of class
+     * @var
+     */
     protected static $instance;
 
     protected function __construct()
     {
     }
 
+    /**
+     * instance() method
+     * @return mixed instance of class
+     */
     public static function instance()
     {
         if (static::$instance !== null) {
