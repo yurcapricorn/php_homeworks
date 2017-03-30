@@ -53,7 +53,6 @@ abstract class Model
 
     /**
      * finds $num last articles
-     * @param int $num
      * @return array
      */
     public static function findLastEntries()
