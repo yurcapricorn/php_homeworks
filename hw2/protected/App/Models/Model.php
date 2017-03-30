@@ -103,6 +103,10 @@ abstract class Model
         $col = [];
         $val = [];
         foreach ($this as $k => $v) {
+            if ($k == 'id') {
+                $val[':' . $k] = $v;
+                continue;
+            }
             $col[$k . '=:' . $k] = $k;
             $val[':' . $k] = $v;
         }

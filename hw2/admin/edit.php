@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '/../../App/Models/Article.php';
+include_once __DIR__ . '/../protected/App/Models/Article.php';
 
 use App\Models\Article;
 
