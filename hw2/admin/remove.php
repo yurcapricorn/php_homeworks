@@ -2,23 +2,24 @@
 
 include_once __DIR__ . '/../protected/App/Models/Article.php';
 
-use App\Models\Article;
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+$error = [];
+
+if (!isset($_POST['id'])) {
+    $error[] = 'no id specified';
 } else {
-    echo 'no id specified';
+    $id = $_POST['id'];
+    $article = App\Models\Article::findById($id);
+    if (empty($article) || $article === false) {
+        $error[] = 'Article ' . $id . ' not found';
+    } else {
+        $res = $article->delete();
+        if ($res !== true) {
+            $error[] = 'something went wrong';
+        }
+    }
 }
-$res = App\Models\Article::findById($id);
-if (empty($res)) {
-    echo 'Article ' . $id . ' not found';
-    die();
-}
-$article = new Article;
-$article->id = $id;
-$res = $article->delete();
-if ($res === true) {
-    echo 'Article ' . $id . ' removed successfully';
-} else {
-    echo 'something went wrong';
-}
+
+file_put_contents(__DIR__ . '/../errors.php', $error);
+
+header("Location: /index.php");

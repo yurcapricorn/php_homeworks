@@ -2,20 +2,26 @@
 
 include_once __DIR__ . '/../protected/App/Models/Article.php';
 
-use App\Models\Article;
 
-if (isset($_GET['title'])) {
-    $title = $_GET['title'];
+$error = [];
+
+$article = new App\Models\Article;
+
+if (isset($_POST['title'])) {
+    $article->title = $_POST['title'];
 }
-if (isset($_GET['lead'])) {
-    $lead = $_GET['lead'];
+if (isset($_POST['lead'])) {
+    $article->lead = $_POST['lead'];
 }
-$article = new Article;
-$article->title = $title;
-$article->lead = $lead;
-$res = $article->save();
-if ($res === true) {
-    echo 'Article ' . $article->id . ' added successfully';
+if (!isset($article->title) && !isset($article->lead)) {
+    $error[] = 'empty data';
 } else {
-    echo 'something went wrong';
+    $res = $article->save();
+    if ($res !== true) {
+        $error[] = 'something went wrong';
+    }
 }
+
+file_put_contents(__DIR__ . '/../errors.php', $error);
+
+header("Location: /index.php");

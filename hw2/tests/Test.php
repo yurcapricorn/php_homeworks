@@ -104,8 +104,9 @@ abstract class Test
      */
     public static function modelUpdateMethodTest()
     {
-        $article = new Article();
-        $article->id = '100';
+
+        $article = Article::findLastEntries()[0];
+        $article->lead = 'test';
         $res = $article->save();
         if ($res === false) {
             echo 'modelUpdateMethodTest error';

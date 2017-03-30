@@ -35,7 +35,7 @@ abstract class Model
     /**
      * find by id method
      * @param int $id
-     * @return array|bool
+     * @return Article|bool
      */
     public static function findById($id)
     {
@@ -105,6 +105,9 @@ abstract class Model
         foreach ($this as $k => $v) {
             if ($k == 'id') {
                 $val[':' . $k] = $v;
+                continue;
+            }
+            if (!isset($v)||empty($v)) {
                 continue;
             }
             $col[$k . '=:' . $k] = $k;
