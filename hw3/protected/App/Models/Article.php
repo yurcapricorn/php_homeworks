@@ -3,6 +3,7 @@
 namespace App\Models;
 
 require_once __DIR__ . '/Model.php';
+require_once __DIR__ . '/SomeMagic.php';
 
 /**
  * Class Article

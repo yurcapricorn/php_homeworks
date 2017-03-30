@@ -2,12 +2,12 @@
 
 require_once __DIR__ . '/protected/autoload.php';
 
-include __DIR__ . '/protected/templates/admin.html';
-
 $data=\App\Models\Article::findLastEntries();
 $view = new App\View($data);
-$template=__DIR__ . '/protected/templates/index.html';
+$template= __DIR__ . '/protected/modules/article/templates/index.html';
 echo $view->render($template);
+
+include __DIR__ . '/protected/modules/admin/templates/admin.html';
 
 /**
  * Повторите код, изученный на уроке.
