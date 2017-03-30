@@ -2,10 +2,10 @@
 
 require_once __DIR__ . '/protected/autoload.php';
 
+include __DIR__ . '/protected/templates/admin.html';
+
 $data=\App\Models\Article::findLastEntries();
 $view = new App\View($data);
-//var_dump($view);
-echo count($view);
 $template=__DIR__ . '/protected/templates/index.html';
 echo $view->render($template);
 
@@ -21,3 +21,5 @@ echo $view->render($template);
 Измените шаблоны своего приложения, добавьте везде вывод авторов новостей
  * Изучите интерфейсы Countable и Iterator и реализуйте его в своем приложении в классе View
  */
+
+// @todo: изучить! var_dump(get_object_vars($this));

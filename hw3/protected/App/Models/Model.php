@@ -53,7 +53,6 @@ abstract class Model
 
     /**
      * finds $num last articles
-     * @param int $num
      * @return array
      */
     public static function findLastEntries()
@@ -93,7 +92,7 @@ abstract class Model
         $this->id = $db->lastDbInsertId();
         return true;
     }
-    // @todo: изучить! var_dump(get_object_vars($this));
+
     /**
      * update method
      * takes public object fields

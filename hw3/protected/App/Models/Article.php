@@ -20,6 +20,12 @@ class Article extends Model
     public $title;
     public $lead;
 
+    /**
+     * redefines SomeMagic __get() method
+     * returns Class Author record from DB if field author id not null or '0' or false or not set
+     * @param $key
+     * @return array|bool
+     */
     public function __get($key)
     {
         switch ($key) {
@@ -30,10 +36,10 @@ class Article extends Model
                 break;
             }
             default: {
-                if (!isset($this->key)) {
-                    return false;
+                if (isset($this->data[$key])) {
+                    return $this->data[$key];
                 }
-                return $this->data[$key];
+                return false;
                 break;
             }
         }

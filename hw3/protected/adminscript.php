@@ -19,7 +19,7 @@ if (isset($_GET['button'])) {
             $article->lead = $lead;
             $res = $article->save();
             if ($res === true) {
-                echo 'Article ' . $article->id . ' added succesfully';
+                echo 'Article ' . $article->id . ' added successfully';
             } else {
                 echo 'something went wrong';
             }
@@ -43,7 +43,7 @@ if (isset($_GET['button'])) {
             $article->lead = $lead;
             $res = $article->save();
             if ($res === true) {
-                echo 'Article ' . $id . ' edited succesfully';
+                echo 'Article ' . $id . ' edited successfully';
             } else {
                 echo 'something went wrong';
             }
@@ -64,7 +64,7 @@ if (isset($_GET['button'])) {
             $article->id = $id;
             $res = $article->delete();
             if ($res === true) {
-                echo 'Article ' . $id . ' removed succesfully';
+                echo 'Article ' . $id . ' removed successfully';
             } else {
                 echo 'something went wrong';
             }

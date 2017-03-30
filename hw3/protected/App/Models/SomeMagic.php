@@ -10,8 +10,17 @@ namespace App\Models;
  */
 trait SomeMagic
 {
+    /**
+     * Contains all pairs of information excepts Class public fields
+     * @var array
+     */
     protected $data = [];
 
+    /**
+     * SomeMagic constructor
+     * gives pairs of passed array to Class __set() method
+     * @param array $args
+     */
     public function __construct($args = [])
     {
         if (empty($args)) {
@@ -22,6 +31,12 @@ trait SomeMagic
         }
     }
 
+    /**
+     * saves pairs either in Class public fields or in data array
+     * @param $key
+     * @param $value
+     * @return bool
+     */
     public function __set($key, $value)
     {
         if (is_null($this->$key)) {
@@ -34,6 +49,11 @@ trait SomeMagic
         return false;
     }
 
+    /**
+     * returns requested value if exists in Class data array
+     * @param $key
+     * @return bool
+     */
     public function __get($key)
     {
         if (isset($this->data[$key])) {
@@ -42,12 +62,15 @@ trait SomeMagic
         return false;
     }
 
+    /**
+     * checks if key exists and set in Class public fields and data array
+     * @param $key
+     * @return bool
+     */
     public function __isset($key)
     {
-        foreach ($this as $thiskey => $thisvalue) {
-            if ($key === $thiskey) {
-                return isset($this->$key);
-            }
+        if (isset($this->$key)) {
+            return isset($this->$key);
         }
         return isset($this->data[$key]);
     }
