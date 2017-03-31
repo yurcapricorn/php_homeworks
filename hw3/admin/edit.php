@@ -32,4 +32,4 @@ if (!isset($_POST['id'])) {
 
 file_put_contents(__DIR__ . '/../errors.php', $error);
 
-header('Location:' . __DIR__ . '/../../index.php');
+header("Location: /index.php");
