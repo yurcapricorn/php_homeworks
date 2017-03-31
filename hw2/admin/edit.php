@@ -11,19 +11,21 @@ if (!isset($_POST['id'])) {
 } else {
     $id = $_POST['id'];
     $article = App\Models\Article::findById($id);
-
-    if (isset($_POST['title'])) {
-        $article->title = $_POST['title'];
-    }
-    if (isset($_POST['lead'])) {
-        $article->lead = $_POST['lead'];
-    }
-    $res = $article->save();
-    if ($res !== true) {
-        $error = 'something went wrong';
+    if (empty($article) || $article === false) {
+        $error = 'Article ' . $id . ' not found';
+    } else {
+        if (isset($_POST['title'])) {
+            $article->title = $_POST['title'];
+        }
+        if (isset($_POST['lead'])) {
+            $article->lead = $_POST['lead'];
+        }
+        $res = $article->save();
+        if ($res !== true) {
+            $error = 'something went wrong';
+        }
     }
 }
-
 file_put_contents(__DIR__ . '/../errors.php', $error);
 
 header("Location: /index.php");
