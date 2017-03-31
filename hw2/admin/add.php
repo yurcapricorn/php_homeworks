@@ -24,4 +24,4 @@ if (!isset($article->title) && !isset($article->lead)) {
 
 file_put_contents(__DIR__ . '/../errors.php', $error);
 
-header("Location: /index.php");
+header('Location:' . __DIR__ . '/../../index.php');
