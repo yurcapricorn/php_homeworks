@@ -28,4 +28,4 @@ if (!isset($_POST['id'])) {
 }
 file_put_contents(__DIR__ . '/../errors.php', $error);
 
-header("Location: /index.php");
+header('Location:' . $_SERVER['HTTP_REFERER']);
