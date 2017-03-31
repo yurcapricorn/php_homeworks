@@ -35,9 +35,9 @@ abstract class Model
     /**
      * find by id method
      * @param int $id
-     * @return array|bool
+     * @return \App\Models\Article|bool
      */
-    public static function findById($id)
+    public static function findById(int $id)
     {
         if (empty($id)) {
             return false;
@@ -73,7 +73,7 @@ abstract class Model
         $col = [];
         $val = [];
         foreach ($this as $k => $v) {
-            if ($k == 'id'||$k == 'data') {
+            if ($k === 'id'||$k === 'data') {
                 continue;
             }
             $col[] = $k;
@@ -103,7 +103,11 @@ abstract class Model
         $col = [];
         $val = [];
         foreach ($this as $k => $v) {
-            if ($k == 'data') {
+            if ($k == 'id') {
+                $val[':' . $k] = $v;
+                continue;
+            }
+            if (!isset($v)||empty($v)) {
                 continue;
             }
             $col[$k . '=:' . $k] = $k;

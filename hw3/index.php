@@ -3,11 +3,14 @@
 require_once __DIR__ . '/protected/autoload.php';
 
 $data=\App\Models\Article::findLastEntries();
-$view = new App\View($data);
-$template= __DIR__ . '/protected/modules/article/templates/index.html';
-echo $view->render($template);
 
-include __DIR__ . '/protected/modules/admin/templates/admin.html';
+$view = new App\View($data);
+
+$template= __DIR__ . '/article/templates/index.html';
+
+$view->display($template);
+
+include __DIR__ . '/admin/templates/admin.html';
 
 /**
  * Повторите код, изученный на уроке.
@@ -21,5 +24,3 @@ include __DIR__ . '/protected/modules/admin/templates/admin.html';
 Измените шаблоны своего приложения, добавьте везде вывод авторов новостей
  * Изучите интерфейсы Countable и Iterator и реализуйте его в своем приложении в классе View
  */
-
-// @todo: изучить! var_dump(get_object_vars($this));

@@ -7,8 +7,19 @@ require_once __DIR__ . '/SomeMagic.php';
 
 /**
  * Class Article
- * depends on Model
+ * extends Model uses SomeMagic trait
  * serves to make structurised requests to database
+ * fields id, author_id, title, lead
+ * @method save() @return bool
+ * @method delete() @return bool
+ * @method insert() @return bool
+ * @method update() @return bool
+ * @method isNew() @return bool
+ * @method static findById(int $id) @return App\Models\Article
+ * @method static findAll() @return array
+ * @method static findLastEntries() @return Article array
+ * @method __set(mixed $key, mixed $value) @return bool
+ * @method __isset(mixed $key) @return bool
  * @package App\Models
  */
 class Article extends Model
@@ -23,9 +34,9 @@ class Article extends Model
 
     /**
      * redefines SomeMagic __get() method
-     * returns Class Author record from DB if field author id not null or '0' or false or not set
+     * returns Class Author record from DB
      * @param $key
-     * @return array|bool
+     * @return Author|bool
      */
     public function __get($key)
     {

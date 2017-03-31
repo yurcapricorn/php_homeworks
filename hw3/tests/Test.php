@@ -5,6 +5,7 @@ namespace tests;
 use App\Config;
 use App\Db;
 use App\Models\Article;
+use App\View;
 
 require_once __DIR__ . '/../protected/autoload.php';
 
@@ -80,7 +81,7 @@ abstract class Test
         if ($config !== $config2) {
             echo 'Singleton error';
         }
-        if ($config->data['db']['host'] == null) {
+        if ($config->data['db']['host'] == NULL) {
             echo 'ConfigTest Error';
         };
     }
@@ -91,9 +92,14 @@ abstract class Test
     public static function modelInsertMethodTest()
     {
         $article = new Article();
-        $article->title = 'test';
-        $article->save();
-        if ($article->id === null) {
+        $article->title = 'testtitle';
+        $article->lead = 'testlead';
+        $res = $article->save();
+        if ($res === false) {
+            echo 'modelInsertMethodTest error';
+            return;
+        }
+        if ($article->id === NULL) {
             echo 'modelInsertMethodTest error';
         }
     }
@@ -103,8 +109,8 @@ abstract class Test
      */
     public static function modelUpdateMethodTest()
     {
-        $article = new Article();
-        $article->id = '100';
+        $article = Article::findLastEntries()[0];
+        $article->lead = 'test';
         $res = $article->save();
         if ($res === false) {
             echo 'modelUpdateMethodTest error';
@@ -116,12 +122,36 @@ abstract class Test
      */
     public static function modelDeleteMethodTest()
     {
-        $article = new Article();
-        $article->id = '100';
+        $article = Article::findLastEntries()[0];
         $res = $article->delete();
         if ($res === false) {
             echo 'modelUpdateMethodTest error';
         }
+    }
+
+    /**
+     * articleAuthorGetTest()
+     */
+    public static function articleAuthorGetTest()
+    {
+        $article = Article::findLastEntries()[0];
+        if (!isset($article->author_id)) {
+            $article->author_id = 1;
+        }
+        $author = $article->author;
+        if (get_class($author) !== 'App\Models\Author') {
+            echo 'authorMagicTest error';
+        }
+    }
+
+    /**
+     * function viewTest()
+     */
+    public static function viewTest(){
+        $data=\App\Models\Article::findLastEntries();
+        $view = new View($data);
+        if(empty($view)){echo 'viewTest error';}
+        if(!is_subclass_of($view, 'Iterator')){echo 'viewTest error';}
     }
 
     /**
@@ -137,6 +167,8 @@ abstract class Test
         static::modelInsertMethodTest();
         static::modelUpdateMethodTest();
         static::modelDeleteMethodTest();
+        static::articleAuthorGetTest();
+        static::viewTest();
     }
 
 }

@@ -32,17 +32,14 @@ trait SomeMagic
     }
 
     /**
-     * saves pairs either in Class public fields or in data array
+     * saves pairs in Class data array
      * @param $key
      * @param $value
      * @return bool
      */
     public function __set($key, $value)
     {
-        if (is_null($this->$key)) {
-            $this->$key = $value;
-            return true;
-        } else if ($this->__isset($key) === false) {
+        if ($this->__isset($key) === false) {
             $this->data[$key] = $value;
             return true;
         }
@@ -52,7 +49,7 @@ trait SomeMagic
     /**
      * returns requested value if exists in Class data array
      * @param $key
-     * @return bool
+     * @return mixed | bool
      */
     public function __get($key)
     {
@@ -70,7 +67,7 @@ trait SomeMagic
     public function __isset($key)
     {
         if (isset($this->$key)) {
-            return isset($this->$key);
+            return true;
         }
         return isset($this->data[$key]);
     }
