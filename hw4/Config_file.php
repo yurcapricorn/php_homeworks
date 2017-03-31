@@ -1,4 +1,3 @@
 <?php
-
-$name='test';
-$host='127.0.0.1';
+$mas['db'] = ['host' => 'localhost', 'name' => 'php2', 'user' => 'root', 'pass' => ''];
+return $mas;
