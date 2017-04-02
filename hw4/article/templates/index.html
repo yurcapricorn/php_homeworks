@@ -8,14 +8,10 @@
 
 <?php
 
-$error = file_get_contents(__DIR__ . '/../../errors.php');
-
-if(!empty($error)){
-    echo $error;
+if(!empty($this->error)){
+    echo $this->error;
+    $this->error=null;
 }
-
-file_put_contents(__DIR__ . '/../../errors.php', '');
-
 foreach($this->news as $article){
 ?>
 
@@ -23,7 +19,7 @@ foreach($this->news as $article){
     <h1>
         <a href="
             <?php
-                echo '/article/article.php?id=' . $article->id;
+                echo '\\News\Article\\' . $article->id;
             ?>
         ">
             <?php

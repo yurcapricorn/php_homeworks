@@ -2,28 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Article</title>
+    <title>
+        <?php
+            echo $this->title;
+        ?>
+    </title>
 </head>
 <body>
+
+<?php
+
+if(!empty($this->error)){
+    echo $this->error;
+    $this->error=null;
+}
+?>
 
 <div>
     <h1>
         <?php
-            echo $article->title;
+            echo $this->article->title;
         ?>
     </h1>
 
     <h1>
         <?php
-            echo $article->author->name . ' ' . $article->author->surname;
+            echo $this->article->author->name . ' ' . $this->article->author->surname;
         ?>
     </h1>
 
-    <p><?php
-            echo $article->lead ;
+    <p>
+        <?php
+            echo $this->article->lead;
         ?>
     </p>
-
 </div>
 
 <a href="/index.php">Main Page</a>
