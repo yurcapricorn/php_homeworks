@@ -2,18 +2,21 @@
 
 namespace App\Controllers;
 
-
+/**
+ * Controller Front
+ * @package App\Controllers
+ */
 class Front
 {
-
-    public function action(array $url=[])
+    /**
+     * chooses controller
+     * @param array $url = []
+     */
+    public function action(array $url = [])
     {
         $controller = '';
         if (!empty($url)){
             $controller = array_shift($url);
-        }
-        else if (!empty($_GET['ctrl'])) {
-            $controller = $_GET['ctrl'];
         }
         switch ($controller) {
             case('News'): {

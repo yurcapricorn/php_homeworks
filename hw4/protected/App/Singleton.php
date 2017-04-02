@@ -3,7 +3,7 @@
 namespace App;
 
 /**
- * Class Singleton
+ * Trait Singleton
  * @package App
  */
 trait Singleton

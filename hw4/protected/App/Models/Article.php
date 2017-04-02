@@ -2,18 +2,18 @@
 
 namespace App\Models;
 
+use App\SomeMagic;
+
 require_once __DIR__ . '/Model.php';
-require_once __DIR__ . '/SomeMagic.php';
+require_once __DIR__ . '/../SomeMagic.php';
 
 /**
  * Class Article
  * extends Model uses SomeMagic trait
  * serves to make structurised requests to database
  * fields id, author_id, title, lead
- * @method save() @return bool
+ * @method save(array $arr = []) @return bool
  * @method delete() @return bool
- * @method insert() @return bool
- * @method update() @return bool
  * @method isNew() @return bool
  * @method static findById(int $id) @return App\Models\Article
  * @method static findAll() @return array
@@ -55,5 +55,40 @@ class Article extends Model
                 break;
             }
         }
+        return false;
+    }
+
+    public function insert(array $arr = [])
+    {
+        if (!empty($arr['title'])) {
+            $this->title = $arr['title'];
+        }
+        if (!empty($arr['lead'])) {
+            $this->lead = $arr['lead'];
+        }
+        if (empty($this->title) && empty($this->lead)) {
+            return false;
+        } else {
+            $res = parent::insert();
+            if ($res !== true) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public function update(array $arr = [])
+    {
+        if (!empty($arr['title'])) {
+            $this->title = $arr['title'];
+        }
+        if (!empty($arr['lead'])) {
+            $this->lead = $arr['lead'];
+        }
+        $res = parent::update();
+        if ($res !== true) {
+            return false;
+        }
+        return true;
     }
 }

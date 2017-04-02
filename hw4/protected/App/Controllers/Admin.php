@@ -4,69 +4,58 @@ namespace App\Controllers;
 
 use App\Models\Article;
 
+/**
+ * Controller Admin
+ * @method __construct()
+ * @method action(array $url = [])
+ * @method access($action)
+ * @package App\Controllers
+ */
 class Admin
 {
     use Base;
 
+    /**
+     * Adds article to Db
+     */
     public function actionAdd()
     {
         $article = new Article();
-        if (isset($_POST['title'])) {
-            $article->title = $_POST['title'];
-        }
-        if (isset($_POST['lead'])) {
-            $article->lead = $_POST['lead'];
-        }
-        if (!isset($article->title) && !isset($article->lead)) {
-            $this->view->error = 'empty data';
-        } else {
-            $res = $article->save();
-            if ($res !== true) {
-                $this->view->error = 'something went wrong';
-            }
+        $res = $article->save($_POST);
+        if ($res === false) {
+            $this->view->error = 'something went wrong';
         }
         header('Location:' . '/');
     }
 
+    /**
+     * Edits article in Db
+     */
     public function actionEdit()
     {
-        if (!isset($_POST['id'])) {
-            $this->view->error = 'no id specified';
-        } else {
-            $id = $_POST['id'];
-            $article = Article::findById($id);
-            if (empty($article) || $article === false) {
-                $this->view->error = 'Article ' . $id . ' not found';
-            } else {
-                if (isset($_POST['title'])) {
-                    $article->title = $_POST['title'];
-                }
-                if (isset($_POST['lead'])) {
-                    $article->lead = $_POST['lead'];
-                }
-                $res = $article->save();
-                if ($res !== true) {
-                    $this->view->error = 'something went wrong';
-                }
-            }
+        $article = Article::findById($_POST['id']);
+        if ($article === false) {
+            $this->view->error = 'something went wrong';
+        }
+        $res = $article->save($_POST);
+        if ($res === false) {
+            $this->view->error = 'something went wrong';
         }
         header('Location:' . '/');
     }
 
+    /**
+     * Removes article from Db
+     */
     public function actionRemove()
     {
-        if (!isset($_POST['id'])) {
-            $this->view->error = 'no id specified';
+        $article = Article::findById($_POST['id']);
+        if (empty($article) || $article === false) {
+            $this->view->error = 'Article ' . $_POST['id'] . ' not found';
         } else {
-            $id = $_POST['id'];
-            $article = Article::findById($id);
-            if (empty($article) || $article === false) {
-                $this->view->error = 'Article ' . $id . ' not found';
-            } else {
-                $res = $article->delete();
-                if ($res !== true) {
-                    $this->view->error = 'something went wrong';
-                }
+            $res = $article->delete();
+            if ($res !== true) {
+                $this->view->error = 'something went wrong';
             }
         }
         header('Location:' . '/');

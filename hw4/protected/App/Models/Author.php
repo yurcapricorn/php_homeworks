@@ -2,13 +2,18 @@
 
 namespace App\Models;
 
+use App\SomeMagic;
+
+require_once __DIR__ . '/Model.php';
+require_once __DIR__ . '/../SomeMagic.php';
+
 
 /**
  * Class Author
  * fields id, name, surname, email
  * extends trait SomeMagic
  * serves to make structurised requests to database
- * @method save() @return bool
+ * @method save(array $arr = []) @return bool
  * @method delete() @return bool
  * @method insert() @return bool
  * @method update() @return bool
@@ -29,5 +34,4 @@ class Author extends Model
     public $email;
     public $name;
     public $surname;
-
 }

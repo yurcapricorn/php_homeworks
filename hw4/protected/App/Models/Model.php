@@ -45,7 +45,7 @@ abstract class Model
         $db = Db::instance();
         $args = [':id' => $id];
         $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', $args, static::class);
-        if ($data === false) {
+        if ($data === false || empty($data)) {
             return false;
         }
         return $data[0];
@@ -73,7 +73,7 @@ abstract class Model
         $col = [];
         $val = [];
         foreach ($this as $k => $v) {
-            if ($k === 'id'||$k === 'data') {
+            if ($k === 'id' || $k === 'data') {
                 continue;
             }
             $col[] = $k;
@@ -107,7 +107,7 @@ abstract class Model
                 $val[':' . $k] = $v;
                 continue;
             }
-            if (!isset($v)||empty($v)) {
+            if (!isset($v) || empty($v)) {
                 continue;
             }
             $col[$k . '=:' . $k] = $k;
@@ -131,24 +131,32 @@ abstract class Model
     /** save method
      * @return bool
      */
-    public function save()
+    public function save(array $arr = [])
     {
-        if ($this->isNew()) {
-            return $this->insert();
+        if (empty($arr)) {
+            if ($this->isNew()) {
+                return $this->insert();
+            } else {
+                return $this->update();
+            }
         } else {
-            return $this->update();
+            if ($this->isNew()) {
+                return $this->insert($arr);
+            } else {
+                return $this->update($arr);
+            }
         }
     }
-
-    /**
-     * delete method
-     * @return bool
-     */
-    public function delete()
-    {
-        $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=:id';
-        $db = Db::instance();
-        $args = [':id' => $this->id];
-        return $db->execute($sql, $args);
+        /**
+         * delete method
+         * @return bool
+         */
+        public
+        function delete()
+        {
+            $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=:id';
+            $db = Db::instance();
+            $args = [':id' => $this->id];
+            return $db->execute($sql, $args);
+        }
     }
-}

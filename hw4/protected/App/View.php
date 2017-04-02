@@ -12,7 +12,7 @@ namespace App;
  */
 class View implements \Countable, \Iterator
 {
-    use \App\Models\SomeMagic;
+    use \App\SomeMagic;
 
     /**
      * function render

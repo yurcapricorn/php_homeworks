@@ -5,23 +5,32 @@ namespace App\Controllers;
 
 use App\View;
 
+/**
+ * Trait Base Controller
+ * @package App\Controllers
+ */
 Trait Base
 {
     protected $view;
 
+    /**
+     * Base constructor
+     * instantiates $view field
+     */
     public function __construct()
     {
         $this->view = new View();
     }
 
+    /**
+     * @param array $url
+     * @return mixed
+     */
     public function action(array $url = [])
     {
         $action = '';
         if (!empty($url)){
             $action = array_shift($url);
-        }
-        else if (!empty($_GET['act'])){
-            $action = $_GET['act'];
         }
         if ( $this->access($action) === false ) {
             echo 'access denied';
@@ -36,7 +45,7 @@ Trait Base
      * @param string $action
      * @return bool|string
      */
-    protected function access($action)
+    protected function access(string $action)
     {
         $methods = get_class_methods($this);
         foreach($methods as $method) {
