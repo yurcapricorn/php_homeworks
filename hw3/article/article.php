@@ -10,7 +10,7 @@ if (isset($_GET['id'])) {
 }
 $article = App\Models\Article::findById($id);
 if (false === $article || empty($article)) {
-    $error = 'Article ' . $id . ' not found' . '<br><br>';
+    $error = 'Article ' . $id . ' not found';
     file_put_contents(__DIR__ . '/../errors.php', $error);
 }
 
