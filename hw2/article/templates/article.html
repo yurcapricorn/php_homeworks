@@ -5,7 +5,14 @@
     <title>Article</title>
 </head>
 <body>
+<?php
 
+$error = file_get_contents(__DIR__ . '/../../errors.php');
+if(!empty($error)){
+echo $error;
+}
+file_put_contents(__DIR__ . '/../../errors.php', '');
+?>
 <div>
     <h1>
         <?php
