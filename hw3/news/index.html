@@ -7,21 +7,14 @@
 <body>
 
 <?php
-
-$error = file_get_contents(__DIR__ . '/../../errors.php');
-if(!empty($error)){
-    echo $error;
-}
-file_put_contents(__DIR__ . '/../../errors.php', '');
-
-foreach($this as $article){
+    foreach($this as $article){
 ?>
 
 <div>
     <h1>
         <a href="
             <?php
-                echo '/article/article.php?id=' . $article->id;
+                echo 'news/article.php?id=' . $article->id;
             ?>
         ">
             <?php
@@ -30,11 +23,13 @@ foreach($this as $article){
         </a>
     </h1>
 
-    <h1>
+    <h2>
         <?php
-            echo $article->author->name . ' ' . $article->author->surname;
+            if (!empty($article->author_id)){
+                echo $article->author->name . ' ' . $article->author->surname;
+            }
         ?>
-    </h1>
+    </h2>
 
     <p>
         <?php

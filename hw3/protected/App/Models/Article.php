@@ -2,12 +2,10 @@
 
 namespace App\Models;
 
-require_once __DIR__ . '/Model.php';
-require_once __DIR__ . '/SomeMagic.php';
+require_once __DIR__ . '/../../autoload.php';
 
 /**
  * Class Article
- * extends Model uses SomeMagic trait
  * serves to make structurised requests to database
  * fields id, author_id, title, lead
  * @method save() @return bool
@@ -18,14 +16,10 @@ require_once __DIR__ . '/SomeMagic.php';
  * @method static findById(int $id) @return App\Models\Article
  * @method static findAll() @return array
  * @method static findLastEntries() @return Article array
- * @method __set(mixed $key, mixed $value) @return bool
- * @method __isset(mixed $key) @return bool
  * @package App\Models
  */
 class Article extends Model
 {
-    use SomeMagic;
-
     protected const TABLE = 'news';
 
     public $author_id;
@@ -33,7 +27,7 @@ class Article extends Model
     public $lead;
 
     /**
-     * redefines SomeMagic __get() method
+     * __get() method
      * returns Class Author record from DB
      * @param $key
      * @return Author|bool
@@ -42,15 +36,14 @@ class Article extends Model
     {
         switch ($key) {
             case('author'): {
-                if ($this->author_id !== false && $this->author_id !== NULL) {
+                if (!empty($this->author_id)) {
                     return Author::findById($this->author_id);
+                } else {
+                    return false;
                 }
                 break;
             }
             default: {
-                if (isset($this->data[$key])) {
-                    return $this->data[$key];
-                }
                 return false;
                 break;
             }

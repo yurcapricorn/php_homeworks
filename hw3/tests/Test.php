@@ -21,7 +21,7 @@ abstract class Test
     public static function dbTestExecute()
     {
         $db = new Db();
-        $sql = 'INSERT INTO ' . news . " (title,lead)" . ' VALUES (:title, :lead)';
+        $sql = 'INSERT INTO ' . 'news' . " (title,lead)" . ' VALUES (:title, :lead)';
         $args = [':title' => 'testtitle', ':lead' => 'testlead'];
         $res = $db->execute($sql, $args);
         if ($res === false) {
@@ -139,8 +139,8 @@ abstract class Test
             $article->author_id = 1;
         }
         $author = $article->author;
-        if (get_class($author) !== 'App\Models\Author') {
-            echo 'authorMagicTest error';
+        if (empty($author)) {
+            echo 'authorTest error';
         }
     }
 
