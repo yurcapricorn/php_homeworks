@@ -20,4 +20,3 @@ class Config
         $this->data = $data;
     }
 }
-

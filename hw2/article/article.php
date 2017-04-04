@@ -1,19 +1,14 @@
 <?php
 
-require_once __DIR__ . '/../protected/autoload.php';
+require_once __DIR__ . '/../protected/App/Models/Article.php';
 
-if (isset($_GET['id'])) {
-    $id = $_GET['id'];
+if (empty($_GET['id'])) {
+    $error = 'incorrect request';
 } else {
-    $error = 'incorrect request' . '<br><br>';
-    file_put_contents(__DIR__ . '/../errors.php', $error);
-    die();
-}
-$article = App\Models\Article::findById($id);
-if (false === $article || empty($article)) {
-    $error = 'Article ' . $id . ' not found';
-    file_put_contents(__DIR__ . '/../errors.php', $error);
-    die();
+    $article = App\Models\Article::findById($_GET['id']);
+    if (false === $article || empty($article)) {
+        $error = 'Article not found';
+    }
 }
 
-include __DIR__ . '/templates/article.html';
+include __DIR__ . '/article.html';

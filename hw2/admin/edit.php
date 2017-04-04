@@ -2,30 +2,28 @@
 
 include_once __DIR__ . '/../protected/App/Models/Article.php';
 
-
-$error = '';
-
-if (!isset($_POST['id'])) {
+if (empty($_POST['id'])) {
     $error = 'no id specified';
-
 } else {
-    $id = $_POST['id'];
-    $article = App\Models\Article::findById($id);
-    if (empty($article) || $article === false) {
-        $error = 'Article ' . $id . ' not found';
+    $article = \App\Models\Article::findById($_POST['id']);
+    if (($article === false) || empty($article)) {
+        $error = 'no such article';
     } else {
-        if (isset($_POST['title'])) {
-            $article->title = $_POST['title'];
-        }
-        if (isset($_POST['lead'])) {
-            $article->lead = $_POST['lead'];
-        }
-        $res = $article->save();
-        if ($res !== true) {
-            $error = 'something went wrong';
+        $title = $_POST['title'];
+        $lead = $_POST['lead'];
+        if (empty($title) && empty($lead)) {
+            $error = 'no data to update';
+        } else {
+            if (!empty($title)) {
+                $article->title = $title;
+            }
+            if (!empty($lead)) {
+                $article->lead = $lead;
+            }
+            $res = $article->save();
+            if ($res === false) {
+                $error = 'save to db error';
+            }
         }
     }
 }
-file_put_contents(__DIR__ . '/../errors.php', $error);
-
-header('Location:' . $_SERVER['HTTP_REFERER']);

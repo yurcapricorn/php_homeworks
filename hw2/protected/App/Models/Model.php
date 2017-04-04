@@ -107,9 +107,6 @@ abstract class Model
                 $val[':' . $k] = $v;
                 continue;
             }
-            if (!isset($v)||empty($v)) {
-                continue;
-            }
             $col[$k . '=:' . $k] = $k;
             $val[':' . $k] = $v;
         }

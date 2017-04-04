@@ -2,26 +2,20 @@
 
 include_once __DIR__ . '/../protected/App/Models/Article.php';
 
-
-$error = '';
-
-$article = new App\Models\Article;
-
-if (isset($_POST['title'])) {
-    $article->title = $_POST['title'];
-}
-if (isset($_POST['lead'])) {
-    $article->lead = $_POST['lead'];
-}
-if (!isset($article->title) && !isset($article->lead)) {
-    $error = 'empty data';
+$title = $_POST['title'];
+$lead = $_POST['lead'];
+if (empty($title) && empty($lead)) {
+    $error = 'no data to update';
 } else {
+    $article = new \App\Models\Article();
+    if (!empty($title)) {
+        $article->title = $title;
+    }
+    if (!empty($lead)) {
+        $article->lead = $lead;
+    }
     $res = $article->save();
-    if ($res !== true) {
-        $error = 'something went wrong';
+    if ($res === false) {
+        $error = 'save to db error';
     }
 }
-
-file_put_contents(__DIR__ . '/../errors.php', $error);
-
-header('Location:' . $_SERVER['HTTP_REFERER']);
