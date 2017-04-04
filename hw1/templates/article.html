@@ -6,14 +6,6 @@
 </head>
 <body>
 
-<?php
-$error = file_get_contents(__DIR__ . '/../errors.php');
-if(!empty($error)){
-    echo $error;
-}
-file_put_contents(__DIR__ . '/../errors.php', '');
-?>
-
 <div>
     <h1>
         <?php
@@ -27,8 +19,6 @@ file_put_contents(__DIR__ . '/../errors.php', '');
     </p>
 
 </div>
-
-<a href="/index.php">Main Page</a>
 
 </body>
 </html>

@@ -50,7 +50,6 @@ abstract class Model
     public static function findLastEntries($num)
     {
         $db = new Db();
-        //SELECT * FROM `news` WHERE id = (select max(id) from news)
         $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT ' . $num;
         return $db->query($sql, [], static::class);
     }
