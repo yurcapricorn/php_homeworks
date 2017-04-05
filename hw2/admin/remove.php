@@ -6,7 +6,7 @@ if (empty($_POST['id'])) {
 //    $error = 'no id specified';
 } else {
     $article = \App\Models\Article::findById($_POST['id']);
-    if (($article === false) || empty($article)) {
+    if (($article === false)) {
 //        $error = 'no such article';
     } else {
         $res = $article->delete();

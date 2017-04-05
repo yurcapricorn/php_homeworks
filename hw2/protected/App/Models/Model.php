@@ -29,7 +29,7 @@ abstract class Model
     {
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->query($sql, [], static::class);
+        return $db->query($sql, static::class, []);
     }
 
     /**
@@ -44,8 +44,8 @@ abstract class Model
         }
         $db = Db::instance();
         $args = [':id' => $id];
-        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', $args, static::class);
-        if ($data === false) {
+        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', static::class, $args);
+        if ($data === false || empty($data)) {
             return false;
         }
         return $data[0];
@@ -58,9 +58,8 @@ abstract class Model
     public static function findLastEntries()
     {
         $db = Db::instance();
-        //SELECT * FROM `news` WHERE id = (select max(id) from news)
         $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT 3';
-        return $db->query($sql, [], static::class);
+        return $db->query($sql, static::class, []);
     }
 
     /**

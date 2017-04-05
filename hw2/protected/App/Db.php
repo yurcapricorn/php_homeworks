@@ -12,7 +12,7 @@ require_once __DIR__ . '/Singleton.php';
  * has methods query and execute
  * keeps PDO in field $dbh
  */
-class Db extends \PDO
+class Db
 {
     use \App\Singleton;
 
@@ -36,7 +36,7 @@ class Db extends \PDO
      * @param string $class (path to class)
      * @return bool|array (all database entries as $class objects array)
      */
-    public function query($query, $params = [], $class = '')
+    public function query($query, $class = \stdClass::class, $params = [])
     {
         $sth = $this->dbh->prepare($query);
         if (empty($params)) {
@@ -47,11 +47,7 @@ class Db extends \PDO
         if ($res === false) {
             return false;
         }
-        if (empty($class)) {
-            return $sth->fetchAll();
-        } else {
-            return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
-        }
+        return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
     }
 
     /**
