@@ -7,9 +7,11 @@ if (empty($_GET['id'])) {
 } else {
     $id = $_GET['id'];
     $article = \Models\Article::findById($id);
-    if (false === $article || empty($article)) {
+    if (false === $article) {
 //        $error = 'Article not found';
+    } else {
+        include __DIR__ . '/templates/article.html';
     }
 }
 
-include __DIR__ . '/templates/article.html';
+

@@ -35,8 +35,8 @@ abstract class Model
         }
         $db = new Db();
         $args = [':id' => $id];
-        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', $args, static::class);
-        if ($data === false) {
+        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', static::class, $args);
+        if (empty($data) || $data === false) {
             return false;
         }
         return $data[0];
@@ -47,10 +47,10 @@ abstract class Model
      * @param $num
      * @return array|bool
      */
-    public static function findLastEntries($num)
+    public static function findLastEntries()
     {
         $db = new Db();
-        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT ' . $num;
-        return $db->query($sql, [], static::class);
+        $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT 3';
+        return $db->query($sql, static::class, []);
     }
 }

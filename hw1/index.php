@@ -2,6 +2,12 @@
 
 require_once __DIR__ . '/autoload.php';
 
-$data = Models\Article::findLastEntries(3);
+$data = Models\Article::findLastEntries();
 
-include __DIR__ . '/templates/index.html';
+if(empty($data) || $data === false) {
+//    $error = 'no records';
+} else {
+    include __DIR__ . '/templates/index.html';
+}
+
+

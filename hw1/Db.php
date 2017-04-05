@@ -22,7 +22,7 @@ class Db
      * @param string $class (path to class)
      * @return bool|array (all database entries as $class objects array)
      */
-    public function query($query, $params = [], $class = '')
+    public function query($query, $class = stdClass::class, $params = [])
     {
         $sth = $this->dbh->prepare($query);
         if (empty($params)) {
@@ -33,11 +33,7 @@ class Db
         if (false === $res) {
             return false;
         }
-        if (empty($class)) {
-            return $sth->fetchAll();
-        } else {
-            return $sth->fetchAll(PDO::FETCH_CLASS, $class);
-        }
+        return $sth->fetchAll(PDO::FETCH_CLASS, $class);
     }
 
     /**
