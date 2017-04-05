@@ -5,7 +5,7 @@ namespace App\Models;
 
 /**
  * Class Author
- * fields id, name, surname, email
+ * fields id, name, surname, email, TABLE
  * serves to make structurised requests to database
  * @method save() @return bool
  * @method delete() @return bool

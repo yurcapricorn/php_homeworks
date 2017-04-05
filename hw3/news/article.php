@@ -8,7 +8,8 @@ if (empty($_GET['id'])) {
     $article = App\Models\Article::findById($_GET['id']);
     if (false === $article || empty($article)) {
 //        $error = 'Article not found';
+    } else {
+        include __DIR__ . '/article.html';
     }
 }
 
-include __DIR__ . '/article.html';

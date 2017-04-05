@@ -7,7 +7,7 @@ require_once __DIR__ . '/../../autoload.php';
 /**
  * Class Article
  * serves to make structurised requests to database
- * fields id, author_id, title, lead
+ * fields id, author_id, title, lead, TABLE
  * @method save() @return bool
  * @method delete() @return bool
  * @method insert() @return bool
