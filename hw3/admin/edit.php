@@ -3,7 +3,7 @@
 include_once __DIR__ . '/../protected/App/Models/Article.php';
 
 if (empty($_POST['id'])) {
-    $error = 'no id specified';
+//    $error = 'no id specified';
 } else {
     $article = \App\Models\Article::findById($_POST['id']);
     if (($article === false) || empty($article)) {
