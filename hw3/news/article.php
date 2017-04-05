@@ -3,11 +3,11 @@
 require_once __DIR__ . '/../protected/App/Models/Article.php';
 
 if (empty($_GET['id'])) {
-    $error = 'incorrect request';
+//    $error = 'incorrect request';
 } else {
     $article = App\Models\Article::findById($_GET['id']);
     if (false === $article || empty($article)) {
-        $error = 'Article not found';
+//        $error = 'Article not found';
     }
 }
 
