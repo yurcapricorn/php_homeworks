@@ -14,8 +14,8 @@ Trait Base
     protected $view;
 
     /**
+     * instantiates $view
      * Base constructor
-     * instantiates $view field
      */
     public function __construct()
     {
@@ -25,6 +25,13 @@ Trait Base
     /**
      * @param array $url
      * @return mixed
+     *
+     * Напишите класс базового контроллера.
+     * Вынесите в него метод action($action) и примените его.
+     * Этот метод должен делать следующее:
+     * Вызвать метод access() контроллера.
+     * Если получен результат false - вывести сообщение "Доступ закрыт" и прекратить работу
+     * Вызвать соответствующий экшн по имени.
      */
     public function action(array $url = [])
     {
@@ -34,7 +41,7 @@ Trait Base
         }
         if ( $this->access($action) === false ) {
             echo 'access denied';
-            die();
+            return false;
         }
         $method = 'action' . $action;
         return $this->$method($url);
@@ -49,7 +56,7 @@ Trait Base
     {
         $methods = get_class_methods($this);
         foreach($methods as $method) {
-            if ('action' . $action == $method) {
+            if ('action' . $action === $method) {
                 return true;
             }
         }

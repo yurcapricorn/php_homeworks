@@ -11,3 +11,5 @@ function autoload_1($class)
 }
 
 spl_autoload_register('autoload_1');
+
+include __DIR__ . '/../vendor/autoload.php';

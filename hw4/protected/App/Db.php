@@ -33,10 +33,10 @@ class Db extends \PDO
      * Db class method query()
      * @param string $query
      * @param array $params
-     * @param string $class (path to class)
+     * @param $class (path to class)
      * @return bool|array (all database entries as $class objects array)
      */
-    public function query($query, $params = [], $class = '')
+    public function query($query, $class = \stdClass::class, $params = [])
     {
         $sth = $this->dbh->prepare($query);
         if (empty($params)) {

@@ -2,10 +2,7 @@
 
 namespace App\Models;
 
-use App\SomeMagic;
-
 require_once __DIR__ . '/Model.php';
-require_once __DIR__ . '/../SomeMagic.php';
 
 
 /**
@@ -21,14 +18,10 @@ require_once __DIR__ . '/../SomeMagic.php';
  * @method static findById(int $id) @return App\Models\Article
  * @method static findAll() @return array
  * @method static findLastEntries() @return array
- * @method __set(mixed $key, mixed $value) @return bool
- * @method __isset(mixed $key) @return bool
  * @package App\Models
  */
 class Author extends Model
 {
-    use SomeMagic;
-
     const TABLE = 'authors';
 
     public $email;

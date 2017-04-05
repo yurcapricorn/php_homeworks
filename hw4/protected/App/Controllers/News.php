@@ -7,6 +7,7 @@ require_once __DIR__ . '/../../autoload.php';
 
 /**
  * Controller News
+ * Создайте контроллеры для клиентских страниц новостей (действия "все новости", "одна новость")
  * @method __construct()
  * @method action(array $url = [])
  * @method access($action)
@@ -14,46 +15,41 @@ require_once __DIR__ . '/../../autoload.php';
  */
 class News
 {
-    use \App\Controllers\Base;
+    use Base;
 
     /**
      * news main page
      */
-    public function actionIndex()
+    public function actionAll()
     {
         $this->view->news = \App\Models\Article::findLastEntries();
         if (false === $this->view->news || empty($this->view->news)) {
-            $this->view->error = 'News ' . ' not found';
+            $this->view->error = 'No news found';
+        } else {
+            $template = __DIR__ . '/../../../news/index.html';
+            $this->view->display($template);
+            return;
         }
-        $template = __DIR__ . '/../../../article/templates/index.html';
-        $this->view->display($template);
-        $template = __DIR__ . '/../../../admin/templates/admin.html';
-        $this->view->display($template);
-        return;
     }
 
     /**
      * one article page
      * @param array $url = []
      */
-    public function actionArticle(array $url = [])
+    public function actionOne()
     {
         if (!empty($_GET['id'])) {
             $id = (int)$_GET['id'];
-        } else if (!empty($url)) {
-            $id = (int)array_shift($url);
         } else {
             $this->view->error = 'incorrect request';
-            $this->actionIndex();
             return;
         }
         $this->view->article = \App\Models\Article::findById($id);
-        if (false === $this->view->article || empty($this->view->article)) {
-            $this->view->error = 'Article ' . $id . ' not found';
-            $this->actionIndex();
+        if (false === $this->view->article) {
+            $this->view->error = 'Article not found';
             return;
         } else {
-            $template = __DIR__ . '/../../../article/templates/article.html';
+            $template = __DIR__ . '/../../../news/article.html';
             $this->view->display($template);
             return;
         }

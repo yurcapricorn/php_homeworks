@@ -66,9 +66,9 @@ trait SomeMagic
      */
     public function __isset($key)
     {
-        if (isset($this->$key)) {
+        if (isset($this->$key) && !empty($this->$key)) {
             return true;
         }
-        return isset($this->data[$key]);
+        return (isset($this->data[$key]) && !empty($this->data[$key]));
     }
 }
