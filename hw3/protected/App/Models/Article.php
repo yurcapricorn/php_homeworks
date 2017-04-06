@@ -16,6 +16,28 @@ class Article extends Model
     public $lead;
 
     /**
+     * Article constructor.
+     * fills instance with data available
+     * @param array $arr
+     */
+    public function __construct(array $arr = [])
+    {
+        if (empty($arr)) {
+            return;
+        }
+        $article = new Article();
+        if (!empty($arr['id'])) {
+            $this->id = $arr['id'];
+            $article = Article::findById($arr['id']);
+        }
+        $this->title = $arr['title'] ?? $article->title;
+        $this->lead = $arr['lead'] ?? $article->lead;
+        $this->authr_id = $arr['author_id'] ?? $article->author_id;
+    }
+
+    /**
+     * redefines SomeMagic __get() method
+     * returns Class Author record from DB
      * @param $key
      * @return Author|bool
      */
@@ -23,7 +45,7 @@ class Article extends Model
     {
         switch ($key) {
             case('author'): {
-                if (!empty($this->author_id)) {
+                if ($this->author_id !== false && $this->author_id !== NULL) {
                     return Author::findById($this->author_id);
                 }
                 break;
@@ -32,5 +54,36 @@ class Article extends Model
                 break;
             }
         }
+    }
+
+    /**
+     * @return bool
+     */
+    public function insert()
+    {
+        if (empty($this->title) && empty($this->lead)) {
+            return false;
+        } else {
+            $res = parent::insert();
+            if ($res !== true) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
+     * @return bool
+     */
+    public function update()
+    {
+        if ((empty($this->title) && empty($this->lead))) {
+            return false;
+        }
+        $res = parent::update();
+        if ($res !== true) {
+            return false;
+        }
+        return true;
     }
 }
