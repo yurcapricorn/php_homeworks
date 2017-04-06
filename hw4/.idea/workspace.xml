@@ -41,6 +41,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Admin.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/protected/App/Controllers/Admin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="455">
+              <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -218,6 +228,28 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw4" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protected" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -331,7 +363,7 @@
       <workItem from="1491290987221" duration="201000" />
       <workItem from="1491292261572" duration="8631000" />
       <workItem from="1491379595574" duration="24343000" />
-      <workItem from="1491487191413" duration="3141000" />
+      <workItem from="1491487191413" duration="3413000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487941813358</created>
@@ -407,7 +439,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="463758000" />
+    <option name="totallyTimeSpent" value="464030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -495,13 +527,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/admin/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -567,17 +592,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/App/Controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/App/Controllers/Base.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -585,6 +604,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="28" column="27" lean-forward="true" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -647,6 +667,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="19" column="29" lean-forward="false" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -670,6 +691,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="49" column="17" lean-forward="false" selection-start-line="49" selection-start-column="17" selection-end-line="49" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/App/Controllers/Admin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="38" column="1" lean-forward="true" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding />
         </state>
       </provider>
