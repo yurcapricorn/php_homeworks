@@ -1,5 +1,33 @@
 hello! I'm a readme file!
 
+06-04-2017
+
+Комментарий преподавателя:
+1. https://github.com/yurcapricorn/php_homeworks/blob/master/hw3/protected/App/Models/SomeMagic.php
+Это не модель. Ошибка.
+
+-fixed. SomeMagic.php moved to App/ folder
+
+2. https://github.com/yurcapricorn/php_homeworks/blob/master/hw3/protected/App/Models/SomeMagic.php#L42
+Идиотское условие. Ошибка.
+
+-fixed. condition from SomeMagic __set method removed.
+
+3. Возвращать что-либо из __set() не следует - это ошибка.
+
+-fixed. all return parameters removed
+
+4. https://github.com/yurcapricorn/php_homeworks/blob/master/hw3/protected/App/Models/SomeMagic.php#L69
+Полная чушь написана.
+
+-fixed. method __isset now contains
+     public function __isset($key)
+     {
+         return isset($this->data[$key]);
+     }
+     
+__________________________________
+
 /**
  * Повторите код, изученный на уроке.
  * Выделите ту часть, которая управляет установкой и чтением произвольных свойств объекта в трейт.
