@@ -4,15 +4,16 @@ namespace App;
 
 /**
  * Trait SomeMagic
- * implements magic methods for its users
  * @package App
  */
 trait SomeMagic
 {
+    /**
+     * @var array
+     */
     protected $data = [];
 
     /**
-     * saves pairs in Class data array
      * @param $key
      * @param $value
      */
@@ -22,7 +23,6 @@ trait SomeMagic
     }
 
     /**
-     * returns requested value if exists in Class data array
      * @param $key
      * @return mixed | bool
      */
@@ -35,7 +35,6 @@ trait SomeMagic
     }
 
     /**
-     * checks if key exists in data array
      * @param $key
      * @return bool
      */

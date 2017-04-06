@@ -8,8 +8,6 @@ require_once __DIR__ . '/../Db.php';
 
 /**
  * Class Model
- * Maintains complex requests to Db class
- * forces childs to have TABLE field for db table name
  * @package App\Models
  */
 abstract class Model
@@ -33,7 +31,6 @@ abstract class Model
     }
 
     /**
-     * find by id method
      * @param int $id
      * @return \App\Models\Article|bool
      */
@@ -52,7 +49,6 @@ abstract class Model
     }
 
     /**
-     * finds $num last articles
      * @return array
      */
     public static function findLastEntries()
@@ -63,8 +59,6 @@ abstract class Model
     }
 
     /**
-     * insert method
-     * takes public object fields except 'id'
      * @return bool
      */
     public function insert()
@@ -93,8 +87,6 @@ abstract class Model
     }
 
     /**
-     * update method
-     * takes public object fields
      * @return bool
      */
     public function update()
@@ -116,7 +108,6 @@ abstract class Model
     }
 
     /**
-     * decides if the object is new
      * @return bool
      */
     public function isNew()
@@ -124,7 +115,7 @@ abstract class Model
         return empty($this->id);
     }
 
-    /** save method
+    /**
      * @return bool
      */
     public function save()
@@ -137,7 +128,6 @@ abstract class Model
     }
 
     /**
-     * delete method
      * @return bool
      */
     public function delete()
