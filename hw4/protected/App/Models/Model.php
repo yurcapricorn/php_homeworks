@@ -18,7 +18,6 @@ abstract class Model
      * keeps database table name
      */
     protected const TABLE = null;
-
     public $id;
 
     /**

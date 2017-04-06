@@ -4,10 +4,6 @@ namespace App\Controllers;
 
 /**
  * Controller Admin
- * для админ-панели (действия "все новости", "редактирование", "сохранение")
- * @method __construct()
- * @method action(array $url = [])
- * @method access($action)
  * @package App\Controllers
  */
 class Admin
@@ -28,7 +24,7 @@ class Admin
      */
     public function actionEdit()
     {
-        $template = __DIR__ . '/../../../admin/templates/edit.html';
+        $template = __DIR__ . '/../../../admin/edit.html';
         $this->view->display($template);
     }
 
@@ -38,9 +34,6 @@ class Admin
     public function actionSave()
     {
         $article = new \App\Models\Article($_POST);
-        $res = $article->save();
-        if ($res === false) {
-            $this->view->error = 'save to db error';
-        }
+        $article->save();
     }
 }

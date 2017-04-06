@@ -2,15 +2,10 @@
 
 namespace App\Controllers;
 
-
 require_once __DIR__ . '/../../autoload.php';
 
 /**
  * Controller News
- * Создайте контроллеры для клиентских страниц новостей (действия "все новости", "одна новость")
- * @method __construct()
- * @method action(array $url = [])
- * @method access($action)
  * @package App\Controllers
  */
 class News
@@ -22,14 +17,9 @@ class News
      */
     public function actionAll()
     {
-        $this->view->news = \App\Models\Article::findLastEntries();
-        if (false === $this->view->news || empty($this->view->news)) {
-            $this->view->error = 'No news found';
-        } else {
-            $template = __DIR__ . '/../../../news/index.html';
-            $this->view->display($template);
-            return;
-        }
+        $this->view->articles = \App\Models\Article::findLastEntries();
+        $template = __DIR__ . '/../../../news/all.html';
+        $this->view->display($template);
     }
 
     /**
@@ -38,20 +28,8 @@ class News
      */
     public function actionOne()
     {
-        if (!empty($_GET['id'])) {
-            $id = (int)$_GET['id'];
-        } else {
-            $this->view->error = 'incorrect request';
-            return;
-        }
-        $this->view->article = \App\Models\Article::findById($id);
-        if (false === $this->view->article) {
-            $this->view->error = 'Article not found';
-            return;
-        } else {
-            $template = __DIR__ . '/../../../news/article.html';
-            $this->view->display($template);
-            return;
-        }
+        $this->view->article =\App\Models\Article::findById($_GET['id']);
+        $template = __DIR__ . '/../../../news/one.html';
+        $this->view->display($template);
     }
 }

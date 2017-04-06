@@ -12,12 +12,17 @@ require_once __DIR__ . '\Singleton.php';
 class Config
 {
     use \App\Singleton;
-
+    /**
+     * @var array
+     */
     public $data = [];
 
+    /**
+     * Config constructor.
+     */
     public function __construct()
     {
-        $data = include __DIR__ . '\..\..\Config_file.php';
+        $data = include __DIR__ . '\..\..\config_file.php';
         $this->data = $data;
     }
 }

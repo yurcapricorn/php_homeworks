@@ -10,10 +10,12 @@ trait Singleton
 {
     /**
      * keeps instance of class
-     * @var
      */
     protected static $instance;
 
+    /**
+     * Singleton constructor.
+     */
     protected function __construct()
     {
     }
