@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '/../protected/App/Models/Article.php';
+require_once __DIR__ . '/../protected/App/Models/Article.php';
 
 if (empty($_POST['id'])) {
 //    $error = 'no id specified';
