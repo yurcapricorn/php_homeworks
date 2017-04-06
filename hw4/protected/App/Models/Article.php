@@ -6,7 +6,6 @@ require_once __DIR__ . '/../../autoload.php';
 
 /**
  * Class Article
- * serves to make structurised requests to database
  * @package App\Models
  */
 class Article extends Model
@@ -42,26 +41,22 @@ class Article extends Model
      * @param $key
      * @return Author|bool
      */
-    public
-    function __get($key)
+    public function __get($key)
     {
         switch ($key) {
             case('author'): {
                 if ($this->author_id !== false && $this->author_id !== NULL) {
                     return Author::findById($this->author_id);
                 }
-                return false;
                 break;
             }
-            default: {
-                return false;
+            default:{
                 break;
             }
         }
     }
 
-    public
-    function insert()
+    public function insert()
     {
         if (empty($this->title) && empty($this->lead)) {
             return false;
@@ -74,8 +69,7 @@ class Article extends Model
         return true;
     }
 
-    public
-    function update()
+    public function update()
     {
         if ((empty($this->title) && empty($this->lead))) {
             return false;
