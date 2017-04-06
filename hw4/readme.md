@@ -1,4 +1,4 @@
-hello! I'm a readme file!
+hello! I'm a readme file! **
 
 1. Напишите класс базового контроллера.
 2. Вынесите в него метод action($action) и примените его.
