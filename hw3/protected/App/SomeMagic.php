@@ -5,8 +5,7 @@ namespace App;
 /**
  * Trait SomeMagic
  * implements magic methods for its users
- * may fill fields in constructor
- * @package App\Models
+ * @package App
  */
 trait SomeMagic
 {
