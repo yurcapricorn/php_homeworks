@@ -10,26 +10,7 @@ namespace App;
  */
 trait SomeMagic
 {
-    /**
-     * Contains all pairs of information excepts Class public fields
-     * @var array
-     */
     protected $data = [];
-
-    /**
-     * SomeMagic constructor
-     * gives pairs of passed array to Class __set() method
-     * @param array $args
-     */
-    public function __construct($args = [])
-    {
-        if (empty($args)) {
-            return;
-        }
-        foreach ($args as $key => $value) {
-            $this->__set($key, $value);
-        }
-    }
 
     /**
      * saves pairs in Class data array
@@ -55,7 +36,7 @@ trait SomeMagic
     }
 
     /**
-     * checks if key exists and set in Class public fields and data array
+     * checks if key exists in data array
      * @param $key
      * @return bool
      */
