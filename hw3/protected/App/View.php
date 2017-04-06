@@ -2,6 +2,7 @@
 
 namespace App;
 
+
 /**
  * Class View
  * displaying information with templates
@@ -12,7 +13,7 @@ namespace App;
  */
 class View implements \Countable, \Iterator
 {
-    use \App\Models\SomeMagic;
+    use \App\SomeMagic;
 
     /**
      * function render
@@ -84,7 +85,7 @@ class View implements \Countable, \Iterator
     public function valid()
     {
         $key = key($this->data);
-        $data = ($key !== NULL && $key !== FALSE);
+        $data = ($key !== NULL && $key !== false);
         return $data;
     }
 
