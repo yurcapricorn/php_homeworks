@@ -5,19 +5,13 @@ namespace App;
 
 /**
  * Class View
- * displaying information with templates
  * @package App
- * @method __set($key,$value)
- * @method __isset() @return bool
- * @method __get(mixed $key) @return mixed|bool
  */
 class View implements \Countable, \Iterator
 {
     use \App\SomeMagic;
 
     /**
-     * function render
-     * returns data with templates
      * @param $template
      * @return string
      */
@@ -34,8 +28,6 @@ class View implements \Countable, \Iterator
     }
 
     /**
-     * function display
-     * displays data with templates
      * @param $template
      */
     public function display($template)

@@ -14,29 +14,12 @@ trait SomeMagic
     protected $data = [];
 
     /**
-     * SomeMagic constructor
-     * @param array $args
-     */
-    public function __construct($args = [])
-    {
-        if (empty($args)) {
-            return;
-        }
-        foreach ($args as $key => $value) {
-            $this->__set($key, $value);
-        }
-    }
-
-    /**
      * @param $key
      * @param $value
-     * @return bool
      */
     public function __set($key, $value)
     {
-        if ($this->__isset($key) === false) {
-            $this->data[$key] = $value;
-        }
+        $this->data[$key] = $value;
     }
 
     /**
