@@ -33,6 +33,7 @@ class Admin
      */
     public function actionSave()
     {
+
         $article = new \App\Models\Article($_POST);
         $article->save();
     }

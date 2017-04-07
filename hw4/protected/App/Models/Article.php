@@ -32,7 +32,7 @@ class Article extends Model
         }
         $this->title = $arr['title'] ?? $article->title;
         $this->lead = $arr['lead'] ?? $article->lead;
-        $this->authr_id = $arr['author_id'] ?? $article->author_id;
+        $this->author_id = $arr['author_id'] ?? $article->author_id;
     }
 
     /**
