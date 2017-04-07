@@ -26,6 +26,7 @@ abstract class Model
     public static function findAll()
     {
         $db = Db::instance();
+
         $sql = 'SELECT * FROM ' . static::TABLE;
         return $db->query($sql, static::class, []);
     }
@@ -40,9 +41,11 @@ abstract class Model
             return false;
         }
         $db = Db::instance();
+
         $args = [':id' => $id];
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $data = $db->query($sql, static::class, $args);
+
         if ($data === false || empty($data)) {
             return false;
         }
