@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-
 use App\View;
 
 /**
@@ -11,11 +10,14 @@ use App\View;
  */
 Trait Base
 {
+    /**
+     * @var View
+     */
     protected $view;
 
     /**
+     * instantiates $view
      * Base constructor
-     * instantiates $view field
      */
     public function __construct()
     {
@@ -34,7 +36,7 @@ Trait Base
         }
         if ( $this->access($action) === false ) {
             echo 'access denied';
-            die();
+            return false;
         }
         $method = 'action' . $action;
         return $this->$method($url);
@@ -49,7 +51,7 @@ Trait Base
     {
         $methods = get_class_methods($this);
         foreach($methods as $method) {
-            if ('action' . $action == $method) {
+            if ('action' . $action === $method) {
                 return true;
             }
         }

@@ -18,7 +18,6 @@ abstract class Model
      * keeps database table name
      */
     protected const TABLE = null;
-
     public $id;
 
     /**
@@ -29,7 +28,7 @@ abstract class Model
     {
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->query($sql, [], static::class);
+        return $db->query($sql, static::class, []);
     }
 
     /**
@@ -44,7 +43,10 @@ abstract class Model
         }
         $db = Db::instance();
         $args = [':id' => $id];
-        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', $args, static::class);
+        $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
+
+        $data = $db->query($sql, static::class, $args);
+
         if ($data === false || empty($data)) {
             return false;
         }
@@ -58,9 +60,9 @@ abstract class Model
     public static function findLastEntries()
     {
         $db = Db::instance();
-        //SELECT * FROM `news` WHERE id = (select max(id) from news)
         $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT 3';
-        return $db->query($sql, [], static::class);
+
+        return $db->query($sql, static::class, []);
     }
 
     /**
@@ -73,19 +75,18 @@ abstract class Model
         $col = [];
         $val = [];
         foreach ($this as $k => $v) {
-            if ($k === 'id' || $k === 'data') {
+            if ($k === 'id') {
                 continue;
             }
             $col[] = $k;
             $val[':' . $k] = $v;
         }
-        $sql = '
-            INSERT INTO ' . static::TABLE . '(' . implode(',', $col) . ')
-            VALUES
-            (' . implode(',', array_keys($val)) . ')
-            ';
+        $sql = 'INSERT INTO ' . static::TABLE . '(' . implode(',', $col) . ')
+            VALUES(' . implode(',', array_keys($val)) . ')';
         $db = Db::instance();
+
         $res = $db->execute($sql, $val);
+
         if ($res === false) {
             return false;
         }
@@ -107,15 +108,12 @@ abstract class Model
                 $val[':' . $k] = $v;
                 continue;
             }
-            if (!isset($v) || empty($v)) {
-                continue;
-            }
             $col[$k . '=:' . $k] = $k;
             $val[':' . $k] = $v;
         }
-        $sql = '
-            UPDATE ' . static::TABLE . ' SET ' . implode(',', array_keys($col)) . ' WHERE id=:id';
+        $sql = 'UPDATE ' . static::TABLE . ' SET ' . implode(',', array_keys($col)) . ' WHERE id=:id';
         $db = Db::instance();
+
         return $db->execute($sql, $val);
     }
 
@@ -131,32 +129,24 @@ abstract class Model
     /** save method
      * @return bool
      */
-    public function save(array $arr = [])
+    public function save()
     {
-        if (empty($arr)) {
-            if ($this->isNew()) {
-                return $this->insert();
-            } else {
-                return $this->update();
-            }
+        if ($this->isNew()) {
+            return $this->insert();
         } else {
-            if ($this->isNew()) {
-                return $this->insert($arr);
-            } else {
-                return $this->update($arr);
-            }
+            return $this->update();
         }
     }
-        /**
-         * delete method
-         * @return bool
-         */
-        public
-        function delete()
-        {
-            $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=:id';
-            $db = Db::instance();
-            $args = [':id' => $this->id];
-            return $db->execute($sql, $args);
-        }
+
+    /**
+     * delete method
+     * @return bool
+     */
+    public function delete()
+    {
+        $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=:id';
+        $db = Db::instance();
+        $args = [':id' => $this->id];
+        return $db->execute($sql, $args);
     }
+}

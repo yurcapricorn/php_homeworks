@@ -6,9 +6,6 @@ namespace App;
  * Class View
  * displaying information with templates
  * @package App
- * @method __set($key,$value) @return bool
- * @method __isset() @return bool
- * @method __get(mixed $key) @return mixed|bool
  */
 class View implements \Countable, \Iterator
 {
@@ -23,6 +20,9 @@ class View implements \Countable, \Iterator
     public function render($template)
     {
         ob_start();
+        foreach ($this as $key => $value){
+            $$key = $value;
+        }
         include $template;
         $data = ob_get_contents();
         ob_end_clean();

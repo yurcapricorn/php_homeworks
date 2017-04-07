@@ -2,13 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Models\Article;
-
 /**
  * Controller Admin
- * @method __construct()
- * @method action(array $url = [])
- * @method access($action)
  * @package App\Controllers
  */
 class Admin
@@ -16,16 +11,12 @@ class Admin
     use Base;
 
     /**
-     * Adds article to Db
+     * displays last news
      */
-    public function actionAdd()
+    public function actionAllNews()
     {
-        $article = new Article();
-        $res = $article->save($_POST);
-        if ($res === false) {
-            $this->view->error = 'something went wrong';
-        }
-        header('Location:' . '/');
+        $news = new News();
+        $news->actionAll();
     }
 
     /**
@@ -33,31 +24,18 @@ class Admin
      */
     public function actionEdit()
     {
-        $article = Article::findById($_POST['id']);
-        if ($article === false) {
-            $this->view->error = 'something went wrong';
-        }
-        $res = $article->save($_POST);
-        if ($res === false) {
-            $this->view->error = 'something went wrong';
-        }
-        header('Location:' . '/');
+        $template = __DIR__ . '/../../../admin/edit.html';
+        $this->view->display($template);
     }
 
     /**
-     * Removes article from Db
+     * saves object into Db
      */
-    public function actionRemove()
+    public function actionSave()
     {
-        $article = Article::findById($_POST['id']);
-        if (empty($article) || $article === false) {
-            $this->view->error = 'Article ' . $_POST['id'] . ' not found';
-        } else {
-            $res = $article->delete();
-            if ($res !== true) {
-                $this->view->error = 'something went wrong';
-            }
-        }
-        header('Location:' . '/');
+
+        $article = new \App\Models\Article($_POST);
+        var_dump($article);
+        $article->save();
     }
 }

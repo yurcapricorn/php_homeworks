@@ -31,7 +31,7 @@ class Front
             }
             default: {
                 $news = new News();
-                $news->actionIndex();
+                $news->actionAll();
                 break;
             }
         }

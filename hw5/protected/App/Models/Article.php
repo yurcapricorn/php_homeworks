@@ -2,35 +2,38 @@
 
 namespace App\Models;
 
-use App\SomeMagic;
-
-require_once __DIR__ . '/Model.php';
-require_once __DIR__ . '/../SomeMagic.php';
+require_once __DIR__ . '/../../autoload.php';
 
 /**
  * Class Article
- * extends Model uses SomeMagic trait
- * serves to make structurised requests to database
- * fields id, author_id, title, lead
- * @method save(array $arr = []) @return bool
- * @method delete() @return bool
- * @method isNew() @return bool
- * @method static findById(int $id) @return App\Models\Article
- * @method static findAll() @return array
- * @method static findLastEntries() @return Article array
- * @method __set(mixed $key, mixed $value) @return bool
- * @method __isset(mixed $key) @return bool
  * @package App\Models
  */
 class Article extends Model
 {
-    use SomeMagic;
-
     protected const TABLE = 'news';
-
     public $author_id;
     public $title;
     public $lead;
+
+    /**
+     * Article constructor.
+     * fills instance with data available
+     * @param array $arr
+     */
+    public function __construct(array $arr = [])
+    {
+        if (empty($arr)) {
+            return;
+        }
+        $article = new Article();
+        if (!empty($arr['id'])) {
+            $this->id = $arr['id'];
+            $article = Article::findById($arr['id']);
+        }
+        $this->title = !empty($arr['title']) ? $arr['title'] : $article->title;
+        $this->lead = !empty($arr['lead']) ? $arr['lead'] : $article->lead;
+        $this->author_id = !empty($arr['author_id']) ? $arr['author_id'] : $article->author_id;
+    }
 
     /**
      * redefines SomeMagic __get() method
@@ -47,25 +50,14 @@ class Article extends Model
                 }
                 break;
             }
-            default: {
-                if (isset($this->data[$key])) {
-                    return $this->data[$key];
-                }
-                return false;
+            default:{
                 break;
             }
         }
-        return false;
     }
 
-    public function insert(array $arr = [])
+    public function insert()
     {
-        if (!empty($arr['title'])) {
-            $this->title = $arr['title'];
-        }
-        if (!empty($arr['lead'])) {
-            $this->lead = $arr['lead'];
-        }
         if (empty($this->title) && empty($this->lead)) {
             return false;
         } else {
@@ -77,13 +69,10 @@ class Article extends Model
         return true;
     }
 
-    public function update(array $arr = [])
+    public function update()
     {
-        if (!empty($arr['title'])) {
-            $this->title = $arr['title'];
-        }
-        if (!empty($arr['lead'])) {
-            $this->lead = $arr['lead'];
+        if ((empty($this->title) && empty($this->lead))) {
+            return false;
         }
         $res = parent::update();
         if ($res !== true) {

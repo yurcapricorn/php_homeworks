@@ -7,19 +7,14 @@
 <body>
 
 <?php
-
-if(!empty($this->error)){
-    echo $this->error;
-    $this->error=null;
-}
-foreach($this->news as $article){
+    foreach($articles as $article){
 ?>
 
 <div>
     <h1>
         <a href="
             <?php
-                echo '\\News\Article\\?id=' . $article->id;
+                echo '/News/One/?id=' . $article->id;
             ?>
         ">
             <?php
@@ -28,11 +23,13 @@ foreach($this->news as $article){
         </a>
     </h1>
 
-    <h1>
+    <h2>
         <?php
-            echo $article->author->name . ' ' . $article->author->surname;
+            if (!empty($article->author_id)){
+                echo $article->author->name . ' ' . $article->author->surname;
+            }
         ?>
-    </h1>
+    </h2>
 
     <p>
         <?php
