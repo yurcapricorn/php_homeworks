@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-
 use App\View;
 
 /**
@@ -11,6 +10,9 @@ use App\View;
  */
 Trait Base
 {
+    /**
+     * @var View
+     */
     protected $view;
 
     /**
