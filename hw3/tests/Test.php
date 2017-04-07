@@ -9,10 +9,7 @@ use App\Models\Article;
 
 require_once __DIR__ . '/../protected/autoload.php';
 
-/**
- * Class Test
- * @package tests
- */
+
 /**
  * Class Test
  * @package tests
