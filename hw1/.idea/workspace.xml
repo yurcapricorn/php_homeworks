@@ -15,22 +15,38 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Model.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Model.php">
+      <file leaf-file-name="Test.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+            <state relative-caret-position="438">
+              <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
               <folding>
-                <marker date="1491552953367" expanded="true" signature="227:241" ph="SELECT * FRO... ${static::TABLE}" />
-                <marker date="1491552953367" expanded="true" signature="576:624" ph="SELECT * FRO... ${static::TABLE}" />
-                <marker date="1491552953367" expanded="true" signature="917:930" ph="SELECT * FRO... " />
-                <marker date="1491552953367" expanded="true" signature="917:931" ph="SELECT * FRO... ${`news`}" />
-                <marker date="1491552953367" expanded="true" signature="917:975" ph="SELECT * FRO... news" />
-                <marker date="1491552953367" expanded="true" signature="917:976" ph="SELECT * FRO... ${`news`}" />
-                <marker date="1491552953367" expanded="true" signature="917:977" ph="SELECT * FRO... ${static::TABLE}" />
-                <marker date="1491552953367" expanded="true" signature="917:978" ph="SELECT * FRO... news" />
-                <marker date="1491552953367" expanded="true" signature="978:1031" ph="SELECT TOP 3... Object" />
+                <marker date="1491554306279" expanded="true" signature="241:265" ph="SELECT * FRO... news" />
+                <marker date="1491554306279" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
+                <marker date="1491554306279" expanded="true" signature="249:265" ph="INSERT INTO " />
+                <marker date="1491554306279" expanded="true" signature="606:620" ph="SELECT * FRO... ${$table}" />
+                <marker date="1491554306279" expanded="true" signature="606:637" ph="SELECT * FRO... news" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testsrun.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/testsrun.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Db.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Db.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,7 +76,6 @@
         <option value="$PROJECT_DIR$/templates/article.php" />
         <option value="$PROJECT_DIR$/Article.php" />
         <option value="$PROJECT_DIR$/autoload.php" />
-        <option value="$PROJECT_DIR$/tests/Test.php" />
         <option value="$PROJECT_DIR$/templates/news_index2.html" />
         <option value="$PROJECT_DIR$/templates/news_index.html" />
         <option value="$PROJECT_DIR$/errors.php" />
@@ -72,6 +87,8 @@
         <option value="$PROJECT_DIR$/Models/Article.php" />
         <option value="$PROJECT_DIR$/Db.php" />
         <option value="$PROJECT_DIR$/Model.php" />
+        <option value="$PROJECT_DIR$/tests/testsrun.php" />
+        <option value="$PROJECT_DIR$/tests/Test.php" />
       </list>
     </option>
   </component>
@@ -265,12 +282,12 @@
       <workItem from="1491410247897" duration="1189000" />
       <workItem from="1491411480529" duration="1649000" />
       <workItem from="1491475673057" duration="58000" />
-      <workItem from="1491552426329" duration="527000" />
+      <workItem from="1491552426329" duration="1873000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60762000" />
+    <option name="totallyTimeSpent" value="62108000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -306,23 +323,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" lean-forward="false" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
-            <marker date="1490594312282" expanded="true" signature="241:272" ph="SELECT * FRO... news" />
-            <marker date="1490594312282" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490594312282" expanded="true" signature="249:272" ph="INSERT INTO " />
-            <marker date="1490594312282" expanded="true" signature="644:675" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="241:265" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1491554306279" expanded="true" signature="249:265" ph="INSERT INTO " />
+            <marker date="1491554306279" expanded="true" signature="606:620" ph="SELECT * FRO... ${$table}" />
+            <marker date="1491554306279" expanded="true" signature="606:637" ph="SELECT * FRO... news" />
           </folding>
         </state>
       </provider>
@@ -348,15 +358,15 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1491552953367" expanded="true" signature="227:241" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="576:624" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:930" ph="SELECT * FRO... " />
-            <marker date="1491552953367" expanded="true" signature="917:931" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:975" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="917:976" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:977" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:978" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="978:1031" ph="SELECT TOP 3... Object" />
+            <marker date="1491553352528" expanded="true" signature="228:242" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="566:614" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:955" ph="SELECT * FRO... " />
+            <marker date="1491553352528" expanded="true" signature="942:956" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1000" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="942:1001" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1002" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:1003" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="1003:1056" ph="SELECT TOP 3... Object" />
           </folding>
         </state>
       </provider>
@@ -399,10 +409,11 @@
         <state relative-caret-position="799">
           <caret line="47" column="37" lean-forward="false" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
-            <marker date="1490594312282" expanded="true" signature="241:272" ph="SELECT * FRO... news" />
-            <marker date="1490594312282" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490594312282" expanded="true" signature="249:272" ph="INSERT INTO " />
-            <marker date="1490594312282" expanded="true" signature="644:675" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="241:265" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1491554306279" expanded="true" signature="249:265" ph="INSERT INTO " />
+            <marker date="1491554306279" expanded="true" signature="606:620" ph="SELECT * FRO... ${$table}" />
+            <marker date="1491554306279" expanded="true" signature="606:637" ph="SELECT * FRO... news" />
           </folding>
         </state>
       </provider>
@@ -420,15 +431,15 @@
         <state relative-caret-position="340">
           <caret line="20" column="21" lean-forward="false" selection-start-line="20" selection-start-column="21" selection-end-line="20" selection-end-column="21" />
           <folding>
-            <marker date="1491552953367" expanded="true" signature="227:241" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="576:624" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:930" ph="SELECT * FRO... " />
-            <marker date="1491552953367" expanded="true" signature="917:931" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:975" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="917:976" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:977" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:978" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="978:1031" ph="SELECT TOP 3... Object" />
+            <marker date="1491553352528" expanded="true" signature="228:242" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="566:614" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:955" ph="SELECT * FRO... " />
+            <marker date="1491553352528" expanded="true" signature="942:956" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1000" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="942:1001" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1002" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:1003" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="1003:1056" ph="SELECT TOP 3... Object" />
           </folding>
         </state>
       </provider>
@@ -471,10 +482,11 @@
         <state relative-caret-position="1173">
           <caret line="69" column="4" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="69" selection-end-column="4" />
           <folding>
-            <marker date="1490594312282" expanded="true" signature="241:272" ph="SELECT * FRO... news" />
-            <marker date="1490594312282" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490594312282" expanded="true" signature="249:272" ph="INSERT INTO " />
-            <marker date="1490594312282" expanded="true" signature="644:675" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="241:265" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1491554306279" expanded="true" signature="249:265" ph="INSERT INTO " />
+            <marker date="1491554306279" expanded="true" signature="606:620" ph="SELECT * FRO... ${$table}" />
+            <marker date="1491554306279" expanded="true" signature="606:637" ph="SELECT * FRO... news" />
           </folding>
         </state>
       </provider>
@@ -492,15 +504,15 @@
         <state relative-caret-position="731">
           <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
-            <marker date="1491552953367" expanded="true" signature="227:241" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="576:624" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:930" ph="SELECT * FRO... " />
-            <marker date="1491552953367" expanded="true" signature="917:931" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:975" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="917:976" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:977" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:978" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="978:1031" ph="SELECT TOP 3... Object" />
+            <marker date="1491553352528" expanded="true" signature="228:242" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="566:614" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:955" ph="SELECT * FRO... " />
+            <marker date="1491553352528" expanded="true" signature="942:956" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1000" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="942:1001" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1002" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:1003" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="1003:1056" ph="SELECT TOP 3... Object" />
           </folding>
         </state>
       </provider>
@@ -542,10 +554,11 @@
         <state relative-caret-position="714">
           <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
           <folding>
-            <marker date="1490594312282" expanded="true" signature="241:272" ph="SELECT * FRO... news" />
-            <marker date="1490594312282" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490594312282" expanded="true" signature="249:272" ph="INSERT INTO " />
-            <marker date="1490594312282" expanded="true" signature="644:675" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="241:265" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1491554306279" expanded="true" signature="249:265" ph="INSERT INTO " />
+            <marker date="1491554306279" expanded="true" signature="606:620" ph="SELECT * FRO... ${$table}" />
+            <marker date="1491554306279" expanded="true" signature="606:637" ph="SELECT * FRO... news" />
           </folding>
         </state>
       </provider>
@@ -555,15 +568,15 @@
         <state relative-caret-position="731">
           <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
-            <marker date="1491552953367" expanded="true" signature="227:241" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="576:624" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:930" ph="SELECT * FRO... " />
-            <marker date="1491552953367" expanded="true" signature="917:931" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:975" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="917:976" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:977" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:978" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="978:1031" ph="SELECT TOP 3... Object" />
+            <marker date="1491553352528" expanded="true" signature="228:242" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="566:614" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:955" ph="SELECT * FRO... " />
+            <marker date="1491553352528" expanded="true" signature="942:956" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1000" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="942:1001" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1002" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:1003" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="1003:1056" ph="SELECT TOP 3... Object" />
           </folding>
         </state>
       </provider>
@@ -597,10 +610,11 @@
         <state relative-caret-position="714">
           <caret line="42" column="22" lean-forward="false" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
           <folding>
-            <marker date="1490594312282" expanded="true" signature="241:272" ph="SELECT * FRO... news" />
-            <marker date="1490594312282" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490594312282" expanded="true" signature="249:272" ph="INSERT INTO " />
-            <marker date="1490594312282" expanded="true" signature="644:675" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="241:265" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1491554306279" expanded="true" signature="249:265" ph="INSERT INTO " />
+            <marker date="1491554306279" expanded="true" signature="606:620" ph="SELECT * FRO... ${$table}" />
+            <marker date="1491554306279" expanded="true" signature="606:637" ph="SELECT * FRO... news" />
           </folding>
         </state>
       </provider>
@@ -610,15 +624,15 @@
         <state relative-caret-position="731">
           <caret line="43" column="42" lean-forward="false" selection-start-line="43" selection-start-column="42" selection-end-line="43" selection-end-column="42" />
           <folding>
-            <marker date="1491552953367" expanded="true" signature="227:241" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="576:624" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:930" ph="SELECT * FRO... " />
-            <marker date="1491552953367" expanded="true" signature="917:931" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:975" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="917:976" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:977" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:978" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="978:1031" ph="SELECT TOP 3... Object" />
+            <marker date="1491553352528" expanded="true" signature="228:242" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="566:614" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:955" ph="SELECT * FRO... " />
+            <marker date="1491553352528" expanded="true" signature="942:956" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1000" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="942:1001" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1002" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:1003" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="1003:1056" ph="SELECT TOP 3... Object" />
           </folding>
         </state>
       </provider>
@@ -670,40 +684,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Models/Article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
           <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <marker date="1490594312282" expanded="true" signature="241:272" ph="SELECT * FRO... news" />
-            <marker date="1490594312282" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
-            <marker date="1490594312282" expanded="true" signature="249:272" ph="INSERT INTO " />
-            <marker date="1490594312282" expanded="true" signature="644:675" ph="SELECT * FRO... news" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,11 +708,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Db.php">
+    <entry file="file://$PROJECT_DIR$/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="1" lean-forward="false" selection-start-line="57" selection-start-column="1" selection-end-line="57" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="833">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+          <folding>
+            <marker date="1491553352528" expanded="true" signature="228:242" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="566:614" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:955" ph="SELECT * FRO... " />
+            <marker date="1491553352528" expanded="true" signature="942:956" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1000" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="942:1001" ph="SELECT * FRO... ${`news`}" />
+            <marker date="1491553352528" expanded="true" signature="942:1002" ph="SELECT * FRO... ${static::TABLE}" />
+            <marker date="1491553352528" expanded="true" signature="942:1003" ph="SELECT * FRO... news" />
+            <marker date="1491553352528" expanded="true" signature="1003:1056" ph="SELECT TOP 3... Object" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,20 +734,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Model.php">
+    <entry file="file://$PROJECT_DIR$/Models/Article.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="38" column="7" lean-forward="false" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="187">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/testsrun.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="42" lean-forward="false" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Db.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="62" column="30" lean-forward="true" selection-start-line="62" selection-start-column="30" selection-end-line="62" selection-end-column="30" />
           <folding>
-            <marker date="1491552953367" expanded="true" signature="227:241" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="576:624" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:930" ph="SELECT * FRO... " />
-            <marker date="1491552953367" expanded="true" signature="917:931" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:975" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="917:976" ph="SELECT * FRO... ${`news`}" />
-            <marker date="1491552953367" expanded="true" signature="917:977" ph="SELECT * FRO... ${static::TABLE}" />
-            <marker date="1491552953367" expanded="true" signature="917:978" ph="SELECT * FRO... news" />
-            <marker date="1491552953367" expanded="true" signature="978:1031" ph="SELECT TOP 3... Object" />
+            <marker date="1491554306279" expanded="true" signature="241:265" ph="SELECT * FRO... news" />
+            <marker date="1491554306279" expanded="true" signature="249:260" ph="INSERT INTO ${static::TABLE}... " />
+            <marker date="1491554306279" expanded="true" signature="249:265" ph="INSERT INTO " />
+            <marker date="1491554306279" expanded="true" signature="606:620" ph="SELECT * FRO... ${$table}" />
+            <marker date="1491554306279" expanded="true" signature="606:637" ph="SELECT * FRO... news" />
           </folding>
         </state>
       </provider>

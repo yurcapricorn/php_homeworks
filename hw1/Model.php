@@ -14,6 +14,7 @@ abstract class Model
     public static function findAll()
     {
         $db = new Db;
+
         $sql = 'SELECT * FROM ' . static::TABLE;
         return $db->query($sql, static::class, []);
     }
@@ -28,8 +29,11 @@ abstract class Model
             return false;
         }
         $db = new Db();
+
         $args = [':id' => $id];
-        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', static::class, $args);
+        $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
+        $data = $db->query($sql, static::class, $args);
+
         if (empty($data) || $data === false) {
             return false;
         }
@@ -43,6 +47,7 @@ abstract class Model
     public static function findLastEntries()
     {
         $db = new Db();
+
         $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT 3';
         return $db->query($sql, static::class, []);
     }

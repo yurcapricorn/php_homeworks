@@ -14,12 +14,10 @@ abstract class Test
     private static function dbTestExecute()
     {
         $db = new \Db();
-        $sql = 'INSERT INTO ' . news . " (title,lead)" . ' VALUES (:title, :lead)';
+        $sql = 'INSERT INTO news (title,lead) VALUES (:title, :lead)';
         $args = [':title' => 'testtitle', ':lead' => 'testlead'];
         $res = $db->execute($sql, $args);
-        if ($res === false) {
-            echo 'dbTestExecute Error';
-        }
+        assert($res !== false, 'dbTestExecute Error');
     }
 
     /*
@@ -28,12 +26,10 @@ abstract class Test
     private static function dbTestQuery()
     {
         $db = new \Db();
-        $sql = "SELECT * FROM news WHERE id=:id";
+        $sql = 'SELECT * FROM news WHERE id=:id';
         $args = [':id' => 1];
-        $res = $db->query($sql, $args);
-        if (empty($res)) {
-            echo 'dbTestQuery Error';
-        }
+        $res = $db->query($sql, \stdClass::class, $args);
+        assert(!empty($res), 'dbTestQuery Error');
     }
 
     /**
@@ -43,14 +39,10 @@ abstract class Test
     {
         $id = 1;
         $data = Article::findById($id);
-        if ($data === false) {
-            echo 'modelTestFindById Error';
-        }
+        assert($data !== false)['modelTestFindById Error'];
         $id = 0;
         $data = Article::findById($id);
-        if ($data !== false) {
-            echo 'modelTestFindById Error';
-        }
+        assert($data === false, 'modelTestFindById Error');
     }
 
     /**
@@ -59,9 +51,7 @@ abstract class Test
     private static function modelTestfindLastEntries()
     {
         $data = Article::findLastEntries(1);
-        if ($data === false) {
-            echo 'modelTestFindById Error';
-        }
+        assert($data !== false, 'modelTestFindById Error');
     }
 
     /**
@@ -74,9 +64,4 @@ abstract class Test
         static::modelTestFindById();
         static::modelTestfindLastEntries();
     }
-
 }
-
-Test::testAll();
-
-echo 'Test done';
