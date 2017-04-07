@@ -15,9 +15,14 @@ require_once __DIR__ . '/Singleton.php';
 class Db
 {
     use \App\Singleton;
-
+    /**
+     * @var \PDO
+     */
     protected $dbh;
 
+    /**
+     * Db constructor.
+     */
     public function __construct()
     {
         require_once __DIR__ . '/Config.php';

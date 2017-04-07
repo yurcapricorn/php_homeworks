@@ -14,6 +14,9 @@ trait Singleton
     {
     }
 
+    /**
+     * @return mixed (object instance)
+     */
     public static function instance()
     {
         if (static::$instance !== null) {

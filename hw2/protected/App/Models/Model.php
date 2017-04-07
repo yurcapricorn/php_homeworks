@@ -8,17 +8,11 @@ require_once __DIR__ . '/../Db.php';
 
 /**
  * Class Model
- * Maintains complex requests to Db class
- * forces childs to have TABLE field for db table name
  * @package App\Models
  */
 abstract class Model
 {
-    /**
-     * keeps database table name
-     */
     protected const TABLE = null;
-
     public $id;
 
     /**
@@ -28,6 +22,7 @@ abstract class Model
     public static function findAll()
     {
         $db = Db::instance();
+
         $sql = 'SELECT * FROM ' . static::TABLE;
         return $db->query($sql, static::class, []);
     }
@@ -43,8 +38,11 @@ abstract class Model
             return false;
         }
         $db = Db::instance();
+
+        $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $args = [':id' => $id];
-        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', static::class, $args);
+        $data = $db->query($sql, static::class, $args);
+
         if ($data === false || empty($data)) {
             return false;
         }
@@ -58,6 +56,7 @@ abstract class Model
     public static function findLastEntries()
     {
         $db = Db::instance();
+
         $sql = 'SELECT * FROM ' . static::TABLE . ' ORDER BY ID DESC LIMIT 3';
         return $db->query($sql, static::class, []);
     }
@@ -70,21 +69,23 @@ abstract class Model
     public function insert()
     {
         $col = [];
-        $val = [];
+        $args = [];
         foreach ($this as $k => $v) {
             if ($k == 'id') {
                 continue;
             }
             $col[] = $k;
-            $val[':' . $k] = $v;
+            $args[':' . $k] = $v;
         }
         $sql = '
             INSERT INTO ' . static::TABLE . '(' . implode(',', $col) . ')
             VALUES
-            (' . implode(',', array_keys($val)) . ')
+            (' . implode(',', array_keys($args)) . ')
             ';
         $db = Db::instance();
-        $res = $db->execute($sql, $val);
+
+        $res = $db->execute($sql, $args);
+
         if ($res === false) {
             return false;
         }
@@ -100,19 +101,20 @@ abstract class Model
     public function update()
     {
         $col = [];
-        $val = [];
+        $args = [];
         foreach ($this as $k => $v) {
             if ($k == 'id') {
-                $val[':' . $k] = $v;
+                $args[':' . $k] = $v;
                 continue;
             }
             $col[$k . '=:' . $k] = $k;
-            $val[':' . $k] = $v;
+            $args[':' . $k] = $v;
         }
         $sql = '
             UPDATE ' . static::TABLE . ' SET ' . implode(',', array_keys($col)) . ' WHERE id=:id';
         $db = Db::instance();
-        return $db->execute($sql, $val);
+
+        return $db->execute($sql, $args);
     }
 
     /**
@@ -144,6 +146,7 @@ abstract class Model
     {
         $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=:id';
         $db = Db::instance();
+
         $args = [':id' => $this->id];
         return $db->execute($sql, $args);
     }
