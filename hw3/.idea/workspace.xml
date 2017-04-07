@@ -24,7 +24,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -33,16 +33,6 @@
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="article.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/news/article.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,7 +97,6 @@
         <option value="$PROJECT_DIR$/Config_file.php" />
         <option value="$PROJECT_DIR$/article/index.html" />
         <option value="$PROJECT_DIR$/article/article.html" />
-        <option value="$PROJECT_DIR$/tests/Test.php" />
         <option value="$PROJECT_DIR$/protected/App/Db.php" />
         <option value="$PROJECT_DIR$/readme.md" />
         <option value="$PROJECT_DIR$/news/index.html" />
@@ -124,6 +113,7 @@
         <option value="$PROJECT_DIR$/admin/remove.php" />
         <option value="$PROJECT_DIR$/admin/edit.php" />
         <option value="$PROJECT_DIR$/admin/add.php" />
+        <option value="$PROJECT_DIR$/tests/Test.php" />
       </list>
     </option>
   </component>
@@ -181,6 +171,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="homework3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hw3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="news" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -194,20 +198,21 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="debugger.stepping" />
     <property name="js.eslint.eslintPackage" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../hw2" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3" />
-      <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw2\hidden\Templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3\protected\App" />
       <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3\admin\templates" />
       <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3\protected" />
       <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3\protected\App\modules\admin" />
       <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3\protected\App\modules\article" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3\tests" />
+      <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw3" />
+      <recent name="C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw2\hidden\Templates" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.Singleton.php">
@@ -318,7 +323,7 @@
       <workItem from="1491377305902" duration="5981000" />
       <workItem from="1491469462940" duration="5688000" />
       <workItem from="1491480083295" duration="34000" />
-      <workItem from="1491488850107" duration="3532000" />
+      <workItem from="1491488850107" duration="5325000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487941813358</created>
@@ -394,7 +399,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="384203000" />
+    <option name="totallyTimeSpent" value="385996000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -448,7 +453,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/trash/Js/index.html" />
     <entry file="file://$PROJECT_DIR$/Protected/Class1.php" />
     <entry file="file://$PROJECT_DIR$/trash/trash.php" />
     <entry file="file://$PROJECT_DIR$/protected/Models/User.php" />
@@ -513,19 +517,6 @@
     <entry file="file://$PROJECT_DIR$/article/templates/index.html" />
     <entry file="file://$PROJECT_DIR$/article/templates/article.html" />
     <entry file="file://$PROJECT_DIR$/admin/templates/admin.html" />
-    <entry file="file://$PROJECT_DIR$/tests/Test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="23" column="38" lean-forward="false" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-          <folding>
-            <marker date="1491345598389" expanded="true" signature="340:361" ph="INSERT INTO news... " />
-            <marker date="1491345598389" expanded="true" signature="340:382" ph="INSERT INTO news . &quot; (title,lead)&quot; .... " />
-            <marker date="1491345598389" expanded="true" signature="340:407" ph="INSERT INTO ${news}... " />
-            <marker date="1491345598389" expanded="true" signature="732:763" ph="SELECT * FRO... news" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/App/Config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -670,6 +661,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/tests/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="27" column="32" lean-forward="false" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
+          <folding>
+            <element signature="e#25#36#0#PHP" expanded="true" />
+            <marker date="1491556618766" expanded="true" signature="384:436" ph="INSERT INTO news... " />
+            <marker date="1491556618766" expanded="true" signature="740:771" ph="SELECT * FRO... news" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/run.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/news/article.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -683,14 +702,6 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/news/article.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>

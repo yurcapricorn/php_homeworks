@@ -2,10 +2,10 @@
 
 namespace tests;
 
-use App\Config;
 use App\Db;
-use App\Models\Article;
 use App\View;
+use App\Config;
+use App\Models\Article;
 
 require_once __DIR__ . '/../protected/autoload.php';
 
@@ -13,62 +13,56 @@ require_once __DIR__ . '/../protected/autoload.php';
  * Class Test
  * @package tests
  */
+/**
+ * Class Test
+ * @package tests
+ */
 abstract class Test
 {
     /**
-     * execute method test
+     * execute method testing
      */
-    public static function dbTestExecute()
+    private static function dbTestExecute()
     {
         $db = new Db();
-        $sql = 'INSERT INTO ' . 'news' . " (title,lead)" . ' VALUES (:title, :lead)';
+        $sql = 'INSERT INTO news (title,lead) VALUES (:title, :lead)';
         $args = [':title' => 'testtitle', ':lead' => 'testlead'];
         $res = $db->execute($sql, $args);
-        if ($res === false) {
-            echo 'dbTestExecute Error';
-        }
+        assert($res !== false, 'dbTestExecute Error');
     }
 
     /*
-     * query method test
+     * query method testing
      */
-    public static function dbTestQuery()
+    private static function dbTestQuery()
     {
         $db = new Db();
-        $sql = "SELECT * FROM news WHERE id=:id";
+        $sql = 'SELECT * FROM news WHERE id=:id';
         $args = [':id' => 1];
-        $res = $db->query($sql, $args);
-        if (empty($res)) {
-            echo 'dbTestQuery Error';
-        }
+        $res = $db->query($sql, \stdClass::class, $args);
+        assert(!empty($res), 'dbTestQuery Error');
     }
 
     /**
-     * findById method test
+     * findById method testing
      */
-    public static function modelTestFindById()
+    private static function modelTestFindById()
     {
         $id = 1;
         $data = Article::findById($id);
-        if ($data === false) {
-            echo 'modelTestFindById Error';
-        }
+        assert($data !== false)['modelTestFindById Error'];
         $id = 0;
         $data = Article::findById($id);
-        if ($data !== false) {
-            echo 'modelTestFindById Error';
-        }
+        assert($data === false, 'modelTestFindById Error');
     }
 
     /**
-     * findLastEntries method test
+     * findLastEntries method testing
      */
-    public static function modelTestFindLastEntries()
+    private static function modelTestfindLastEntries()
     {
-        $data = Article::findLastEntries();
-        if ($data === false) {
-            echo 'modelTestFindById Error';
-        }
+        $data = Article::findLastEntries(1);
+        assert($data !== false, 'modelTestFindById Error');
     }
 
     /**
@@ -78,12 +72,8 @@ abstract class Test
     {
         $config = Config::instance();
         $config2 = Config::instance();
-        if ($config !== $config2) {
-            echo 'Singleton error';
-        }
-        if ($config->data['db']['host'] == NULL) {
-            echo 'ConfigTest Error';
-        };
+        assert($config === $config2, 'Singleton error');
+        assert($config->data['db']['host'] !== null, 'ConfigTest Error');
     }
 
     /**
@@ -92,16 +82,10 @@ abstract class Test
     public static function modelInsertMethodTest()
     {
         $article = new Article();
-        $article->title = 'testtitle';
-        $article->lead = 'testlead';
-        $res = $article->save();
-        if ($res === false) {
-            echo 'modelInsertMethodTest error';
-            return;
-        }
-        if ($article->id === NULL) {
-            echo 'modelInsertMethodTest error';
-        }
+        $article->title = 'title test';
+        $article->lead = 'lead test';
+        $article->save();
+        assert($article->id !== null, 'modelInsertMethodTest error');
     }
 
     /**
@@ -109,12 +93,11 @@ abstract class Test
      */
     public static function modelUpdateMethodTest()
     {
+
         $article = Article::findLastEntries()[0];
         $article->lead = 'test';
         $res = $article->save();
-        if ($res === false) {
-            echo 'modelUpdateMethodTest error';
-        }
+        assert($res !== false, 'modelUpdateMethodTest error');
     }
 
     /**
@@ -122,11 +105,10 @@ abstract class Test
      */
     public static function modelDeleteMethodTest()
     {
-        $article = Article::findLastEntries()[0];
+        $article = new Article();
+        $article->id = '100';
         $res = $article->delete();
-        if ($res === false) {
-            echo 'modelUpdateMethodTest error';
-        }
+        assert($res !== false, 'modelUpdateMethodTest error');
     }
 
     /**
@@ -139,9 +121,7 @@ abstract class Test
             $article->author_id = 1;
         }
         $author = $article->author;
-        if (empty($author)) {
-            echo 'authorTest error';
-        }
+        assert(!empty($author),'authorTest error');
     }
 
     /**
@@ -150,8 +130,8 @@ abstract class Test
     public static function viewTest(){
         $data=\App\Models\Article::findLastEntries();
         $view = new View($data);
-        if(empty($view)){echo 'viewTest error';}
-        if(!is_subclass_of($view, 'Iterator')){echo 'viewTest error';}
+        assert(!empty($view), 'viewTest error');
+        assert(is_subclass_of($view, 'Iterator'), 'viewTest error');
     }
 
     /**
@@ -170,8 +150,4 @@ abstract class Test
         static::articleAuthorGetTest();
         static::viewTest();
     }
-
 }
-
-Test::testAll();
-echo 'Tests done';
