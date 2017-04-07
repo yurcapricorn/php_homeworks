@@ -17,7 +17,6 @@ class Article extends Model
 
     /**
      * Article constructor.
-     * fills instance with data available
      * @param array $arr
      */
     public function __construct(array $arr = [])
@@ -36,8 +35,7 @@ class Article extends Model
     }
 
     /**
-     * redefines SomeMagic __get() method
-     * returns Class Author record from DB
+     * @override SomeMagic __get() method
      * @param $key
      * @return Author|bool
      */
@@ -57,6 +55,7 @@ class Article extends Model
     }
 
     /**
+     * @override Model insert()
      * @return bool
      */
     public function insert()
@@ -73,6 +72,7 @@ class Article extends Model
     }
 
     /**
+     * @override Model update()
      * @return bool
      */
     public function update()

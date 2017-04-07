@@ -41,7 +41,8 @@ abstract class Model
         }
         $db = Db::instance();
         $args = [':id' => $id];
-        $data = $db->query('SELECT * FROM ' . static::TABLE . ' WHERE id=:id', static::class, $args);
+        $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
+        $data = $db->query($sql, static::class, $args);
         if ($data === false || empty($data)) {
             return false;
         }
@@ -66,7 +67,7 @@ abstract class Model
         $col = [];
         $val = [];
         foreach ($this as $k => $v) {
-            if ($k === 'id'||$k === 'data') {
+            if ($k === 'id') {
                 continue;
             }
             $col[] = $k;
