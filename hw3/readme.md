@@ -15,7 +15,7 @@ hello! I'm a readme file!
 
 3. Возвращать что-либо из __set() не следует - это ошибка.
 
--fixed. all return parameters removed
+-fixed. all return statements removed
 
 4. https://github.com/yurcapricorn/php_homeworks/blob/master/hw3/protected/App/Models/SomeMagic.php#L69
 Полная чушь написана.
