@@ -2,21 +2,24 @@
 
 /**
  * Class Db
- * Maintains database connection
- * has methods query and execute
  * keeps PDO in field $dbh
  */
 class Db
 {
+    /**
+     * @var PDO
+     */
     protected $dbh;
 
+    /**
+     * Db constructor.
+     */
     public function __construct()
     {
         $this->dbh = new PDO('mysql:host=localhost;dbname=php2', 'root', '');
     }
 
     /**
-     * Db class method query()
      * @param string $query
      * @param array $params
      * @param string $class (path to class)
@@ -37,7 +40,6 @@ class Db
     }
 
     /**
-     * Db Class Method execute()
      * @param string $query
      * @param array $params
      * @return bool

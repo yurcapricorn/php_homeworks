@@ -2,29 +2,23 @@
 
 /**
  * Class Model
- * Maintains complex requests to Db class
- * contain methods findAll(), findById($id), findLastArticles($num)
- * forces childs to have TABLE field for db table name
  */
 abstract class Model
 {
     protected const TABLE = null;
-
     public $id;
 
     /**
-     * find all method
      * @return array|bool
      */
     public static function findAll()
     {
         $db = new Db;
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->query($sql, [], static::class);
+        return $db->query($sql, static::class, []);
     }
 
     /**
-     * find by id method
      * @param int $id
      * @return array|bool
      */
@@ -43,7 +37,6 @@ abstract class Model
     }
 
     /**
-     * finds $num last articles
      * @param $num
      * @return array|bool
      */
