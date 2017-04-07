@@ -2,8 +2,8 @@
 
 namespace tests;
 
-use App\Config;
 use App\Db;
+use App\Config;
 use App\Models\Article;
 
 require_once __DIR__ . '/../protected/autoload.php';
@@ -15,59 +15,49 @@ require_once __DIR__ . '/../protected/autoload.php';
 abstract class Test
 {
     /**
-     * execute method test
+     * execute method testing
      */
-    public static function dbTestExecute()
+    private static function dbTestExecute()
     {
         $db = new Db();
-        $sql = 'INSERT INTO ' . news . " (title,lead)" . ' VALUES (:title, :lead)';
+        $sql = 'INSERT INTO news (title,lead) VALUES (:title, :lead)';
         $args = [':title' => 'testtitle', ':lead' => 'testlead'];
         $res = $db->execute($sql, $args);
-        if ($res === false) {
-            echo 'dbTestExecute Error';
-        }
+        assert($res !== false, 'dbTestExecute Error');
     }
 
     /*
-     * query method test
+     * query method testing
      */
-    public static function dbTestQuery()
+    private static function dbTestQuery()
     {
         $db = new Db();
-        $sql = "SELECT * FROM news WHERE id=:id";
+        $sql = 'SELECT * FROM news WHERE id=:id';
         $args = [':id' => 1];
-        $res = $db->query($sql, $args);
-        if (empty($res)) {
-            echo 'dbTestQuery Error';
-        }
+        $res = $db->query($sql, \stdClass::class, $args);
+        assert(!empty($res), 'dbTestQuery Error');
     }
 
     /**
-     * findById method test
+     * findById method testing
      */
-    public static function modelTestFindById()
+    private static function modelTestFindById()
     {
         $id = 1;
         $data = Article::findById($id);
-        if ($data === false) {
-            echo 'modelTestFindById Error';
-        }
+        assert($data !== false)['modelTestFindById Error'];
         $id = 0;
         $data = Article::findById($id);
-        if ($data !== false) {
-            echo 'modelTestFindById Error';
-        }
+        assert($data === false, 'modelTestFindById Error');
     }
 
     /**
-     * findLastEntries method test
+     * findLastEntries method testing
      */
-    public static function modelTestFindLastEntries()
+    private static function modelTestfindLastEntries()
     {
-        $data = Article::findLastEntries();
-        if ($data === false) {
-            echo 'modelTestFindById Error';
-        }
+        $data = Article::findLastEntries(1);
+        assert($data !== false, 'modelTestFindById Error');
     }
 
     /**
@@ -77,12 +67,8 @@ abstract class Test
     {
         $config = Config::instance();
         $config2 = Config::instance();
-        if ($config !== $config2) {
-            echo 'Singleton error';
-        }
-        if ($config->data['db']['host'] == null) {
-            echo 'ConfigTest Error';
-        };
+        assert($config === $config2, 'Singleton error');
+        assert($config->data['db']['host'] !== null, 'ConfigTest Error');
     }
 
     /**
@@ -94,9 +80,7 @@ abstract class Test
         $article->title = 'title test';
         $article->lead = 'lead test';
         $article->save();
-        if ($article->id === null) {
-            echo 'modelInsertMethodTest error';
-        }
+        assert($article->id !== null, 'modelInsertMethodTest error');
     }
 
     /**
@@ -108,9 +92,7 @@ abstract class Test
         $article = Article::findLastEntries()[0];
         $article->lead = 'test';
         $res = $article->save();
-        if ($res === false) {
-            echo 'modelUpdateMethodTest error';
-        }
+        assert($res !== false, 'modelUpdateMethodTest error');
     }
 
     /**
@@ -121,9 +103,7 @@ abstract class Test
         $article = new Article();
         $article->id = '100';
         $res = $article->delete();
-        if ($res === false) {
-            echo 'modelUpdateMethodTest error';
-        }
+        assert($res !== false, 'modelUpdateMethodTest error');
     }
 
     /**
@@ -140,8 +120,4 @@ abstract class Test
         static::modelUpdateMethodTest();
         static::modelDeleteMethodTest();
     }
-
 }
-
-Test::testAll();
-echo 'Tests done';
