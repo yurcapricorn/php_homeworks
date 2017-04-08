@@ -50,11 +50,7 @@ class Db
         if ($res === false) {
             return false;
         }
-        if (empty($class)) {
-            return $sth->fetchAll();
-        } else {
-            return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
-        }
+        return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
     }
 
     /**
@@ -78,7 +74,8 @@ class Db
      * method to use PDO::lastInsertId() with protected Db field $dbh
      * @return string
      */
-    public function lastDbInsertId(){
+    public function lastDbInsertId()
+    {
         return $this->dbh->lastInsertId();
     }
 }
