@@ -33,6 +33,9 @@ class Article extends Model
         $this->title = $arr['title'] ?? $article->title;
         $this->lead = $arr['lead'] ?? $article->lead;
         $this->author_id = $arr['author_id'] ?? $article->author_id;
+//        $this->title = !empty($arr['title']) ? $arr['title'] : $article->title;
+//        $this->lead = !empty($arr['lead']) ? $arr['lead'] : $article->lead;
+//        $this->author_id = !empty($arr['author_id']) ? $arr['author_id'] : $article->author_id;
     }
 
     /**
