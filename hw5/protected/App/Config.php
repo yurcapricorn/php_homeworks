@@ -22,8 +22,7 @@ class Config
      */
     public function __construct()
     {
-        $data = include __DIR__ . '\..\..\config_file.php';
-        $this->data = $data;
+        $this->data = include __DIR__ . '\..\..\config_file.php';
     }
 }
 

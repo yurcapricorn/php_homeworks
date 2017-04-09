@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\Models\Article;
 use App\NoPageException;
-use App\ZZZException;
 
 require_once __DIR__ . '/../../autoload.php';
 
@@ -34,7 +33,6 @@ class News
 
     /**
      * @throws NoPageException
-     * @throws ZZZException
      */
     public function actionOne()
     {
@@ -46,11 +44,6 @@ class News
             throw new NoPageException('page ' . $_GET['id'] . ' not found');
         }
         $template = __DIR__ . '/../../../news/one.html';
-        try {
-            throw new ZZZException('action' . ' = ' . $_GET['id']);
-        } catch (\InvalidArgumentException $e) {
-        } finally {
-            $this->view->display($template);
-        }
+        $this->view->display($template);
     }
 }

@@ -2,10 +2,9 @@
 
 namespace App\Controllers;
 
-use App\DbException;
 use App\Logger;
+use App\DbException;
 use App\NoPageException;
-use App\ZZZException;
 
 /**
  * Controller Front
@@ -42,8 +41,6 @@ class Front
         } catch (NoPageException $e) {
             $this->logger->log('404', $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
             $this->actionError(['404']);
-        } catch (ZZZException $e) {
-            $this->logger->log('ZZZ', $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
         } finally {
             die();
         }

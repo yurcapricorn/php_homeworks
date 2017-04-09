@@ -82,7 +82,7 @@ class Article extends Model
     public function __get($key)
     {
         if ($key === 'author') {
-            if ($this->author_id !== false && $this->author_id !== NULL) {
+            if (!empty($this->author_id)) {
                 return Author::findById($this->author_id);
             }
         }

@@ -174,3 +174,11 @@ action = 185
 time: 05-24-09 : 09-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 50
 action = 184
+
+time: 10-06-43 : 09-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\Admin.php line 45
+edited page not found
+
+time: 11-48-42 : 09-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 55
+PDO Exception: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound

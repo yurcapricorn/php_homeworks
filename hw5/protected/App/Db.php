@@ -26,10 +26,9 @@ class Db
     {
         require_once __DIR__ . '/Config.php';
         $config = Config::instance();
-        $name = $config->data['db']['name'];
-        $host = $config->data['db']['host'];
-        $user = $config->data['db']['user'];
-        $pass = $config->data['db']['pass'];
+        foreach($config->data['db'] as $key => $val){
+            $$key = $val;
+        }
         try {
             $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name, $user, $pass);
             $this->dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);

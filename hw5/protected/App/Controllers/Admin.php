@@ -26,6 +26,10 @@ class Admin
      */
     public function actionEdit()
     {
+        $this->view->articles = Article::findLastEntries();
+        if (empty($this->view->articles)) {
+            throw new NoPageException('no articles in database');
+        }
         $template = __DIR__ . '/../../../admin/edit.html';
         $this->view->display($template);
     }
@@ -38,7 +42,7 @@ class Admin
         if (!empty($_POST['id'])) {
             $article = Article::findById($_POST['id']);
             if (empty($article)) {
-                throw new NoPageException('page not found');
+                throw new NoPageException('updating page not found');
             }
         } else {
             $article = new Article();
