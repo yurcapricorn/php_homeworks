@@ -35,7 +35,7 @@ Trait Base
         }
         if ( $this->access($action) === false ) {
             echo 'access denied';
-            return false;
+            die();
         }
         $method = 'action' . $action;
         return $this->$method($url);
@@ -44,16 +44,10 @@ Trait Base
     /**
      * access method
      * @param string $action
-     * @return bool|string
+     * @return bool
      */
     protected function access(string $action)
     {
-        $methods = get_class_methods($this);
-        foreach($methods as $method) {
-            if ('action' . $action === $method) {
-                return true;
-            }
-        }
-        return false;
+        return true;
     }
 }
