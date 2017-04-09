@@ -34,8 +34,7 @@ Trait Base
             $action = array_shift($url);
         }
         if ( $this->access($action) === false ) {
-            echo 'access denied';
-            die();
+            die('access denied');
         }
         $method = 'action' . $action;
         return $this->$method($url);
