@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\Models\Article;
+
 require_once __DIR__ . '/../../autoload.php';
 
 /**
@@ -17,7 +19,7 @@ class News
      */
     public function actionAll()
     {
-        $this->view->articles = \App\Models\Article::findLastEntries();
+        $this->view->articles = Article::findLastEntries();
         $template = __DIR__ . '/../../../news/all.html';
         $this->view->display($template);
     }
@@ -28,7 +30,7 @@ class News
      */
     public function actionOne()
     {
-        $this->view->article =\App\Models\Article::findById($_GET['id']);
+        $this->view->article =Article::findById($_GET['id']);
         $template = __DIR__ . '/../../../news/one.html';
         $this->view->display($template);
     }

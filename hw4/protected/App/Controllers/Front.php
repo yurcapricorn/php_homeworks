@@ -20,7 +20,7 @@ class Front
             $action = 'Default';
         }
         $method = 'action' . $action;
-            $this->$method($url);
+        $this->$method($url);
     }
 
     /**

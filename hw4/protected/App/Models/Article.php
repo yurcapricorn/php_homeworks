@@ -39,48 +39,16 @@ class Article extends Model
     }
 
     /**
-     * redefines SomeMagic __get() method
      * returns Class Author record from DB
      * @param $key
      * @return Author|bool
      */
     public function __get($key)
     {
-        switch ($key) {
-            case('author'): {
-                if ($this->author_id !== false && $this->author_id !== NULL) {
-                    return Author::findById($this->author_id);
-                }
-                break;
-            }
-            default:{
-                break;
+        if ($key === 'author') {
+            if (!empty($this->author_id)) {
+                return Author::findById($this->author_id);
             }
         }
-    }
-
-    public function insert()
-    {
-        if (empty($this->title) && empty($this->lead)) {
-            return false;
-        } else {
-            $res = parent::insert();
-            if ($res !== true) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public function update()
-    {
-        if ((empty($this->title) && empty($this->lead))) {
-            return false;
-        }
-        $res = parent::update();
-        if ($res !== true) {
-            return false;
-        }
-        return true;
     }
 }
