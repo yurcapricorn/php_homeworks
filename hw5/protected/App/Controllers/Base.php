@@ -16,8 +16,7 @@ Trait Base
     protected $view;
 
     /**
-     * instantiates $view
-     * Base constructor
+     * Base constructor.
      */
     public function __construct()
     {

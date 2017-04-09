@@ -2,6 +2,11 @@
 
 namespace App\Controllers;
 
+use App\Models\Article;
+use App\MultiException;
+use App\NoPageException;
+
+
 /**
  * Controller Admin
  * @package App\Controllers
@@ -10,9 +15,6 @@ class Admin
 {
     use Base;
 
-    /**
-     * displays last news
-     */
     public function actionAllNews()
     {
         $news = new News();
@@ -33,9 +35,21 @@ class Admin
      */
     public function actionSave()
     {
-
-        $article = new \App\Models\Article($_POST);
-        var_dump($article);
+        if (!empty($_POST['id'])) {
+            $article = Article::findById($_POST['id']);
+            if (empty($article)) {
+                throw new NoPageException('page not found');
+            }
+        } else {
+            $article = new Article();
+        }
+        try {
+            $article->fill($_POST);
+        } catch (MultiException $e) {
+//            foreach($e->getErrors() as $error){
+//                echo $error->getMessage();
+//            }
+        }
         $article->save();
     }
 }

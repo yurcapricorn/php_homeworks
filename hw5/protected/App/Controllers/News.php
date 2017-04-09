@@ -2,6 +2,10 @@
 
 namespace App\Controllers;
 
+use App\Models\Article;
+use App\NoPageException;
+use App\ZZZException;
+
 require_once __DIR__ . '/../../autoload.php';
 
 /**
@@ -10,26 +14,43 @@ require_once __DIR__ . '/../../autoload.php';
  */
 class News
 {
+    /**
+     * trait Base controller
+     */
     use Base;
 
     /**
-     * news main page
+     * @throws NoPageException
      */
     public function actionAll()
     {
-        $this->view->articles = \App\Models\Article::findLastEntries();
+        $this->view->articles = Article::findLastEntries();
+        if (empty($this->view->articles)) {
+            throw new NoPageException('no articles in database');
+        }
         $template = __DIR__ . '/../../../news/all.html';
         $this->view->display($template);
     }
 
     /**
-     * one article page
-     * @param array $url = []
+     * @throws NoPageException
+     * @throws ZZZException
      */
     public function actionOne()
     {
-        $this->view->article =\App\Models\Article::findById($_GET['id']);
+        if (empty($_GET['id'])) {
+            throw new NoPageException('No id specified');
+        }
+        $this->view->article = Article::findById($_GET['id']);
+        if (empty($this->view->article)) {
+            throw new NoPageException('page ' . $_GET['id'] . ' not found');
+        }
         $template = __DIR__ . '/../../../news/one.html';
-        $this->view->display($template);
+        try {
+            throw new ZZZException('action' . ' = ' . $_GET['id']);
+        } catch (\InvalidArgumentException $e) {
+        } finally {
+            $this->view->display($template);
+        }
     }
 }

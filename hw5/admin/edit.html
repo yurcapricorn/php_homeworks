@@ -8,9 +8,9 @@
 
 <div class="inputform">
     <form>
-        <p><input title="id" name="id" type="number"/><strong> ID</strong></p>
-        <p><input title="title" name="title" type="text" size="65"/><strong> Title</strong></p>
-        <p><textarea title="lead" name="lead" rows="10" cols="70"></textarea><strong> Lead</strong></p>
+        <p><input title="id" name="id" type="number" required/><strong> ID</strong></p>
+        <p><input title="title" name="title" type="text" size="65" required/><strong> Title</strong></p>
+        <p><textarea title="lead" name="lead" rows="10" cols="70" required></textarea><strong> Lead</strong></p>
         <p class="form-submit">
             <input type="submit" formmethod="POST" formaction="/Admin/Save/" value="save">
         </p>

@@ -1,15 +1,14 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: user
- * Date: 08-Apr-17
- * Time: 00:11
- */
 
 namespace App;
 
 
-class DbException extends \Exception
+class DbException extends \RuntimeException
 {
-
+    public function __construct(\PDOException $e)
+    {
+        $this->message = $e->getMessage();
+        $this->file = $e->getFile();
+        $this->line = $e->getLine();
+    }
 }

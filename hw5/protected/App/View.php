@@ -20,7 +20,7 @@ class View implements \Countable, \Iterator
     public function render($template)
     {
         ob_start();
-        foreach ($this as $key => $value){
+        foreach ($this as $key => $value) {
             $$key = $value;
         }
         include $template;
@@ -53,8 +53,7 @@ class View implements \Countable, \Iterator
      */
     public function current()
     {
-        $data = current($this->data);
-        return $data;
+        return current($this->data);
     }
 
     /**
@@ -63,8 +62,7 @@ class View implements \Countable, \Iterator
      */
     public function key()
     {
-        $data = key($this->data);
-        return $data;
+        return key($this->data);
     }
 
     /**
@@ -73,8 +71,7 @@ class View implements \Countable, \Iterator
      */
     public function next()
     {
-        $var = next($this->data);
-        return $var;
+        return next($this->data);
     }
 
     /**
@@ -84,8 +81,7 @@ class View implements \Countable, \Iterator
     public function valid()
     {
         $key = key($this->data);
-        $data = ($key !== NULL && $key !== FALSE);
-        return $data;
+        return !empty($key);
     }
 
     /**

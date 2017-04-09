@@ -20,6 +20,7 @@ class Db
 
     /**
      * Db constructor.
+     * @throws DbException
      */
     public function __construct()
     {
@@ -33,18 +34,16 @@ class Db
             $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name, $user, $pass);
             $this->dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (\PDOException $e) {
-            $logger = new Logger();
-            $logger->log('DB exception', 'PDO Exception: ' . $e->getMessage(), $this);
-            throw new DbException('Db connection error');
+            throw new DbException($e);
         }
     }
 
     /**
-     * Db class method query()
-     * @param string $query
+     * @param $query
+     * @param $class
      * @param array $params
-     * @param $class (path to class)
-     * @return bool|array (all database entries as $class objects array)
+     * @return array|bool (all database entries as $class objects array)
+     * @throws DbException
      */
     public function query($query, $class = \stdClass::class, $params = [])
     {
@@ -55,34 +54,33 @@ class Db
             } else {
                 $res = $sth->execute($params);
             }
-            if ($res === false) {
-                return false;
-            }
-            if (empty($class)) {
-                return $sth->fetchAll();
-            } else {
-                return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
-            }
         } catch (\PDOException $e) {
-            $logger = new Logger();
-            $logger->log('DB exception', 'PDO Exception: ' . $e->getMessage(), $this);
-            throw new DbException(' error');
+            throw new DbException($e);
         }
+        if ($res === false) {
+            return false;
+        }
+        return $sth->fetchAll(\PDO::FETCH_CLASS, $class);
     }
 
     /**
-     * Db Class Method execute()
      * @param $query
      * @param array $params
-     * @return bool|\PDOStatement
+     * @return bool
+     * @throws DbException
      */
-    public function execute($query, $params = [])
+    public
+    function execute($query, $params = [])
     {
         $sth = $this->dbh->prepare($query);
-        if (!empty($params)) {
-            $res = $sth->execute($params);
-        } else {
-            $res = $sth->execute();
+        try {
+            if (!empty($params)) {
+                $res = $sth->execute($params);
+            } else {
+                $res = $sth->execute();
+            }
+        } catch (\PDOException $e) {
+            throw new DbException($e);
         }
         return $res;
     }

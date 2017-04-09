@@ -16,23 +16,61 @@ class Article extends Model
     public $lead;
 
     /**
-     * Article constructor.
-     * fills instance with data available
-     * @param array $arr
+     * @param string $value
+     * @return $this
+     * @throws \UnexpectedValueException
      */
-    public function __construct(array $arr = [])
+    public function setId(string $value)
     {
-        if (empty($arr)) {
-            return;
+        $value = (int)$value;
+        if ($value <= 0) {
+            throw new \UnexpectedValueException('id must be positive!');
         }
-        $article = new Article();
-        if (!empty($arr['id'])) {
-            $this->id = $arr['id'];
-            $article = Article::findById($arr['id']);
+        $this->id = $value;
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     * @return $this
+     * @throws \UnexpectedValueException
+     */
+    public function setAuthor_id(string $value)
+    {
+        $value = (int)$value;
+        if ($value <= 0) {
+            throw new \UnexpectedValueException('author_id must be positive!');
         }
-        $this->title = !empty($arr['title']) ? $arr['title'] : $article->title;
-        $this->lead = !empty($arr['lead']) ? $arr['lead'] : $article->lead;
-        $this->author_id = !empty($arr['author_id']) ? $arr['author_id'] : $article->author_id;
+        $this->author_id = $value;
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     * @return $this
+     * @throws \UnexpectedValueException
+     */
+    public function setTitle(string $value)
+    {
+        if (empty($value)) {
+            throw new \UnexpectedValueException('title must be filled!');
+        }
+        $this->title = $value;
+        return $this;
+    }
+
+    /**
+     * @param string $value
+     * @return $this
+     * @throws \UnexpectedValueException
+     */
+    public function setLead(string $value)
+    {
+        if (empty($value)) {
+            throw new \UnexpectedValueException('lead must be filled!');
+        }
+        $this->lead = $value;
+        return $this;
     }
 
     /**
@@ -43,41 +81,10 @@ class Article extends Model
      */
     public function __get($key)
     {
-        switch ($key) {
-            case('author'): {
-                if ($this->author_id !== false && $this->author_id !== NULL) {
-                    return Author::findById($this->author_id);
-                }
-                break;
-            }
-            default:{
-                break;
+        if ($key === 'author') {
+            if ($this->author_id !== false && $this->author_id !== NULL) {
+                return Author::findById($this->author_id);
             }
         }
-    }
-
-    public function insert()
-    {
-        if (empty($this->title) && empty($this->lead)) {
-            return false;
-        } else {
-            $res = parent::insert();
-            if ($res !== true) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public function update()
-    {
-        if ((empty($this->title) && empty($this->lead))) {
-            return false;
-        }
-        $res = parent::update();
-        if ($res !== true) {
-            return false;
-        }
-        return true;
     }
 }

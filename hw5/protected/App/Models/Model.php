@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Db;
+use App\MultiException;
 
 require_once __DIR__ . '/../Db.php';
 
@@ -19,6 +20,30 @@ abstract class Model
      */
     protected const TABLE = null;
     public $id;
+
+    /**
+     * method fill()
+     * @param array $arr
+     * @throws MultiException
+     */
+    public function fill(array $arr = [])
+    {
+        if (empty($arr)) {
+            return;
+        }
+        $errors = new MultiException();
+        foreach ($arr as $key => $val) {
+            try {
+                $method = 'set' . ucfirst($key);
+                $this->$method($val);
+            } catch (\UnexpectedValueException $e) {
+                $errors->add($e);
+            }
+        }
+        if (!empty($errors->getErrors())) {
+            throw $errors;
+        }
+    }
 
     /**
      * find all method
@@ -47,8 +72,10 @@ abstract class Model
 
         $data = $db->query($sql, static::class, $args);
 
-        if ($data === false || empty($data)) {
+        if ($data === false) {
             return false;
+        } else if (empty($data)) {
+            return NULL;
         }
         return $data[0];
     }
@@ -108,10 +135,10 @@ abstract class Model
                 $val[':' . $k] = $v;
                 continue;
             }
-            $col[$k . '=:' . $k] = $k;
+            $col[] = $k . '=:' . $k;
             $val[':' . $k] = $v;
         }
-        $sql = 'UPDATE ' . static::TABLE . ' SET ' . implode(',', array_keys($col)) . ' WHERE id=:id';
+        $sql = 'UPDATE ' . static::TABLE . ' SET ' . implode(',', $col) . ' WHERE id=:id';
         $db = Db::instance();
 
         return $db->execute($sql, $val);
