@@ -67,9 +67,8 @@ abstract class Model
             return false;
         }
         $db = Db::instance();
-        $args = [':id' => $id];
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
-        $data = $db->query($sql, static::class, $args);
+        $data = $db->query($sql, static::class, [':id' => $id]);
         if ($data === false) {
             return false;
         } else if (empty($data)) {
@@ -113,7 +112,6 @@ abstract class Model
             return false;
         }
         $this->id = $db->lastDbInsertId();
-        return true;
     }
 
     /**
