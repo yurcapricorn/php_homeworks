@@ -45,16 +45,10 @@ Trait Base
     /**
      * access method
      * @param string $action
-     * @return bool|string
+     * @return bool
      */
     protected function access(string $action)
     {
-        $methods = get_class_methods($this);
-        foreach($methods as $method) {
-            if ('action' . $action === $method) {
-                return true;
-            }
-        }
-        return false;
+        return true;
     }
 }

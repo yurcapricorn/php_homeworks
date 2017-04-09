@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+
 /**
  * Controller Front
  * @package App\Controllers
@@ -9,31 +10,43 @@ namespace App\Controllers;
 class Front
 {
     /**
-     * chooses controller
-     * @param array $url = []
+     * @param array $url
      */
     public function action(array $url = [])
     {
-        $controller = '';
-        if (!empty($url)){
-            $controller = array_shift($url);
+        if (!empty($url[0])) {
+            $action = array_shift($url);
+        } else {
+            $action = 'Default';
         }
-        switch ($controller) {
-            case('News'): {
-                $news = new News();
-                $news->action($url);
-                break;
-            }
-            case('Admin'): {
-                $admin = new Admin();
-                $admin->action($url);
-                break;
-            }
-            default: {
-                $news = new News();
-                $news->actionAll();
-                break;
-            }
-        }
+        $method = 'action' . $action;
+            $this->$method($url);
+    }
+
+    /**
+     * @param $url
+     */
+    public function actionNews($url)
+    {
+        $news = new News();
+        $news->action($url);
+    }
+
+    /**
+     * @param $url
+     */
+    public function actionAdmin($url)
+    {
+        $admin = new Admin();
+        $admin->action($url);
+    }
+
+    /**
+     * Default Front controller method
+     */
+    public function actionDefault()
+    {
+        $news = new News();
+        $news->actionAll();
     }
 }
