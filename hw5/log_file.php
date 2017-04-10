@@ -182,3 +182,7 @@ edited page not found
 time: 11-48-42 : 09-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 55
 PDO Exception: SQLSTATE[HY093]: Invalid parameter number: no parameters were bound
+
+time: 10-58-21 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
