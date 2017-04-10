@@ -11,7 +11,9 @@ class Logger extends AbstractLogger implements LoggerInterface
     use Singleton;
 
     public function log($level, $message, array $context = []){
-        $path = __DIR__ . '/../../log_file.php';
+        require_once __DIR__ . '/Config.php';
+        $config = Config::instance();
+        $path = $config->data['log'];
         $errors = "\n" . 'time: '. date('h-i-s : d-m-Y') . "\n" . $context['place'] ."\n" . $message . "\n";
         file_put_contents($path, $errors, FILE_APPEND);
     }
