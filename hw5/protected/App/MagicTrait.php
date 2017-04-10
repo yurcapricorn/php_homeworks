@@ -3,10 +3,10 @@
 namespace App;
 
 /**
- * Trait SomeMagic
+ * Trait MagicTrait
  * @package App
  */
-trait SomeMagic
+trait MagicTrait
 {
     /**
      * @var array
@@ -30,9 +30,7 @@ trait SomeMagic
      */
     public function __get($key)
     {
-        if (isset($this->data[$key])) {
-            return $this->data[$key];
-        }
+        return isset($this->data[$key]);
     }
 
     /**

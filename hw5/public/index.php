@@ -11,9 +11,9 @@ if (!empty($parts[1])) {
     $controllerName = 'Index';
 }
 $controllerClassName = '\\App\\Controllers\\' . $controllerName;
-$controller = new $controllerClassName;
 
 try {
+$controller = new $controllerClassName;
     if (!empty($parts[2])) {
         $controller->action($parts[2]);
     } else {

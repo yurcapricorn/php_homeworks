@@ -9,7 +9,7 @@ namespace App;
  */
 class View implements \Countable, \Iterator
 {
-    use \App\SomeMagic;
+    use \App\MagicTrait;
 
     /**
      * function render
