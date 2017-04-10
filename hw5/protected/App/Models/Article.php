@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\SomeMagic;
 
 require_once __DIR__ . '/../../autoload.php';
 
@@ -25,11 +24,11 @@ class Article extends Model
     public $lead;
 
     /**
-     * @param string $value
+     * @param $value
      * @return $this
      * @throws \UnexpectedValueException
      */
-    public function setId(string $value)
+    public function setId($value)
     {
         $value = (int)$value;
         if ($value <= 0) {
@@ -40,11 +39,11 @@ class Article extends Model
     }
 
     /**
-     * @param string $value
+     * @param $value
      * @return $this
      * @throws \UnexpectedValueException
      */
-    public function setAuthor_id(string $value)
+    public function setAuthor_id($value)
     {
         $value = (int)$value;
         if ($value <= 0) {
@@ -55,11 +54,11 @@ class Article extends Model
     }
 
     /**
-     * @param string $value
+     * @param $value
      * @return $this
      * @throws \UnexpectedValueException
      */
-    public function setTitle(string $value)
+    public function setTitle($value)
     {
         if (empty($value)) {
             throw new \UnexpectedValueException('title must be filled!');
@@ -69,11 +68,11 @@ class Article extends Model
     }
 
     /**
-     * @param string $value
+     * @param $value
      * @return $this
      * @throws \UnexpectedValueException
      */
-    public function setLead(string $value)
+    public function setLead($value)
     {
         if (empty($value)) {
             throw new \UnexpectedValueException('lead must be filled!');
@@ -83,7 +82,6 @@ class Article extends Model
     }
 
     /**
-     * redefines SomeMagic __get() method
      * returns Class Author record from DB
      * @param $key
      * @return Author|bool

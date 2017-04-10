@@ -53,7 +53,7 @@ abstract class Model
     {
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->query($sql, static::class, []);
+        return $db->query($sql, static::class);
     }
 
     /**
@@ -63,18 +63,10 @@ abstract class Model
      */
     public static function findById(int $id)
     {
-        if (empty($id)) {
-            return false;
-        }
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $data = $db->query($sql, static::class, [':id' => $id]);
-        if ($data === false) {
-            return false;
-        } else if (empty($data)) {
-            return NULL;
-        }
-        return $data[0];
+        return $data ? $data[0] : false;
     }
 
     /**
@@ -150,9 +142,8 @@ abstract class Model
     {
         if ($this->isNew()) {
             return $this->insert();
-        } else {
-            return $this->update();
         }
+        return $this->update();
     }
 
     /**
