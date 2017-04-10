@@ -5,15 +5,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Новости</title>
+    <title>All news</title>
 </head>
 <body>
 
     <section>
-        <?php foreach ($articles as $item) : ?>
+        <?php foreach ($articles as $article) : ?>
     <article>
-        <h2><?php echo $item->title; ?></h2>
-        <div><?php echo $item->lead; ?></div>
+        <h2><?php echo $article->title; ?></h2>
+        <h3><?php if (!empty($article->author_id)){
+            echo $article->author->name . ' ' . $article->author->surname;
+            }?>
+        </h3>
+        <div><?php echo $article->lead; ?></div>
     </article>
     <hr>
 <?php endforeach; ?>
