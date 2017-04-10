@@ -28,7 +28,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="readme.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
@@ -37,26 +37,6 @@
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="all.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/news/all.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="16" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/news/default.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -122,7 +102,6 @@
         <option value="$PROJECT_DIR$/protected/App/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/protected/App/Controller.php" />
         <option value="$PROJECT_DIR$/errors/404.html" />
-        <option value="$PROJECT_DIR$/protected/App/Controllers/Admin.php" />
         <option value="$PROJECT_DIR$/protected/App/Controllers/News.php" />
         <option value="$PROJECT_DIR$/protected/App/Controllers/Index.php" />
         <option value="$PROJECT_DIR$/protected/App/Config.php" />
@@ -138,6 +117,7 @@
         <option value="$PROJECT_DIR$/public/readme.md" />
         <option value="$PROJECT_DIR$/templates/news/all.html" />
         <option value="$PROJECT_DIR$/templates/news/default.php" />
+        <option value="$PROJECT_DIR$/protected/App/Controllers/Admin.php" />
       </list>
     </option>
   </component>
@@ -423,7 +403,7 @@
       <workItem from="1491292261572" duration="8631000" />
       <workItem from="1491379595574" duration="24343000" />
       <workItem from="1491487191413" duration="9574000" />
-      <workItem from="1491581010805" duration="101139000" />
+      <workItem from="1491581010805" duration="101927000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487941813358</created>
@@ -499,7 +479,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="571330000" />
+    <option name="totallyTimeSpent" value="572118000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -730,16 +710,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/App/Controllers/Admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
-          <folding>
-            <element signature="e#35#54#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/App/Config.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -863,14 +833,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="119">
-            <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            <folding />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/templates/news/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -882,11 +849,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/news/default.php">
+    <entry file="file://$PROJECT_DIR$/protected/App/Controllers/Admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="7" lean-forward="true" selection-start-line="28" selection-start-column="7" selection-end-line="28" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="187">
+          <caret line="34" column="32" lean-forward="true" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
+          <folding>
+            <element signature="e#35#54#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="119">
+            <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

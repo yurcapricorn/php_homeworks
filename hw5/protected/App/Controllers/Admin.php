@@ -25,10 +25,6 @@ class Admin extends Controller
      */
     public function actionEdit()
     {
-        $this->view->articles = Article::findLastEntries();
-        if (empty($this->view->articles)) {
-            throw new NoPageException('no articles in database');
-        }
         $template = __DIR__ . '/../../../templates/admin/edit.html';
         $this->view->display($template);
     }
