@@ -3,7 +3,7 @@
 to do:
 1. improve error templates
 2. include log_file path into config_file - done!
-3. make exception messages to be included into error templates
+3. make exception messages to be included into error templates - done!
 _______________________________________________________________________________________________________
 h/w_5
 

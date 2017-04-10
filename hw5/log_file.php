@@ -386,3 +386,27 @@ page 111 not found
 time: 12-44-28 : 11-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
 PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 01-02-37 : 11-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 01-04-59 : 11-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 01-06-55 : 11-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 01-06-59 : 11-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 01-09-11 : 11-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 01-09-55 : 11-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
