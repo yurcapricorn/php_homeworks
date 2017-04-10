@@ -3,10 +3,10 @@
 namespace App\Controllers;
 
 
-class Error
-{
-    use Base;
+use App\Controller;
 
+class Error extends Controller
+{
     public function actionDb()
     {
         $template = __DIR__ . '/../../../errors/error.html';

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Controller;
 use App\Models\Article;
 use App\MultiException;
 use App\NoPageException;
@@ -11,10 +12,8 @@ use App\NoPageException;
  * Controller Admin
  * @package App\Controllers
  */
-class Admin
+class Admin extends Controller
 {
-    use Base;
-
     public function actionAllNews()
     {
         $news = new News();

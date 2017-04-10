@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Controller;
 use App\Models\Article;
 use App\NoPageException;
 
@@ -11,13 +12,8 @@ require_once __DIR__ . '/../../autoload.php';
  * Controller News
  * @package App\Controllers
  */
-class News
+class News extends Controller
 {
-    /**
-     * trait Base controller
-     */
-    use Base;
-
     /**
      * @throws NoPageException
      */

@@ -186,3 +186,35 @@ PDO Exception: SQLSTATE[HY093]: Invalid parameter number: no parameters were bou
 time: 10-58-21 : 10-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
 PDO Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+time: 07-24-14 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\Base.php line 39
+Uncatched error: Call to undefined method App\Controllers\Front::actionfavicon.ico()
+
+time: 07-42-18 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\Controller.php line 33
+Uncatched error: Call to undefined method App\Controllers\Index::actionDefault()
+
+time: 07-42-51 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\Controller.php line 33
+Uncatched error: Call to undefined method App\Controllers\Index::actionDefault()
+
+time: 07-47-32 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\Controller.php line 33
+Uncatched error: Call to undefined method App\Controllers\Index::actionDefault()
+
+time: 09-28-33 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 09-28-55 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 09-29-24 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 09-30-04 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)

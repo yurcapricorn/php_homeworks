@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\SomeMagic;
+
 require_once __DIR__ . '/../../autoload.php';
 
 /**
@@ -10,6 +12,13 @@ require_once __DIR__ . '/../../autoload.php';
  */
 class Article extends Model
 {
+    /**
+     * @var string db table
+     * @var int author_id
+     * @var int id
+     * @var string title
+     * @var string lead
+     */
     protected const TABLE = 'news';
     public $author_id;
     public $title;
