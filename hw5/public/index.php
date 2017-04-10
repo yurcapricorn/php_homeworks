@@ -25,14 +25,15 @@ try {
     $controller = new \App\Controllers\Error();
     $controller->action('Db');
 } catch (\App\NoPageException $e) {
-    $this->logger->log('404', $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
+    $logger = \App\Logger::instance();
+    $logger->log('404', $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
     $controller = new \App\Controllers\Error();
-    $controller->action404();
+    $controller->action404('action');
 } catch (Throwable $e) {
     $logger = \App\Logger::instance();
     $logger->log('Unknown error', 'Uncatched error: ' . $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
     $controller = new \App\Controllers\Error();
-    $controller->action404();
+    $controller->action404('action');
 } finally {
     die();
 }

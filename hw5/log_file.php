@@ -218,3 +218,11 @@ PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost'
 time: 09-30-04 : 10-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Db.php line 33
 PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 09-50-58 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 09-50-58 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 36
+No id specified
