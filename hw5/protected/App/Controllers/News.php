@@ -23,7 +23,7 @@ class News extends Controller
         if (empty($this->view->articles)) {
             throw new NoPageException('no articles in database');
         }
-        $template = __DIR__ . '/../../../news/all.html';
+        $template = __DIR__ . '/../../../templates/news/all.html';
         $this->view->display($template);
     }
 
@@ -39,7 +39,7 @@ class News extends Controller
         if (empty($this->view->article)) {
             throw new NoPageException('page ' . $_GET['id'] . ' not found');
         }
-        $template = __DIR__ . '/../../../news/one.html';
+        $template = __DIR__ . '/../../../templates/news/one.html';
         $this->view->display($template);
     }
 }

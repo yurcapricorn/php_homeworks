@@ -226,3 +226,159 @@ page 111 not found
 time: 09-50-58 : 10-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 36
 No id specified
+
+time: 09-55-09 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 09-55-09 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 36
+No id specified
+
+time: 09-56-14 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 09-56-37 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 09-56-38 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 09-57-13 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 09-57-29 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 09-59-59 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-02-19 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-02-47 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-06-00 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-06-14 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-08-51 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-09-22 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-09-23 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controller.php line 32
+Uncatched error: Call to undefined method App\Controllers\News::actionimg()
+
+time: 10-09-27 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-09-27 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controller.php line 32
+Uncatched error: Call to undefined method App\Controllers\News::actionimg()
+
+time: 10-12-16 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-12-16 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 36
+No id specified
+
+time: 10-12-27 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-16-28 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-16-31 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-17-03 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-17-12 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-17-13 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-17-14 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-17-37 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found
+
+time: 10-18-31 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1112 not found
+
+time: 10-18-43 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1112 not found
+
+time: 10-18-57 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1112 not found
+
+time: 10-18-59 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1112 not found
+
+time: 10-19-00 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1112 not found
+
+time: 10-19-43 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1112 not found
+
+time: 10-19-44 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1112 not found
+
+time: 10-20-15 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1111 not found
+
+time: 10-20-36 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1111 not found
+
+time: 10-20-49 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1111 not found
+
+time: 10-21-28 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 1111 not found
+
+time: 10-30-13 : 10-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw5\protected\App\Controllers\News.php line 40
+page 111 not found

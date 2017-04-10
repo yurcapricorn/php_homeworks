@@ -23,17 +23,17 @@ try {
     $logger = \App\Logger::instance();
     $logger->log('Db error', 'PDO Exception: ' . $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
     $controller = new \App\Controllers\Error();
-    $controller->action('Db');
+    $controller->actionDb();
 } catch (\App\NoPageException $e) {
     $logger = \App\Logger::instance();
     $logger->log('404', $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
     $controller = new \App\Controllers\Error();
-    $controller->action404('action');
+    $controller->action404();
 } catch (Throwable $e) {
     $logger = \App\Logger::instance();
     $logger->log('Unknown error', 'Uncatched error: ' . $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
     $controller = new \App\Controllers\Error();
-    $controller->action404('action');
+    $controller->action404();
 } finally {
     die();
 }

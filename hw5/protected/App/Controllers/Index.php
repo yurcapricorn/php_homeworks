@@ -17,7 +17,7 @@ class Index extends Controller
     protected function actionDefault()
     {
         $this->view->articles = Article::findAll();
-        $this->view->display(__DIR__ . '/../../../templates/default.php');
+        $this->view->display(__DIR__ . '/../../../templates/news/default.php');
     }
 
     /**

@@ -29,7 +29,7 @@ class Admin extends Controller
         if (empty($this->view->articles)) {
             throw new NoPageException('no articles in database');
         }
-        $template = __DIR__ . '/../../../admin/edit.html';
+        $template = __DIR__ . '/../../../templates/admin/edit.html';
         $this->view->display($template);
     }
 
