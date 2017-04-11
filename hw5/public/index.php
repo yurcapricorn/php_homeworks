@@ -34,6 +34,4 @@ $controller = new $controllerClassName;
     $logger->log('Unknown error', 'Uncatched error: ' . $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
     $controller = new \App\Controllers\Error();
     $controller->action404($e->getMessage());
-} finally {
-    die();
 }
