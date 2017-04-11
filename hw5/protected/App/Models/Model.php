@@ -53,7 +53,7 @@ abstract class Model
     {
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->query($sql, static::class);
+        return $db->query($sql, static::class, []);
     }
 
     /**
@@ -66,7 +66,12 @@ abstract class Model
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $data = $db->query($sql, static::class, [':id' => $id]);
-        return $data ? $data[0] : false;
+        if ($data === false) {
+            return false;
+        } else if (empty($data)) {
+            return NULL;
+        }
+        return $data[0];
     }
 
     /**
