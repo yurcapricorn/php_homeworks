@@ -36,6 +36,9 @@ class MultiException extends \Exception implements \Iterator
         return current($this->data);
     }
 
+    /**
+     * next
+     */
     public function next()
     {
         next($this->data);
@@ -57,6 +60,9 @@ class MultiException extends \Exception implements \Iterator
         return null !== key($this->data);
     }
 
+    /**
+     * rewind
+     */
     public function rewind()
     {
         reset($this->data);

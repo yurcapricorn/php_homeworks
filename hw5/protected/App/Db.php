@@ -68,8 +68,7 @@ class Db
      * @return bool
      * @throws DbException
      */
-    public
-    function execute($query, $params = [])
+    public function execute($query, $params = [])
     {
         $sth = $this->dbh->prepare($query);
         try {

@@ -6,7 +6,7 @@ function autoload_1($class)
     if (file_exists($filename)) {
         include $filename;
     } else {
-//        echo 'file not found. required: ' . $class . "\n" . ' found: ' . $filename . "\n" . 'main dir: ' . __DIR__;
+        throw new Exception('file not found. required: ' . $class . "\n" . ' found: ' . $filename . "\n");
     }
 }
 

@@ -6,7 +6,6 @@ require_once __DIR__ . '\Singleton.php';
 
 /**
  * Class Config
- * keeps DB connection parameters
  * @package App
  */
 class Config

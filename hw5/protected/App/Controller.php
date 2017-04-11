@@ -4,8 +4,8 @@ namespace App;
 
 
 /**
- * @class Controller
- * @package App\Controllers
+ * Class Controller
+ * @package App
  */
 abstract class Controller
 {

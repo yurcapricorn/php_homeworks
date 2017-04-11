@@ -4,15 +4,13 @@ namespace App;
 
 /**
  * Class View
- * displaying information with templates
  * @package App
  */
 class View implements \Countable, \Iterator
 {
-    use \App\MagicTrait;
+    use MagicTrait;
 
     /**
-     * function render
      * returns data with templates
      * @param $template
      * @return string
