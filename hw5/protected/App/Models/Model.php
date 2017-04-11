@@ -16,7 +16,8 @@ require_once __DIR__ . '/../Db.php';
 abstract class Model
 {
     /**
-     * keeps database table name
+     * @var string TABLE
+     * @var int id
      */
     protected const TABLE = null;
     public $id;
