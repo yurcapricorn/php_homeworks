@@ -5,8 +5,15 @@ namespace App\Controllers;
 
 use App\Controller;
 
+/**
+ * Class Error
+ * @package App\Controllers
+ */
 class Error extends Controller
 {
+    /**
+     * @param $error
+     */
     public function actionDb($error)
     {
         $this->view->error = $error;
@@ -14,6 +21,9 @@ class Error extends Controller
         $this->view->display($template);
     }
 
+    /**
+     * @param $error
+     */
     public function action404($error)
     {
         $this->view->error = $error;
