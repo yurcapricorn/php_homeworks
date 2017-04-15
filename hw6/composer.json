@@ -1,0 +1,19 @@
+{
+  "name": "vendor_name/package_name",
+  "description": "description_text",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "author's name",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "psr/log": "1.0.2",
+    "phpunit/php-timer": "1.0.9",
+    "twig/twig": "2.x-dev",
+    "swiftmailer/swiftmailer": "5.x-dev",
+    "phpunit/phpunit": "6.1.0"
+  }
+}
