@@ -61,12 +61,6 @@ class Db
         }
     }
 
-//    public function fetch($sth, $fetchMode) {
-//        while ($result = $sth->fetch($fetchMode)) {
-//            yield $result;
-//        }
-//    }
-
     /**
      * @param $query
      * @param $class

@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\AdminDataTable;
 use App\Controller;
 use App\Models\Article;
 use App\MultiException;
@@ -25,7 +26,8 @@ class Admin extends Controller
      */
     public function actionEdit()
     {
-        $template = __DIR__ . '/../../../templates/admin/edit.html';
+        $this->view->table = new AdminDataTable(['add','edit','remove'], ['news', 'authors']);
+        $template = __DIR__ . '/../../../templates/admin/edit2.html';
         $this->view->display($template);
     }
 

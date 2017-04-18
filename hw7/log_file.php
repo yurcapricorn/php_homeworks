@@ -2201,3 +2201,15 @@ Uncatched error: SQLSTATE[HY000]: General error: fetch mode requires the classna
 time: 11-45-43 : 18-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\News.php line 39
 Uncatched error: page 100 not found
+
+time: 12-27-52 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\News.php line 39
+Uncatched error: page 100 not found
+
+time: 12-28-03 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\edit2.html line 18
+Uncatched error: syntax error, unexpected end of file
+
+time: 12-28-29 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\edit2.html line 18
+Uncatched error: syntax error, unexpected end of file

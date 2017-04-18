@@ -3,12 +3,14 @@ hello! I'm a readme file.
 
 ________________________________
 
-bugfixing from h\w_5 : 
+bugfixing from h\w_6 : 
 
 
 ________________________________
-h\w_6 progress:
+h\w_7 progress:
 
+-Generator method queryEach() in Db done!
+-Generator applied for /News/All controller action
 
 _________________________________
 h\w_7:
