@@ -44,7 +44,7 @@ class Admin extends Controller
         }
         try {
             $article->fill($_POST);
-        } catch (MultiException $e) {
+        } catch (\Yurcapricorn\Multiexception\App\MultiException $e) {
 //            foreach($e->getErrors() as $error){
 //                echo $error->getMessage();
 //            }

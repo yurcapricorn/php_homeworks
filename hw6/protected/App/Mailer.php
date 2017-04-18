@@ -6,7 +6,7 @@ namespace App;
  * Class Mailer
  * @package App
  */
-class Mailer
+class Mailer extends \Swift
 {
     use Singleton;
 
@@ -18,18 +18,20 @@ class Mailer
     public function __construct()
     {
         $config = \App\Config::instance();
-        $this->data = $config['mail'];
+        $this->data = $config->data['mail'];
     }
 
     /**
      * mailing!
+     * @param $message
+     * @return int
      */
-    public function sendMail($message){
-
-        foreach($this->data['mail'] as $key => $val){
+    public function sendMail($message)
+    {
+        foreach ($this->data as $key => $val) {
             $$key = $val;
         }
-        $transport = \Swift_SmtpTransport::newInstance($smtp, $port)
+        $transport = \Swift_SmtpTransport::newInstance($smtp, $port, $encryption)
             ->setUsername($user)
             ->setPassword($pass);
         $swift = \Swift_Mailer::newInstance($transport);
@@ -39,6 +41,11 @@ class Mailer
             ->setTo($to)
             ->setBody($content, 'text/html')
             ->addPart(strip_tags($content), 'text/plain');
-        $swift -> send($message);
+        try {
+            return $swift->send($message);
+        } catch (\Exception $e) {
+            $logger = Logger::instance();
+            $logger->log('mailer error', $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
+        }
     }
 }

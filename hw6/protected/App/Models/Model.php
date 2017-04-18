@@ -25,14 +25,14 @@ abstract class Model implements \Iterator, \Countable
     /**
      * method fill()
      * @param array $arr
-     * @throws MultiException
+     * @throws \Yurcapricorn\Multiexception\App\MultiException
      */
     public function fill(array $arr = [])
     {
         if (empty($arr)) {
             return;
         }
-        $errors = new MultiException();
+        $errors = new \Yurcapricorn\Multiexception\App\MultiException();
         foreach ($arr as $key => $val) {
             try {
                 $method = 'set' . ucfirst($key);

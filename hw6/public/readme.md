@@ -1,5 +1,26 @@
 hello! I'm a readme file.
 
+!warning! mail sender cofiguration has to be updated! current box is banned!
+________________________________
+
+bugfixing from h\w_5 : 
+
+-removed redundant catch block from router
+________________________________
+h\w_6 progress:
+
+-logger done!
+-phptimer - done!
+-twig - done! (cache turned off)
+-swiftmailer - done! (mail box is banned by spam bot after 2nd letter)
+-MagicTrait applied to App\Models\Model, all properties now kept in data array
+-Iterator applied to App\Models\Model
+-__isset redefined in Article model to search for author property
+-Multiexception class moved to github and included as composer package
+-Multiexception package added to packagist, github repository integrated with packagist for auto-update
+_________________________________
+h\w_6:
+
 1. Проверьте свой код на соответствие стандартам PSR-1 и PSR-2. При необходимости - исправьте.
 2. Подключите с помощью composer на выбор к своему проекту одну из указанных библиотек:
 psr/log

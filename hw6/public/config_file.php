@@ -1,4 +1,5 @@
 <?php
 return ['db' => ['host' => 'localhost', 'name' => 'php2', 'user' => 'root', 'pass' => ''],
     'log' => __DIR__ . '/../log_file.php',
-    'mail' => ['smtp' => 'smtp', 'port' => 'port', 'user' => 'user', 'pass' => 'pass', 'from' => 'from', 'to' => 'to']];
+    'mail' => ['smtp' => 'smtp.mail.ru', 'port' => '465', 'encryption' => 'SSL', 'user' => 'swifttest',
+        'pass' => 'foobar123', 'from' => 'swifttest@mail.ru', 'to' => 'recipient@gmail.com']];
