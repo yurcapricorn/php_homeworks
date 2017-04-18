@@ -54,7 +54,7 @@ abstract class Model implements \Iterator, \Countable
     {
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE;
-        return $db->query($sql, static::class, []);
+        return $db->queryEach($sql, static::class, []);
     }
 
     /**

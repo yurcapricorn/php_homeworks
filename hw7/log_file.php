@@ -2165,3 +2165,39 @@ Uncatched error: Class '\App\Controllers\favicon.ico' not found
 time: 01-00-15 : 18-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
 Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 10-43-01 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 58
+Uncatched error: SQLSTATE[HY000]: General error: fetch mode requires the classname argument
+
+time: 10-50-47 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 58
+Uncatched error: SQLSTATE[HY000]: General error: fetch mode requires the classname argument
+
+time: 11-20-31 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\news\default.php line 13
+Uncatched error: An exception has been thrown during the rendering of a template ("Cannot traverse an already closed generator").
+
+time: 11-25-43 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\News.php line 23
+Uncatched error: no articles in database
+
+time: 11-26-41 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\News.php line 23
+Uncatched error: no articles in database
+
+time: 11-26-42 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\News.php line 23
+Uncatched error: no articles in database
+
+time: 11-42-09 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 58
+Uncatched error: SQLSTATE[HY000]: General error: No fetch class specified
+
+time: 11-43-34 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 58
+Uncatched error: SQLSTATE[HY000]: General error: fetch mode requires the classname argument
+
+time: 11-45-43 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\News.php line 39
+Uncatched error: page 100 not found

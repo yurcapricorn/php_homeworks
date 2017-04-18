@@ -16,8 +16,8 @@ class Index extends Controller
      */
     protected function actionDefault()
     {
-        $this->view->articles = Article::findAll();
-        $this->view->displayTwig(__DIR__ . '/../../../templates/news/default.php');
+       $news = new News();
+       $news->actionAll();
     }
 
     /**

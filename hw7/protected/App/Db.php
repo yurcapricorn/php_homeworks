@@ -22,7 +22,7 @@ class Db
     public function __construct()
     {
         $config = Config::instance();
-        foreach($config->data['db'] as $key => $val){
+        foreach ($config->data['db'] as $key => $val) {
             $$key = $val;
         }
         try {
@@ -55,8 +55,17 @@ class Db
         if ($res === false) {
             return false;
         }
-        yield $sth->fetchAll(\PDO::FETCH_CLASS, $class);
+        $sth->setFetchMode(\PDO::FETCH_CLASS, $class);
+        while ($result = $sth->fetch()) {
+            yield $result;
+        }
     }
+
+//    public function fetch($sth, $fetchMode) {
+//        while ($result = $sth->fetch($fetchMode)) {
+//            yield $result;
+//        }
+//    }
 
     /**
      * @param $query
