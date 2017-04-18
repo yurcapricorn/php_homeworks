@@ -2165,3 +2165,27 @@ Uncatched error: Class '\App\Controllers\favicon.ico' not found
 time: 01-00-15 : 18-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
 Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 06-27-31 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 06-27-31 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 06-27-34 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 06-27-36 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 06-27-51 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\protected\App\Controllers\News.php line 39
+Uncatched error: page 6777 not found
+
+time: 06-27-52 : 18-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
