@@ -10,13 +10,21 @@ ________________________________
 h\w_6 progress:
 
 -logger done!
+
 -phptimer - done!
+
 -twig - done! (cache turned off)
+
 -swiftmailer - done! (mail box is banned by spam bot after 2nd letter)
+
 -MagicTrait applied to App\Models\Model, all properties now kept in data array
+
 -Iterator applied to App\Models\Model
+
 -__isset redefined in Article model to search for author property
+
 -Multiexception class moved to github and included as composer package
+
 -Multiexception package added to packagist, github repository integrated with packagist for auto-update
 _________________________________
 h\w_6:
