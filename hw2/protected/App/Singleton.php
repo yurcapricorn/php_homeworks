@@ -8,8 +8,14 @@ namespace App;
  */
 trait Singleton
 {
+    /**
+     * @var object instance
+     */
     protected static $instance;
 
+    /**
+     * Singleton constructor.
+     */
     protected function __construct()
     {
     }

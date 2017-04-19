@@ -7,6 +7,11 @@ require_once __DIR__ . '/Model.php';
 /**
  * Class Article
  * @package App\Models
+ * @property string table
+ * @property string title
+ * @property string lead
+ * @property int author_id
+ * @property int id
  */
 class Article extends Model
 {

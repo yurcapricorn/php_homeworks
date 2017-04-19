@@ -1,5 +1,41 @@
 hello! I'm a readme file!
 
+bugfixing 08-04-2017
+
+Комментарий преподавателя:
+1. https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/protected/App/Config.php#L19
+А одной строчкой записать слабо? А?
+
+-fixed "$this->data = include...."
+
+2. Больше переменных, временных и никому не нужных, больше!!!
+Особенно это видно тут: https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/protected/App/Db.php#L30
+О да, дайте мне еще десяток переменных ))
+
+-fixed. construction  
+       
+foreach ($config->data['db'] as $key => $val) {
+                                 $$key = $val;
+                             }
+used
+
+3. https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/protected/App/Models/Model.php#L107
+и
+https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/protected/App/Models/Model.php#L111
+Дубль
+
+-fixed. Model method update() fixed
+
+4. https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/protected/App/Models/Model.php#L110
+Я не понял, а где вы используете ЗНАЧЕНИЯ этого массива? Ключи - вижу где, а значения?
+
+-fixed. Model method update() fixed
+
+https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/admin/index.html
+Что за бредятина? Я захожу в админ-панель и что вижу? Форму? И что мне с ней делать?
+
+-fixed /admin/index.html
+
 bugfixing 04-04-2017
 
 1. Блин, когда же вы отучитесь от многословности?

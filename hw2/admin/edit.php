@@ -2,28 +2,17 @@
 
 include_once __DIR__ . '/../protected/App/Models/Article.php';
 
-if (empty($_POST['id'])) {
-//    $error = 'no id specified';
-} else {
+if (!empty($_POST['id'])) {
     $article = \App\Models\Article::findById($_POST['id']);
-    if (($article === false)) {
-//        $error = 'no such article';
-    } else {
-        $title = $_POST['title'];
-        $lead = $_POST['lead'];
-        if (empty($title) && empty($lead)) {
-//            $error = 'no data to update';
-        } else {
-            if (!empty($title)) {
-                $article->title = $title;
+    if (($article !== false)) {
+        if (!empty($_POST['title']) || !empty($_POST['lead'])) {
+            if (!empty($_POST['title'])) {
+                $article->title = $_POST['title'];
             }
-            if (!empty($lead)) {
-                $article->lead = $lead;
+            if (!empty($_POST['lead'])) {
+                $article->lead = $_POST['lead'];
             }
-            $res = $article->save();
-            if ($res === false) {
-//                $error = 'save to db error';
-            }
+            $article->save();
         }
     }
 }

@@ -6,27 +6,17 @@
 </head>
 <body>
 
-<?php
-    foreach($data as $article){
-?>
+<?php foreach($data as $article){ ?>
 
 <div>
     <h1>
-        <a href="
-            <?php
-                echo 'article/article.php?id=' . $article->id;
-            ?>
-        ">
-            <?php
-                echo $article->title;
-            ?>
+        <a href=" <?php echo 'article/article.php?id=' . $article->id; ?> ">
+            <?php echo $article->title; ?>
         </a>
     </h1>
 
     <p>
-        <?php
-            echo $article->lead ;}
-        ?>
+        <?php echo $article->lead ;} ?>
     </p>
 
 </div>
