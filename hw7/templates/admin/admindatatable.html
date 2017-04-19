@@ -10,8 +10,9 @@
 <?php foreach($models as $model){ ?>
         <tr>
         <?php foreach($functions as $function){ ?>
-        <th> <?php echo $function($model ); ?> </th>
+            <th> <?php echo $function($model ); ?> </th>
         <?php } ?>
+            <th> <a href="/Admin/Delete/?id=<?= $model->id; ?>"> delete </a> </th>
         </tr>
     <?php } ?>
 </table>

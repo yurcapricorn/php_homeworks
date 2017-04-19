@@ -44,13 +44,14 @@ class Admin extends Controller
 
     public function actionDelete()
     {
-        if (!empty($_POST['id'])) {
-            $article = Article::findById($_POST['id']);
+        if (!empty($_GET['id'])) {
+            $article = Article::findById($_GET['id']);
             if (empty($article)) {
                 throw new NoPageException('removing article not found');
             }
             $article->delete();
         }
+        $this->actionEdit();
     }
 
     /**
@@ -74,5 +75,6 @@ class Admin extends Controller
 //            }
         }
         $article->save();
+        $this->actionEdit();
     }
 }

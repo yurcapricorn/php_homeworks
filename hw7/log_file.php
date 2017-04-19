@@ -2245,3 +2245,23 @@ Uncatched error: syntax error, unexpected 'echo' (T_ECHO)
 time: 06-10-10 : 19-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 13
 Uncatched error: Function name must be a string
+
+time: 08-00-52 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\News.php line 39
+Uncatched error: page 111 not found
+
+time: 11-16-02 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 15
+Uncatched error: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';'
+
+time: 11-16-12 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 15
+Uncatched error: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';'
+
+time: 11-16-15 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 15
+Uncatched error: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';'
+
+time: 11-19-54 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Models\Model.php line 76
+Uncatched error: Argument 1 passed to App\Models\Model::findById() must be of the type integer, null given, called in C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\Admin.php on line 48
