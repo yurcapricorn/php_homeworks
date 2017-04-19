@@ -2265,3 +2265,7 @@ Uncatched error: syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',
 time: 11-19-54 : 19-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Models\Model.php line 76
 Uncatched error: Argument 1 passed to App\Models\Model::findById() must be of the type integer, null given, called in C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\Admin.php on line 48
+
+time: 11-27-39 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\Admin.php line 50
+Uncatched error: removing article not found
