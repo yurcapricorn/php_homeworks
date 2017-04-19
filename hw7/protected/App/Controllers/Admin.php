@@ -42,6 +42,17 @@ class Admin extends Controller
         $this->view->display($template);
     }
 
+    public function actionDelete()
+    {
+        if (!empty($_POST['id'])) {
+            $article = Article::findById($_POST['id']);
+            if (empty($article)) {
+                throw new NoPageException('removing article not found');
+            }
+            $article->delete();
+        }
+    }
+
     /**
      * saves object into Db
      */
@@ -50,7 +61,7 @@ class Admin extends Controller
         if (!empty($_POST['id'])) {
             $article = Article::findById($_POST['id']);
             if (empty($article)) {
-                throw new NoPageException('updating page not found');
+                throw new NoPageException('updating article not found');
             }
         } else {
             $article = new Article();

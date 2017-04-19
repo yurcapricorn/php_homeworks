@@ -8,6 +8,10 @@
 
 <h1 align="center">Admin Panel</h1>
 
+<?php $table = new \App\AdminDataTable(require __DIR__ . '/../../protected/App/functions.php', $articles);
+    echo $table->render();
+?>
+
 <div class="inputform" align="center"> <h2> INSERT FORM </h2>
     <form>
         <p><input title="title" name="title" type="text" size="65" required/><strong> <br> Insert new article title here</strong></p>
@@ -29,14 +33,14 @@
     </form>
 </div>
 
-<!--<div class="inputform" align="center"> <h2> REMOVE FORM </h2>-->
-<!--<form>-->
-<!--<p><input title="id" name="id" type="number" required/><strong> <br> type article ID to remove here </strong></p>-->
-<!--<p class="form-submit">-->
-<!--<input type="submit" formmethod="POST" formaction="/Admin/Save/" value="REMOVE">-->
-<!--</p>-->
-<!--</form>-->
-<!--</div>-->
+<div class="inputform" align="center"> <h2> DELETE FORM </h2>
+    <form>
+        <p><input title="id" name="id" type="number" required/><strong> <br> type article ID to remove here </strong></p>
+        <p class="form-submit">
+        <input type="submit" formmethod="POST" formaction="/Admin/Delete/" value="DELETE">
+        </p>
+    </form>
+</div>
 
 </body>
 </html>

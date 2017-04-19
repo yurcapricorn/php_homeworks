@@ -7,10 +7,10 @@
 <body>
 
 <table border="1">
-<?php foreach($this->data['model'] as $model){ ?>
+<?php foreach($models as $model){ ?>
         <tr>
-        <?php foreach($this->data['func'] as $func){ ?>
-        <th> <?php var_dump( $func($model) ); ?> </th>
+        <?php foreach($functions as $function){ ?>
+        <th> <?php echo $function($model ); ?> </th>
         <?php } ?>
         </tr>
     <?php } ?>

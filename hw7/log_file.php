@@ -2225,3 +2225,23 @@ Uncatched error: syntax error, unexpected '}', expecting end of file
 time: 02-38-16 : 19-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 22
 Uncatched error: syntax error, unexpected end of file
+
+time: 06-05-07 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\edit.html line 12
+Uncatched error: syntax error, unexpected 'echo' (T_ECHO)
+
+time: 06-08-42 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\edit.html line 12
+Uncatched error: syntax error, unexpected 'echo' (T_ECHO)
+
+time: 06-08-45 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\edit.html line 12
+Uncatched error: syntax error, unexpected 'echo' (T_ECHO)
+
+time: 06-08-48 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\edit.html line 12
+Uncatched error: syntax error, unexpected 'echo' (T_ECHO)
+
+time: 06-10-10 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 13
+Uncatched error: Function name must be a string

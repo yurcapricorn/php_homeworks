@@ -23,7 +23,7 @@ class AdminDataTable
      */
     public function __construct(array $func, array $models) {
         $this->data['func'] = $func;
-        $this->data['model'] = $models;
+        $this->data['models'] = $models;
     }
 
     /**
@@ -33,11 +33,15 @@ class AdminDataTable
      * в них передается запись (модель)
      * То, что вернула функция - становится значением ячейки таблицы
      */
+
+    /**
+     * returns data with template
+     * @return string
+     */
     public function render() {
-        ob_start();
-        include __DIR__ . '/../../templates/admin/admindatatable.html';
-        $data = ob_get_contents();
-        ob_clean();
-        echo $data;
+        $view = new View();
+        $view->functions = $this->data['func'];
+        $view->models = $this->data['models'];
+        return $view->render(__DIR__ . '/../../templates/admin/admindatatable.html');
     }
 }
