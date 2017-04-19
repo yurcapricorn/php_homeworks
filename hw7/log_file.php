@@ -2269,3 +2269,7 @@ Uncatched error: Argument 1 passed to App\Models\Model::findById() must be of th
 time: 11-27-39 : 19-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\Admin.php line 50
 Uncatched error: removing article not found
+
+time: 11-31-08 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\Admin.php line 50
+Uncatched error: removing article not found

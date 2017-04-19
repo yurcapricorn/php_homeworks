@@ -51,7 +51,7 @@ class Admin extends Controller
             }
             $article->delete();
         }
-        $this->actionEdit();
+        header('Location: /Admin/Edit/');
     }
 
     /**
@@ -75,6 +75,6 @@ class Admin extends Controller
 //            }
         }
         $article->save();
-        $this->actionEdit();
+        header('Location: /Admin/Edit/');
     }
 }
