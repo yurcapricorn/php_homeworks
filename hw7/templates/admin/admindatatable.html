@@ -6,14 +6,11 @@
 </head>
 <body>
 
-
-<table>
-<?php
-    foreach($this->data['model'] as $model){
-        echo '<tr>';
-        foreach($this->data['func'] as $func){ ?>
-            <td> <?php var_dump( $func($model) ); ?>
-            </td>
+<table border="1">
+<?php foreach($this->data['model'] as $model){ ?>
+        <tr>
+        <?php foreach($this->data['func'] as $func){ ?>
+        <th> <?php var_dump( $func($model) ); ?> </th>
         <?php } ?>
         </tr>
     <?php } ?>

@@ -18,7 +18,7 @@ class Admin extends Controller
      * admin data table
      */
     public function actionAdminDataTable(){
-        $table = new AdminDataTable(['var_dump'], Article::findAll());
+        $table = new AdminDataTable(['var_dump', 'print_r'], Article::findAll());
         $table->render();
     }
     /**

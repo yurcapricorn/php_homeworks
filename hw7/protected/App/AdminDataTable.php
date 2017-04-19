@@ -25,7 +25,7 @@ class AdminDataTable
     }
 
     /**
-     * @return \Generator
+     * render()
      */
     public function render() {
         ob_start();
