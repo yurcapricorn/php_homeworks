@@ -1,4 +1,7 @@
 <?php
+
+namespace App;
+
 use App\Models\Article;
 
 return [
