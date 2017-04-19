@@ -9,11 +9,16 @@ bugfixing from h\w_6 :
 ________________________________
 h\w_7 progress:
 
--Generator method queryEach() in Db done!
+-Generator method queryEach() in Db done
+
 -Generator applied for /News/All controller action
+
 -AdminDataTable class created
+
 -admindatatable template created
+
 -functions.php created
+
 -AdminDataTable applied to admin template
 
 _________________________________
