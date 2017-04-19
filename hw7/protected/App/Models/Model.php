@@ -50,11 +50,22 @@ abstract class Model implements \Iterator, \Countable
      * find all method
      * @return array|bool
      */
-    public static function findAll()
+    public static function findAllEach()
     {
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE;
         return $db->queryEach($sql, static::class, []);
+    }
+
+    /**
+     * find all method
+     * @return array|bool
+     */
+    public static function findAll()
+    {
+        $db = Db::instance();
+        $sql = 'SELECT * FROM ' . static::TABLE;
+        return $db->query($sql, static::class, []);
     }
 
     /**

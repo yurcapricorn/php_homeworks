@@ -5,7 +5,6 @@ namespace App\Controllers;
 use App\AdminDataTable;
 use App\Controller;
 use App\Models\Article;
-use App\MultiException;
 use App\NoPageException;
 
 
@@ -15,6 +14,16 @@ use App\NoPageException;
  */
 class Admin extends Controller
 {
+    /**
+     * admin data table
+     */
+    public function actionAdminDataTable(){
+        $table = new AdminDataTable(['var_dump'], Article::findAll());
+        $table->render();
+    }
+    /**
+     * All news
+     */
     public function actionAllNews()
     {
         $news = new News();
@@ -26,8 +35,8 @@ class Admin extends Controller
      */
     public function actionEdit()
     {
-        $this->view->table = new AdminDataTable(['add','edit','remove'], ['news', 'authors']);
-        $template = __DIR__ . '/../../../templates/admin/edit2.html';
+        $this->view->articles = Article::findAll();
+        $template = __DIR__ . '/../../../templates/admin/edit.html';
         $this->view->display($template);
     }
 

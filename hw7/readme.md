@@ -11,6 +11,7 @@ h\w_7 progress:
 
 -Generator method queryEach() in Db done!
 -Generator applied for /News/All controller action
+-AdminDataTable class created
 
 _________________________________
 h\w_7:

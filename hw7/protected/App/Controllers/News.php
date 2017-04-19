@@ -18,7 +18,7 @@ class News extends Controller
      */
     public function actionAll()
     {
-        $this->view->articles = Article::findAll();
+        $this->view->articles = Article::findAllEach();
         if (empty($this->view->articles)) {
             throw new NoPageException('no articles in database');
         }

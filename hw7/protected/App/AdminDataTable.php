@@ -21,17 +21,17 @@ class AdminDataTable
      */
     public function __construct(array $func, array $models) {
         $this->data['func'] = $func;
-        $this->data['mod'] = $models;
+        $this->data['model'] = $models;
     }
 
     /**
      * @return \Generator
      */
     public function render() {
-        foreach($this->data['mod'] as $model){
-            foreach($this->data['func'] as $func){
-                yield $func($model);
-            }
-        }
+        ob_start();
+        include __DIR__ . '/../../templates/admin/admindatatable.html';
+        $data = ob_get_contents();
+        ob_clean();
+        echo $data;
     }
 }

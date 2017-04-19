@@ -37,7 +37,7 @@ class Db
      * @param $query
      * @param $class
      * @param array $params
-     * @return array|bool (all database entries as $class objects array)
+     * @return \Generator
      * @throws DbException
      */
     public function queryEach($query, $class = \stdClass::class, $params = [])

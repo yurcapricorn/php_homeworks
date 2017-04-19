@@ -2213,3 +2213,15 @@ Uncatched error: syntax error, unexpected end of file
 time: 12-28-29 : 19-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\edit2.html line 18
 Uncatched error: syntax error, unexpected end of file
+
+time: 02-31-40 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controller.php line 32
+Uncatched error: Call to undefined method App\Controllers\Admin::actionadminDataTable()
+
+time: 02-32-16 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 14
+Uncatched error: syntax error, unexpected '}', expecting end of file
+
+time: 02-38-16 : 19-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\templates\admin\admindatatable.html line 22
+Uncatched error: syntax error, unexpected end of file
