@@ -2189,3 +2189,15 @@ Uncatched error: page 6777 not found
 time: 06-27-52 : 18-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
 Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 12-10-36 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\protected\App\View.php line 24
+Uncatched error: Cannot use object of type App\Config as array
+
+time: 12-10-37 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 12-11-06 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found

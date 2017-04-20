@@ -20,9 +20,8 @@ class View implements \Countable, \Iterator
     {
         $path = $this->getPath($template);
         $loader = new \Twig_Loader_Filesystem($path['path']);
-        $twig = new \Twig_Environment($loader, array(
-            //'cache' => __DIR__ . '/../../cache/',
-        ));
+        $config = Config::instance();
+        $twig = new \Twig_Environment($loader, ['cache' => $config->data['cache']]); //cache
         \PHP_Timer::start(); //timer starts
         ob_start(); //buffer starts
         echo $twig->render( $path['file'], $this->data ); //rendering main page and passing to buffer
