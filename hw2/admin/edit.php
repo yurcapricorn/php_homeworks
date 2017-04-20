@@ -4,7 +4,7 @@ include_once __DIR__ . '/../protected/App/Models/Article.php';
 
 if (!empty($_POST['id'])) {
     $article = \App\Models\Article::findById($_POST['id']);
-    if (($article !== false)) {
+    if (!empty($article)) {
         if (!empty($_POST['title']) || !empty($_POST['lead'])) {
             if (!empty($_POST['title'])) {
                 $article->title = $_POST['title'];
