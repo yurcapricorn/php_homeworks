@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-
 use App\Controller;
 
 /**
@@ -12,6 +11,7 @@ use App\Controller;
 class Error extends Controller
 {
     /**
+     * actionDb error
      * @param $error
      */
     public function actionDb($error)
@@ -22,6 +22,7 @@ class Error extends Controller
     }
 
     /**
+     * action404 error
      * @param $error
      */
     public function action404($error)

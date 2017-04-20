@@ -6,7 +6,6 @@ use App\Controller;
 use App\Models\Article;
 use App\NoPageException;
 
-
 /**
  * Controller News
  * @package App\Controllers
@@ -14,6 +13,7 @@ use App\NoPageException;
 class News extends Controller
 {
     /**
+     * all news
      * @throws NoPageException
      */
     public function actionAll()
@@ -27,6 +27,7 @@ class News extends Controller
     }
 
     /**
+     * one article
      * @throws NoPageException
      */
     public function actionOne()

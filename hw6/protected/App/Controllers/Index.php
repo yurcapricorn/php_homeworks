@@ -12,7 +12,7 @@ use App\Models\Article;
 class Index extends Controller
 {
     /**
-     * Default
+     * Default action
      */
     protected function actionDefault()
     {
@@ -21,6 +21,7 @@ class Index extends Controller
     }
 
     /**
+     * news controller
      * @param $action
      */
     public function actionNews($action)
@@ -30,6 +31,7 @@ class Index extends Controller
     }
 
     /**
+     * admin controller
      * @param $action
      */
     public function actionAdmin($action)
@@ -39,6 +41,7 @@ class Index extends Controller
     }
 
     /**
+     * error controller
      * @param $action
      */
     public function actionError($action)
