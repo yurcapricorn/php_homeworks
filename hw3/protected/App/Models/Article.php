@@ -2,88 +2,47 @@
 
 namespace App\Models;
 
-require_once __DIR__ . '/../../autoload.php';
-
 /**
  * Class Article
  * @package App\Models
+ * @property int id
  */
 class Article extends Model
 {
+    /**
+     * @var string table
+     * @var int author_id
+     * @var string title
+     * @var string lead
+     */
     protected const TABLE = 'news';
     public $author_id;
     public $title;
     public $lead;
 
     /**
-     * Article constructor.
-     * @param array $arr
-     */
-    public function __construct(array $arr = [])
-    {
-        if (empty($arr)) {
-            return;
-        }
-        $article = new Article();
-        if (!empty($arr['id'])) {
-            $this->id = $arr['id'];
-            $article = Article::findById($arr['id']);
-        }
-        $this->title = $arr['title'] ?? $article->title;
-        $this->lead = $arr['lead'] ?? $article->lead;
-        $this->authr_id = $arr['author_id'] ?? $article->author_id;
-    }
-
-    /**
-     * @override SomeMagic __get() method
+     * @override __get()
      * @param $key
      * @return Author|bool
      */
     public function __get($key)
     {
-        switch ($key) {
-            case('author'): {
-                if ($this->author_id !== false && $this->author_id !== NULL) {
-                    return Author::findById($this->author_id);
-                }
-                break;
-            }
-            default: {
-                break;
+        if ($key === 'author') {
+            if (!empty($this->author_id)) {
+                return Author::findById($this->author_id);
             }
         }
     }
 
     /**
-     * @override Model insert()
+     * @override __isset()
+     * @param $key
      * @return bool
      */
-    public function insert()
+    public function __isset($key)
     {
-        if (empty($this->title) && empty($this->lead)) {
-            return false;
-        } else {
-            $res = parent::insert();
-            if ($res !== true) {
-                return false;
-            }
+        if ($key === 'author') {
+            return isset($this->author_id);
         }
-        return true;
-    }
-
-    /**
-     * @override Model update()
-     * @return bool
-     */
-    public function update()
-    {
-        if ((empty($this->title) && empty($this->lead))) {
-            return false;
-        }
-        $res = parent::update();
-        if ($res !== true) {
-            return false;
-        }
-        return true;
     }
 }

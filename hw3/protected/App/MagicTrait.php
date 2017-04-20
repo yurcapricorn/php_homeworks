@@ -6,7 +6,7 @@ namespace App;
  * Trait SomeMagic
  * @package App
  */
-trait SomeMagic
+trait MagicTrait
 {
     /**
      * @var array
@@ -31,7 +31,6 @@ trait SomeMagic
         if (isset($this->data[$key])) {
             return $this->data[$key];
         }
-        return false;
     }
 
     /**

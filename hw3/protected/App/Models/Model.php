@@ -4,8 +4,6 @@ namespace App\Models;
 
 use App\Db;
 
-require_once __DIR__ . '/../Db.php';
-
 /**
  * Class Model
  * @package App\Models
@@ -16,7 +14,9 @@ abstract class Model
      * keeps database table name
      */
     protected const TABLE = null;
-
+    /**
+     * @var int id
+     */
     public $id;
 
     /**
@@ -32,6 +32,7 @@ abstract class Model
     }
 
     /**
+     * finds by id
      * @param int $id
      * @return \App\Models\Article|bool
      */
@@ -53,6 +54,7 @@ abstract class Model
     }
 
     /**
+     * finds last entries
      * @return array
      */
     public static function findLastEntries()
@@ -63,55 +65,53 @@ abstract class Model
     }
 
     /**
+     * insert method
+     * takes public object fields except 'id'
      * @return bool
      */
     public function insert()
     {
-        $col = [];
-        $val = [];
-        foreach ($this as $k => $v) {
-            if ($k === 'id') {
+        $columns = [];
+        $values = [];
+        foreach ($this as $key => $val) {
+            if ($key === 'id') {
                 continue;
             }
-            $col[] = $k;
-            $val[':' . $k] = $v;
+            $columns[] = $key;
+            $values[':' . $key] = $val;
         }
-        $sql = '
-            INSERT INTO ' . static::TABLE . '(' . implode(',', $col) . ')
-            VALUES
-            (' . implode(',', array_keys($val)) . ')
-            ';
+        $sql = 'INSERT INTO ' . static::TABLE . '(' . implode(',', $columns) . ')
+            VALUES(' . implode(',', array_keys($values)) . ')';
         $db = Db::instance();
-        $res = $db->execute($sql, $val);
+        $res = $db->execute($sql, $values);
         if ($res === false) {
             return false;
         }
         $this->id = $db->lastDbInsertId();
-        return true;
     }
 
     /**
+     * update method
+     * takes public object fields
      * @return bool
      */
     public function update()
     {
-        $col = [];
-        $val = [];
-        foreach ($this as $k => $v) {
-            if ($k == 'id') {
-                $val[':' . $k] = $v;
-                continue;
+        $columns = [];
+        $values = [];
+        foreach ($this as $key => $val) {
+            if ($key !== 'id') {
+                $columns[] = $key . '=:' . $key;
             }
-            $col[$k . '=:' . $k] = $k;
-            $val[':' . $k] = $v;
+            $values[':' . $key] = $val;
         }
-        $sql = '
-            UPDATE ' . static::TABLE . ' SET ' . implode(',', array_keys($col)) . ' WHERE id=:id';
+        $sql = 'UPDATE ' . static::TABLE . ' SET ' . implode(',', $columns) . ' WHERE id=:id';
         $db = Db::instance();
-        return $db->execute($sql, $val);
+        return $db->execute($sql, $values);
     }
 
     /**
+     * isnew method
      * @return bool
      */
     public function isNew()
@@ -120,6 +120,7 @@ abstract class Model
     }
 
     /**
+     * save method
      * @return bool
      */
     public function save()
@@ -132,6 +133,7 @@ abstract class Model
     }
 
     /**
+     * delete method
      * @return bool
      */
     public function delete()

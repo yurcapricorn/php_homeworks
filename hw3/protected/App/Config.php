@@ -2,7 +2,6 @@
 
 namespace App;
 
-require_once __DIR__ . '\Singleton.php';
 
 /**
  * Class Config
@@ -11,14 +10,21 @@ require_once __DIR__ . '\Singleton.php';
  */
 class Config
 {
+    /**
+     * singleton
+     */
     use \App\Singleton;
-
+    /**
+     * @var array|mixed
+     */
     public $data = [];
 
+    /**
+     * Config constructor.
+     */
     public function __construct()
     {
-        $data = include __DIR__ . '\..\..\Config_file.php';
-        $this->data = $data;
+        $this->data = include __DIR__ . '\..\..\Config_file.php';
     }
 }
 

@@ -14,6 +14,9 @@ trait Singleton
      */
     protected static $instance;
 
+    /**
+     * Singleton constructor.
+     */
     protected function __construct()
     {
     }

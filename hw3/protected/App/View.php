@@ -2,16 +2,19 @@
 
 namespace App;
 
-
 /**
  * Class View
  * @package App
  */
 class View implements \Countable, \Iterator
 {
-    use \App\SomeMagic;
+    /**
+     * MagicTrait
+     */
+    use \App\MagicTrait;
 
     /**
+     * render
      * @param $template
      * @return string
      */
@@ -28,6 +31,7 @@ class View implements \Countable, \Iterator
     }
 
     /**
+     * display
      * @param $template
      */
     public function display($template)
@@ -49,8 +53,7 @@ class View implements \Countable, \Iterator
      */
     public function current()
     {
-        $data = current($this->data);
-        return $data;
+        return current($this->data);
     }
 
     /**
@@ -59,8 +62,7 @@ class View implements \Countable, \Iterator
      */
     public function key()
     {
-        $data = key($this->data);
-        return $data;
+        return key($this->data);
     }
 
     /**
@@ -69,8 +71,7 @@ class View implements \Countable, \Iterator
      */
     public function next()
     {
-        $var = next($this->data);
-        return $var;
+        return next($this->data);
     }
 
     /**
@@ -80,8 +81,7 @@ class View implements \Countable, \Iterator
     public function valid()
     {
         $key = key($this->data);
-        $data = ($key !== NULL && $key !== false);
-        return $data;
+        return ($key !== NULL && $key !== false);
     }
 
     /**

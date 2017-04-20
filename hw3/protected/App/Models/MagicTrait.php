@@ -3,10 +3,10 @@
 namespace App\Models;
 
 /**
- * Trait SomeMagic
+ * Trait MagicTrait
  * @package App\Models
  */
-trait SomeMagic
+trait MagicTrait
 {
     /**
      * @var array
