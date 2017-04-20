@@ -11,6 +11,9 @@ use Psr\Log\LoggerInterface;
  */
 class Logger extends AbstractLogger implements LoggerInterface
 {
+    /**
+     * Singleton
+     */
     use Singleton;
 
     /**
