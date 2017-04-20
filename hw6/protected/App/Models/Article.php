@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-use App\MagicTrait;
-
 /**
  * Class Article
  * @property string table
