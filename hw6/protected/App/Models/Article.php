@@ -2,9 +2,7 @@
 
 namespace App\Models;
 
-
 use App\MagicTrait;
-
 
 /**
  * Class Article

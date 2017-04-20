@@ -9,6 +9,9 @@ namespace App;
  */
 class Config
 {
+    /**
+     * singleton
+     */
     use \App\Singleton;
     /**
      * @var array
