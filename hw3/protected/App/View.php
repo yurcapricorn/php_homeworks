@@ -25,9 +25,7 @@ class View implements \Countable, \Iterator
             $$key = $val;
         }
         include $template;
-        $data = ob_get_contents();
-        ob_end_clean();
-        return $data;
+        return ob_get_clean();
     }
 
     /**
@@ -80,8 +78,7 @@ class View implements \Countable, \Iterator
      */
     public function valid()
     {
-        $key = key($this->data);
-        return ($key !== NULL && $key !== false);
+        return !empty(key($this->data));
     }
 
     /**
