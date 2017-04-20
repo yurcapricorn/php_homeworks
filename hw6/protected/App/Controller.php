@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 /**
  * Class Controller
  * @package App

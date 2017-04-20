@@ -34,9 +34,7 @@ class View implements \Countable, \Iterator
         \PHP_Timer::stop(); //stops timer
         $resource = \PHP_Timer::resourceUsage();
         include __DIR__ . '/../../templates/news/footer.html'; //footer with resource usage display
-        $data = ob_get_contents(); //buffer end
-        ob_end_clean();
-        return $data;
+        return ob_get_clean();
     }
 
     /**
@@ -68,9 +66,7 @@ class View implements \Countable, \Iterator
         \PHP_Timer::stop();
         $resource = \PHP_Timer::resourceUsage();
         include __DIR__ . '/../../templates/news/footer.html';
-        $data = ob_get_contents();
-        ob_end_clean();
-        return $data;
+        return ob_get_clean();
     }
 
     /**
@@ -84,6 +80,7 @@ class View implements \Countable, \Iterator
     }
 
     /**
+     * display with twig
      * @param $template
      */
     public function displayTwig($template)

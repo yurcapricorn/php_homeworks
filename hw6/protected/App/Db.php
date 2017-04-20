@@ -8,6 +8,9 @@ namespace App;
  */
 class Db
 {
+    /**
+     * singleton
+     */
     use \App\Singleton;
 
     /**

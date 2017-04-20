@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 /**
  * Class Config
  * @package App

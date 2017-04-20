@@ -27,7 +27,7 @@ class Mailer extends \Swift
     }
 
     /**
-     * mailing!
+     * sendmail()
      * @param $message
      * @return int
      */
