@@ -8,8 +8,13 @@ namespace App;
  */
 class Mailer extends \Swift
 {
+    /**
+     * singleton
+     */
     use Singleton;
-
+    /**
+     * @var array
+     */
     protected $data = [];
 
     /**
