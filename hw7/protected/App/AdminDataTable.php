@@ -20,7 +20,7 @@ class AdminDataTable
      * @param array $func
      * @param array $models
      */
-    public function __construct(array $func, array $models) {
+    public function __construct(array $models, array $func) {
         $this->data['func'] = $func;
         $this->data['models'] = $models;
     }
@@ -31,9 +31,6 @@ class AdminDataTable
      * Для каждой записи (это строка таблицы) последовательно вызываются функции (каждая - это столбец таблицы),
      * в них передается запись (модель)
      * То, что вернула функция - становится значением ячейки таблицы
-     */
-
-    /**
      * returns data with template
      * @return string
      */

@@ -8,7 +8,7 @@
 
 <h1 align="center">Admin Panel</h1>
 
-<?php $table = new \App\AdminDataTable(require __DIR__ . '/../../protected/App/functions.php', $articles);
+<?php $table = new \App\AdminDataTable($articles, require __DIR__ . '/../../protected/App/functions.php');
     echo $table->render();
 ?>
 

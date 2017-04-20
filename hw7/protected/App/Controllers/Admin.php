@@ -7,7 +7,6 @@ use App\Controller;
 use App\Models\Article;
 use App\NoPageException;
 
-
 /**
  * Controller Admin
  * @package App\Controllers

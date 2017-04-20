@@ -15,7 +15,13 @@ use App\MagicTrait;
  */
 abstract class Model implements \Iterator, \Countable
 {
+    /**
+     * magictrait
+     */
     use MagicTrait;
+    /**
+     * iterator
+     */
     use Iterator;
 
     protected const TABLE = null;
