@@ -31,7 +31,7 @@ class Mailer extends \Swift
      * @param $message
      * @return int
      */
-    public function sendMail($message)
+    public function sendMail($content)
     {
         foreach ($this->data as $key => $val) {
             $$key = $val;
@@ -40,12 +40,10 @@ class Mailer extends \Swift
             ->setUsername($user)
             ->setPassword($pass);
         $swift = \Swift_Mailer::newInstance($transport);
-        $content = $message;
         $message = \Swift_Message::newInstance('Db error')
             ->setFrom($from)
             ->setTo($to)
-            ->setBody($content, 'text/html')
-            ->addPart(strip_tags($content), 'text/plain');
+            ->setBody($content, 'text/html');
         try {
             $swift->send($message);
         } catch (\Exception $e) {
