@@ -13,6 +13,9 @@ namespace App\Models;
  */
 class Article extends Model
 {
+    /**
+     * @var string table
+     */
     protected const TABLE = 'news';
 
     /**
