@@ -2,13 +2,15 @@
 
 namespace App;
 
-
 /**
  * Class Config
  * @package App
  */
 class Config
 {
+    /**
+     * singleton
+     */
     use \App\Singleton;
     /**
      * @var array

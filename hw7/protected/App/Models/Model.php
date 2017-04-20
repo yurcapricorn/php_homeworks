@@ -5,8 +5,6 @@ namespace App\Models;
 use App\Db;
 use App\Iterator;
 use App\MagicTrait;
-use App\MultiException;
-
 
 /**
  * Class Model

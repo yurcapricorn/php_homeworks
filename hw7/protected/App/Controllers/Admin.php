@@ -42,6 +42,9 @@ class Admin extends Controller
         $this->view->display($template);
     }
 
+    /**
+     * delete
+     */
     public function actionDelete()
     {
         if (!empty($_GET['id'])) {

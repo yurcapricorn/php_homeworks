@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 /**
  * Class Controller
  * @package App
@@ -23,6 +22,7 @@ abstract class Controller
     }
 
     /**
+     * action()
      * @param $name
      */
     public function action($name)

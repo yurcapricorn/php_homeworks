@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Controller;
-use App\Models\Article;
 
 /**
  * Controller Index

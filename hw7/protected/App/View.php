@@ -8,10 +8,15 @@ namespace App;
  */
 class View implements \Countable, \Iterator
 {
+    /**
+     * @use magictrait
+     * @use iterator
+     */
     use MagicTrait;
     use Iterator;
 
     /**
+     * twig renderer
      * returns data with templates
      * @param $template
      * @return string
