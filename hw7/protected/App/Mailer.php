@@ -27,7 +27,7 @@ class Mailer extends \Swift
     }
 
     /**
-     * mailing!
+     * sendmail()
      * @param $message
      * @return int
      */
@@ -47,7 +47,7 @@ class Mailer extends \Swift
             ->setBody($content, 'text/html')
             ->addPart(strip_tags($content), 'text/plain');
         try {
-            return $swift->send($message);
+            $swift->send($message);
         } catch (\Exception $e) {
             $logger = Logger::instance();
             $logger->log('mailer error', $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);

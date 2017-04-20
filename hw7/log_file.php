@@ -2273,3 +2273,39 @@ Uncatched error: removing article not found
 time: 11-31-08 : 19-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Controllers\Admin.php line 50
 Uncatched error: removing article not found
+
+time: 04-31-44 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-32-46 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-33-52 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-34-23 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-34-27 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-36-24 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-37-13 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-39-16 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
+
+time: 04-40-31 : 20-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw7\protected\App\Db.php line 29
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost' (using password: NO)
