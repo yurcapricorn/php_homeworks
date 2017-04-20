@@ -83,6 +83,7 @@ class View implements \Countable, \Iterator
     }
 
     /**
+     * displayTwig method
      * @param $template
      */
     public function displayTwig($template)

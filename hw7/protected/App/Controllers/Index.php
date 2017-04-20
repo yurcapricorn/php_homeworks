@@ -20,6 +20,7 @@ class Index extends Controller
     }
 
     /**
+     * news controller
      * @param $action
      */
     public function actionNews($action)
@@ -29,6 +30,7 @@ class Index extends Controller
     }
 
     /**
+     * admin controller
      * @param $action
      */
     public function actionAdmin($action)
@@ -38,6 +40,7 @@ class Index extends Controller
     }
 
     /**
+     * error controller
      * @param $action
      */
     public function actionError($action)

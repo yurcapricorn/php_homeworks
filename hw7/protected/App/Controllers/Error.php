@@ -11,6 +11,7 @@ use App\Controller;
 class Error extends Controller
 {
     /**
+     * Db error action
      * @param $error
      */
     public function actionDb($error)
@@ -21,6 +22,7 @@ class Error extends Controller
     }
 
     /**
+     * 404 error action
      * @param $error
      */
     public function action404($error)
