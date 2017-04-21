@@ -3,8 +3,31 @@ hello! I'm a readme file.
 
 ________________________________
 
-bugfixing from h\w_6 : 
-
+bugfixing :
+ 
+ 1. https://github.com/yurcapricorn/php_homeworks/blob/master/hw7/protected/App/AdminDataTable.php#L24
+ Нахрена такие сложности? Чем хуже просто $this->funcs? 
+ Что вы всё придумываете, Юрий? Почему у вас код получается... цветастый какой-то?
+  
+ -fixed.
+ 
+ 2. https://github.com/yurcapricorn/php_homeworks/blob/master/hw7/templates/admin/admindatatable.html#L15
+ И чё? Чтобы вы ни удаляли - статью, автора, товар в магазине - будет одна и та же ссылка? Что за чушь?
+ 
+ -fixed. link removed
+ 
+ 3. https://github.com/yurcapricorn/php_homeworks/blob/master/hw7/protected/App/Controllers/Admin.php#L20
+ Что это? Как это соотносится с заданием?
+ 
+ -fixed. removed
+ 
+ 4. Первая часть - зачёт (сложно было не справиться). Часть с AdminDataTable - незачёт полный. 
+ Массива функций я так и не увидел, нормальной таблицы в админке тоже.
+ 
+ -functions array:
+ https://github.com/yurcapricorn/php_homeworks/blob/master/hw7/protected/App/functions.php
+ -table applied
+ https://github.com/yurcapricorn/php_homeworks/blob/master/hw7/templates/admin/edit.html#L11
 
 ________________________________
 h\w_7 progress:

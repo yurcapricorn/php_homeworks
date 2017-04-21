@@ -13,16 +13,17 @@ class AdminDataTable
     /**
      * @var array
      */
-    protected $data = [];
+    protected $funcs = [];
+    protected $models = [];
 
     /**
      * AdminDataTable constructor.
      * @param array $func
      * @param array $models
      */
-    public function __construct(array $models, array $func) {
-        $this->data['func'] = $func;
-        $this->data['models'] = $models;
+    public function __construct(array $models, array $funcs) {
+        $this->funcs = $funcs;
+        $this->models = $models;
     }
 
     /**
@@ -36,8 +37,8 @@ class AdminDataTable
      */
     public function render() {
         $view = new View();
-        $view->functions = $this->data['func'];
-        $view->models = $this->data['models'];
+        $view->functions = $this->funcs;
+        $view->models = $this->models;
         return $view->render(__DIR__ . '/../../templates/admin/admindatatable.html');
     }
 }

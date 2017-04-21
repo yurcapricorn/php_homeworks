@@ -2,7 +2,6 @@
 
 namespace App\Controllers;
 
-use App\AdminDataTable;
 use App\Controller;
 use App\Models\Article;
 use App\NoPageException;
@@ -13,15 +12,6 @@ use App\NoPageException;
  */
 class Admin extends Controller
 {
-    /**
-     * admin data table
-     */
-    public function actionAdminDataTable(){
-        $func = ['var_dump', 'print_r']; //массив функций
-        $models = Article::findAll(); // массив моделей
-        $table = new AdminDataTable($func, $models);
-        $table->render();
-    }
     /**
      * All news
      */
