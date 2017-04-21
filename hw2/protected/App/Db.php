@@ -4,7 +4,6 @@ namespace App;
 
 require_once __DIR__ . '/Singleton.php';
 
-
 /**
  * Class Db
  * @package App
@@ -30,10 +29,8 @@ class Db
     {
         require_once __DIR__ . '/Config.php';
         $config = Config::instance();
-        foreach ($config->data['db'] as $key => $val) {
-            $$key = $val;
-        }
-        $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name, $user, $pass);
+        $this->dbh = new \PDO('mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['name'],
+            $config->data['db']['user'], $config->data['db']['pass']);
     }
 
     /**

@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__ . '/../protected/App/Models/Article.php';
+require_once __DIR__ . '/../protected/App/Models/Article.php';
 
 if (!empty($_POST['id'])) {
     $article = \App\Models\Article::findById($_POST['id']);
@@ -16,3 +16,4 @@ if (!empty($_POST['id'])) {
         }
     }
 }
+header('Location: /admin/index.php');
