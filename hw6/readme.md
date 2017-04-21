@@ -1,6 +1,12 @@
 hello! I'm a readme file.
 
-!warning! mail sender cofiguration has to be updated! current box is banned!
+bugfixing on 21-04-2017:
+
+1Пункт 2 не выполнен. Вы подключили не одну из указанных библиотек, а все.
+Задание не выполнено.
+
+-fixed. (-logger, phptimer, swiftmailer removed)
+
 ________________________________
 
 bugfixing from h\w_5 : 

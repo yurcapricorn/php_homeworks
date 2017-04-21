@@ -2,14 +2,11 @@
 
 namespace App;
 
-use Psr\Log\AbstractLogger;
-use Psr\Log\LoggerInterface;
-
 /**
  * Class Logger
  * @package App
  */
-class Logger extends AbstractLogger implements LoggerInterface
+class Logger
 {
     use Singleton;
 

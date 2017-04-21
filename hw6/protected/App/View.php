@@ -28,13 +28,7 @@ class View implements \Countable, \Iterator
         $loader = new \Twig_Loader_Filesystem($path['path']);
         $config = Config::instance();
         $twig = new \Twig_Environment($loader, ['cache' => $config->data['cache']]); //cache
-        \PHP_Timer::start(); //timer starts
-        ob_start(); //buffer starts
-        echo $twig->render( $path['file'], $this->data ); //rendering main page and passing to buffer
-        \PHP_Timer::stop(); //stops timer
-        $resource = \PHP_Timer::resourceUsage();
-        include __DIR__ . '/../../templates/news/footer.html'; //footer with resource usage display
-        return ob_get_clean();
+        return $twig->render( $path['file'], $this->data ); //rendering main page and passing to buffer
     }
 
     /**
@@ -57,15 +51,11 @@ class View implements \Countable, \Iterator
      */
     public function render($template)
     {
-        \PHP_Timer::start();
         ob_start();
         foreach ($this as $key => $value) {
             $$key = $value;
         }
         include $template;
-        \PHP_Timer::stop();
-        $resource = \PHP_Timer::resourceUsage();
-        include __DIR__ . '/../../templates/news/footer.html';
         return ob_get_clean();
     }
 

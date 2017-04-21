@@ -21,8 +21,6 @@ $controller = new $controllerClassName;
     $logger = \App\Logger::instance();
     $logger->log('Db error', 'PDO Exception: ' . $e->getMessage(), ['place' => $e->getFile() . ' line ' . $e->getLine()]);
     $controller = new \App\Controllers\Error();
-    $mail = \App\Mailer::instance();
-    $mail->sendMail($e->getMessage());
     $controller->actionDb($e->getMessage());
 } catch (Throwable $e) {
     $logger = \App\Logger::instance();
