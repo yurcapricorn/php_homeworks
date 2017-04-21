@@ -12,3 +12,4 @@ if (!empty($_POST['lead']) || !empty($_POST['title'])) {
     }
     $article->save();
 }
+header('Location: /admin/index.php');

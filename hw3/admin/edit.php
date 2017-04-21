@@ -16,3 +16,4 @@ if (!empty($_POST['id'])) {
         }
     }
 }
+header('Location: /admin/index.php');
