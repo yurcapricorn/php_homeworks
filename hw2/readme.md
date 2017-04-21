@@ -2,17 +2,17 @@ hello! I'm a readme file!
 
 bugfixing 21-04-2017:
 
-https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/protected/App/Db.php#L33
+1. https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/protected/App/Db.php#L33
 Полная, никому не нужная, чушь. Убрать.
 
 fixed.
 
-Админ-панели у вас как не было - так и нет. 
-Где у вас в админке 
-1. список всех новостей? 
-
+2. Админ-панели у вас как не было - так и нет. 
+Где у вас в админке список всех новостей? 
 Как мне найти нужную, чтобы ее отредактировать? удалить?
 
+-fixed: added all news table in admin panel
+https://github.com/yurcapricorn/php_homeworks/blob/master/hw2/admin/templates/admin.html#L28
 
 ____________________________________
 bugfixing 08-04-2017
