@@ -22,11 +22,9 @@ class Db
     public function __construct()
     {
         $config = Config::instance();
-        foreach ($config->data['db'] as $key => $val) {
-            $$key = $val;
-        }
         try {
-            $this->dbh = new \PDO('mysql:host=' . $host . ';dbname=' . $name, $user, $pass);
+            $this->dbh = new \PDO('mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['name'],
+                $config->data['db']['user'], $config->data['db']['pass']);
             $this->dbh->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
         } catch (\PDOException $e) {
             throw new DbException($e);
