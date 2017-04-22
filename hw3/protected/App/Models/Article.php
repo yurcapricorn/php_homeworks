@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+require_once __DIR__ . '/../../autoload.php';
+
 /**
  * Class Article
  * @package App\Models

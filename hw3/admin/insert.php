@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '/../protected/autoload.php';
+include_once __DIR__ . '/../protected/App/Models/Article.php';
 
 if (!empty($_POST['lead']) || !empty($_POST['title'])) {
     $article = new \App\Models\Article();
