@@ -3,7 +3,7 @@
 namespace App;
 
 /**
- * Trait SomeMagic
+ * Trait MagicTrait
  * @package App
  */
 trait MagicTrait

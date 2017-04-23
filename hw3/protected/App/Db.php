@@ -4,12 +4,13 @@ namespace App;
 
 /**
  * Class Db
+ * maintains requests to db
  * @package App
  */
 class Db
 {
     /**
-     * singleton
+     * Trait Singleton
      */
     use \App\Singleton;
 

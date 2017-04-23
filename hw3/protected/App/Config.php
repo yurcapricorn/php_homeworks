@@ -2,7 +2,6 @@
 
 namespace App;
 
-
 /**
  * Class Config
  * keeps DB connection parameters
@@ -11,7 +10,7 @@ namespace App;
 class Config
 {
     /**
-     * singleton
+     * Trait Singleton
      */
     use \App\Singleton;
     /**

@@ -5,14 +5,12 @@ namespace App\Models;
 use App\Db;
 
 /**
+ * base model
  * Class Model
  * @package App\Models
  */
 abstract class Model
 {
-    /**
-     * keeps database table name
-     */
     protected const TABLE = null;
     /**
      * @var int id
@@ -32,7 +30,7 @@ abstract class Model
     }
 
     /**
-     * finds by id
+     * finds by id method
      * @param int $id
      * @return \App\Models\Article|bool
      */
@@ -66,7 +64,6 @@ abstract class Model
 
     /**
      * insert method
-     * takes public object fields except 'id'
      * @return bool
      */
     public function insert()
@@ -92,7 +89,6 @@ abstract class Model
 
     /**
      * update method
-     * takes public object fields
      * @return bool
      */
     public function update()
@@ -111,7 +107,7 @@ abstract class Model
     }
 
     /**
-     * isnew method
+     * cheks if model is new
      * @return bool
      */
     public function isNew()

@@ -6,26 +6,29 @@ require_once __DIR__ . '/../../autoload.php';
 
 /**
  * Class Article
+ * article model
  * @package App\Models
- * @property int id
  */
 class Article extends Model
 {
-    /**
-     * @var string table
-     * @var int author_id
-     * @var string title
-     * @var string lead
-     */
     protected const TABLE = 'news';
+    /**
+     * @var string $author_id
+     */
     public $author_id;
+    /**
+     * @var string $title
+     */
     public $title;
+    /**
+     * @var string $lead
+     */
     public $lead;
 
     /**
-     * @override __get()
+     * fins author by author_id
      * @param $key
-     * @return Author|bool
+     * @return Article|bool
      */
     public function __get($key)
     {
@@ -37,7 +40,7 @@ class Article extends Model
     }
 
     /**
-     * @override __isset()
+     * checks if article has author
      * @param $key
      * @return bool
      */
