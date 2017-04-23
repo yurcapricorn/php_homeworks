@@ -1,5 +1,11 @@
 hello! I'm a readme file!
 
+bugfixing 23-04-2017:
+
+Пункт 2.3 не выполнен, в моделях нет верного PHPDoc.
+
+-fixed PHPDoc
+
 bugfixing 09-04-2017
 
 1.https://github.com/yurcapricorn/php_homeworks/blob/master/hw3/protected/App/SomeMagic.php#L34

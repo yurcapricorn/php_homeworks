@@ -10,7 +10,7 @@ trait Singleton
 {
     /**
      * keeps instance of class
-     * @var
+     * @var object
      */
     protected static $instance;
 
@@ -22,7 +22,7 @@ trait Singleton
     }
 
     /**
-     * instance() method
+     * instance method
      * @return mixed instance of class
      */
     public static function instance()
