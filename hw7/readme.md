@@ -14,7 +14,7 @@ bugfixing :
  2. https://github.com/yurcapricorn/php_homeworks/blob/master/hw7/templates/admin/admindatatable.html#L15
  И чё? Чтобы вы ни удаляли - статью, автора, товар в магазине - будет одна и та же ссылка? Что за чушь?
  
- -fixed. link removed
+ -fixed. link moved to Article model method
  
  3. https://github.com/yurcapricorn/php_homeworks/blob/master/hw7/protected/App/Controllers/Admin.php#L20
  Что это? Как это соотносится с заданием?
