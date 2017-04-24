@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="238">
+              <first_editor relative-caret-position="272">
                 <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
                 <folding />
               </first_editor>
@@ -110,7 +110,6 @@
         <option value="$PROJECT_DIR$/protected/App/AdminDataTable.php" />
         <option value="$PROJECT_DIR$/protected/App/Db.php" />
         <option value="$PROJECT_DIR$/templates/admin/insert.html" />
-        <option value="$PROJECT_DIR$/templates/admin/edit.html" />
         <option value="$PROJECT_DIR$/templates/admin/update.html" />
         <option value="$PROJECT_DIR$/protected/App/Models/Model.php" />
         <option value="$PROJECT_DIR$/protected/App/functions.php" />
@@ -118,6 +117,7 @@
         <option value="$PROJECT_DIR$/templates/admin/admindatatable.html" />
         <option value="$PROJECT_DIR$/protected/App/Models/Article.php" />
         <option value="$PROJECT_DIR$/readme.md" />
+        <option value="$PROJECT_DIR$/templates/admin/edit.html" />
       </list>
     </option>
   </component>
@@ -451,7 +451,7 @@
       <workItem from="1492767837115" duration="2264000" />
       <workItem from="1492778804160" duration="1240000" />
       <workItem from="1492783678115" duration="623000" />
-      <workItem from="1493014115620" duration="11011000" />
+      <workItem from="1493014115620" duration="11221000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <created>1487941813358</created>
@@ -527,7 +527,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="698229000" />
+    <option name="totallyTimeSpent" value="698439000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -931,14 +931,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/admin/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/admin/update.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -981,10 +973,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="238">
+          <first_editor relative-caret-position="272">
             <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
             <folding />
           </first_editor>
