@@ -51,8 +51,8 @@ class Admin extends Controller
      */
     public function actionSave()
     {
-        if (!empty($_POST['id'])) {
-            $article = Article::findById($_POST['id']);
+        if (!empty($_GET['id'])) {
+            $article = Article::findById($_GET['id']);
             if (empty($article)) {
                 throw new NoPageException('updating article not found');
             }
@@ -70,6 +70,9 @@ class Admin extends Controller
         header('Location: /Admin/Edit/');
     }
 
+    /**
+     * update action
+     */
     public function actionUpdate()
     {
         if (!empty($_GET['id'])) {
@@ -82,8 +85,10 @@ class Admin extends Controller
         }
     }
 
-        public
-        function actionInsert()
+    /**
+     * insert action
+     */
+        public function actionInsert()
         {
             $this->view->display(__DIR__ . '/../../../templates/admin/insert.html');
         }

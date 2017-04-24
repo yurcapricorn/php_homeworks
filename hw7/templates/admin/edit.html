@@ -8,11 +8,8 @@
 
 <h1 align="center">Admin Panel</h1>
 <div align="center">
-<form action="/Admin/Insert/">
-    <button type="submit" > INSERT NEW ARTICLE</button>
-</form>
+    <a  href="/Admin/Insert/"><button> INSERT NEW ARTICLE </button></a>
 </div>
-
 <br>
 
 <?php $table = new \App\AdminDataTable($articles, require __DIR__ . '/../../protected/App/functions.php');
