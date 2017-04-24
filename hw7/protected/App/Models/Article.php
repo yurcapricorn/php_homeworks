@@ -100,4 +100,20 @@ class Article extends Model
         }
         return isset($this->data[$key]);
     }
+
+    /**
+     * update button
+     * @return string
+     */
+    public function updBtn(){
+        return '<a href=' . "/Admin/Update/?id=$this->id". '><button> UPDATE </button></a>';
+    }
+
+    /**
+     * delete button
+     * @return string
+     */
+    public function delBtn(){
+        return '<a href=' . "/Admin/Delete/?id=$this->id" . '><button> DELETE </button></a>';
+    }
 }

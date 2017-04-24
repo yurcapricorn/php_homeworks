@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Controller;
+use App\Logger;
 use App\Models\Article;
 use App\NoPageException;
 
@@ -62,9 +63,10 @@ class Admin extends Controller
         try {
             $article->fill($_POST);
         } catch (\Yurcapricorn\Multiexception\App\MultiException $e) {
-//            foreach($e->getErrors() as $error){
-//                echo $error->getMessage();
-//            }
+            foreach($e->getErrors() as $error){
+                $logger = Logger::instance();
+                $logger->log($error->getMessage());
+            }
         }
         $article->save();
         header('Location: /Admin/Edit/');
@@ -76,7 +78,8 @@ class Admin extends Controller
     public function actionUpdate()
     {
         if (!empty($_GET['id'])) {
-            $this->view->article = Article::findById($_GET['id']);
+
+            $this->view->article = Article::findById((int)$_GET['id']);
             if (empty($this->view->article)) {
                 throw new NoPageException('updating article not found');
             } else {

@@ -18,9 +18,9 @@ return [
         }
     },
     function (Article $model) {
-        return '<a href="/Admin/Update/?id=' . $model->id . '"><button> UPDATE </button></a>';
+        return $model->updBtn();
     },
     function (Article $model) {
-        return '<a href="/Admin/Delete/?id=' . $model->id . '"><button> DELETE </button></a>';
+        return $model->delBtn();
     },
 ];
