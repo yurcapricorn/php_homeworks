@@ -18,8 +18,8 @@ class AdminDataTable
 
     /**
      * AdminDataTable constructor.
-     * @param array $func
      * @param array $models
+     * @param array $funcs
      */
     public function __construct(array $models, array $funcs) {
         $this->funcs = $funcs;
