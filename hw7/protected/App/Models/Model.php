@@ -9,8 +9,6 @@ use App\MagicTrait;
 /**
  * Class Model
  * Maintains complex requests to Db class
- * @property int $id
- * @property string TABLE
  * @package App\Models
  */
 abstract class Model implements \Iterator, \Countable
@@ -23,7 +21,9 @@ abstract class Model implements \Iterator, \Countable
      * iterator
      */
     use Iterator;
-
+    /**
+     * table
+     */
     protected const TABLE = null;
 
     /**

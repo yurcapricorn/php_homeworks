@@ -4,17 +4,12 @@ namespace App\Models;
 
 /**
  * Class Article
- * @property string table
- * @property int id
- * @property int author_id
- * @property string title
- * @property string lead
  * @package App\Models
  */
 class Article extends Model
 {
     /**
-     * @var string table
+     * table
      */
     protected const TABLE = 'news';
 
