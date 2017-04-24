@@ -23,7 +23,7 @@ class Admin extends Controller
     }
 
     /**
-     * Edits article in Db
+     * Main admin panel
      */
     public function actionEdit()
     {
