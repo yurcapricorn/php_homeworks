@@ -16,5 +16,11 @@ return [
         if ($article->author_id !== NULL) {
             return ($article->author->name . ' ' . $article->author->surname);
         }
-    }
+    },
+    function (Article $model) {
+        return '<a href="/Admin/Update/?id=' . $model->id . '"><button> UPDATE </button></a>';
+    },
+    function (Article $model) {
+        return '<a href="/Admin/Delete/?id=' . $model->id . '"><button> DELETE </button></a>';
+    },
 ];

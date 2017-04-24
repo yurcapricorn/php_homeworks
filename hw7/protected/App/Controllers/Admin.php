@@ -69,4 +69,22 @@ class Admin extends Controller
         $article->save();
         header('Location: /Admin/Edit/');
     }
-}
+
+    public function actionUpdate()
+    {
+        if (!empty($_GET['id'])) {
+            $this->view->article = Article::findById($_GET['id']);
+            if (empty($this->view->article)) {
+                throw new NoPageException('updating article not found');
+            } else {
+                $this->view->display($template = __DIR__ . '/../../../templates/admin/update.html');
+            }
+        }
+    }
+
+        public
+        function actionInsert()
+        {
+            $this->view->display(__DIR__ . '/../../../templates/admin/insert.html');
+        }
+    }

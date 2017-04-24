@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Update Article </title>
+</head>
+<body>
+
+<div align="center"> <h2> UPDATE FORM </h2>
+    <form>
+        <p> <strong> article id  <?= $article->id ?> </strong> </p>
+        <p><textarea title="title" name="title" rows="3" cols="150" required > <?= $article->title; ?> </textarea><strong> <br> type edited article title here </strong></p>
+        <p><textarea title="lead" name="lead" rows="20" cols="150" required > <?= $article->lead; ?> </textarea> <strong> <br> type edited article lead here </strong></p>
+        <p class="form-submit">
+            <input type="submit" formmethod="POST" formaction="/Admin/Save/" value="UPDATE">
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
