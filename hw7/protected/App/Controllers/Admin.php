@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Controller;
 use App\Models\Article;
+use Yurcapricorn\Multiexception\App\MultiException;
 
 /**
  * Controller Admin
@@ -32,9 +33,9 @@ class Admin extends Controller
         }
         try {
             $article->fill($_POST);
-            $article->save();
-        } catch (\Exception $e) {
+        } catch (MultiException $e) {
         }
+        $article->save();
         header('Location: /Admin/');
     }
 
