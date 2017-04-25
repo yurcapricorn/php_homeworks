@@ -30,6 +30,7 @@ class Admin extends Controller
             $this->view->display($template = __DIR__ . '/../../../templates/admin/edit.html');
         }
     }
+
     /**
      * save action
      */
