@@ -25,10 +25,8 @@ class Admin extends Controller
      */
     public function actionEdit()
     {
-        if (!empty($_GET['id'])) {
-            $this->view->article = Article::findById((int)$_GET['id']);
-            $this->view->display($template = __DIR__ . '/../../../templates/admin/edit.html');
-        }
+        $this->view->article = Article::findById((int)$_GET['id']);
+        $this->view->display($template = __DIR__ . '/../../../templates/admin/edit.html');
     }
 
     /**
