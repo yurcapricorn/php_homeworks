@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\Controller;
 use App\Models\Article;
-use App\NoPageException;
 
 /**
  * Controller Admin
@@ -13,43 +12,35 @@ use App\NoPageException;
 class Admin extends Controller
 {
     /**
-     * all news action
+     * default action
      */
-    public function actionAllNews()
+    public function actionDefault()
     {
-        $news = new News();
-        $news->actionAll();
+        $this->view->articles = Article::findAll();
+        $this->view->display(__DIR__ . '/../../../templates/admin/default.html');
     }
 
     /**
-     * Edits article in Db
+     * edit action
      */
     public function actionEdit()
     {
-        $template = __DIR__ . '/../../../templates/admin/edit.html';
-        $this->view->display($template);
+        $this->view->article = Article::findById((int)$_GET['id']);
+        $this->view->display(__DIR__ . '/../../../templates/admin/edit.html');
     }
 
     /**
-     * saves object into Db
+     * save action
      */
     public function actionSave()
     {
-        if (!empty($_POST['id'])) {
-            $article = Article::findById($_POST['id']);
-            if (empty($article)) {
-                throw new NoPageException('updating page not found');
-            }
+        if (!empty($_GET['id'])) {
+            $article = Article::findById((int)$_GET['id']);
         } else {
             $article = new Article();
         }
-        try {
-            $article->fill($_POST);
-        } catch (\Yurcapricorn\Multiexception\App\MultiException $e) {
-//            foreach($e->getErrors() as $error){
-//                echo $error->getMessage();
-//            }
-        }
+        $article->fill($_POST);
         $article->save();
+        header('Location: /Admin/');
     }
 }

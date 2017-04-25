@@ -2301,3 +2301,91 @@ PDO Exception: SQLSTATE[HY000] [1045] Access denied for user 'rooty'@'localhost'
 time: 03-34-34 : 21-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
 Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 03-41-02 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 03-41-05 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 03-41-10 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 03-41-12 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 03-44-39 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\protected\App\Db.php line 30
+PDO Exception: SQLSTATE[HY000] [1045] Access denied for user ''@'localhost' (using password: NO)
+
+time: 03-44-40 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 03-45-36 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 03-45-38 : 21-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-50-34 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-50-36 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-54-57 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-55-01 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-55-39 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-56-56 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-57-08 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-57-50 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-58-15 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-58-27 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-58-32 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-58-36 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-58-39 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 07-59-57 : 25-04-2017
+C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
+Uncatched error: Class '\App\Controllers\favicon.ico' not found
