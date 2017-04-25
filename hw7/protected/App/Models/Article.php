@@ -101,14 +101,6 @@ class Article extends Model
      * @return string
      */
     public function updBtn(){
-        return '<a href=' . "/Admin/Update/?id=$this->id". '><button> UPDATE </button></a>';
-    }
-
-    /**
-     * delete button
-     * @return string
-     */
-    public function delBtn(){
-        return '<a href=' . "/Admin/Delete/?id=$this->id" . '><button> DELETE </button></a>';
+        return '<a href=' . "/Admin/Edit/?id=$this->id". '><button> EDIT </button></a>';
     }
 }

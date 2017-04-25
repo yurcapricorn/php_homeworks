@@ -40,13 +40,13 @@ class Admin extends Controller
     }
 
     /**
-     * update action
+     * edit action
      */
-    public function actionUpdate()
+    public function actionEdit()
     {
         if (!empty($_GET['id'])) {
             $this->view->article = Article::findById((int)$_GET['id']);
-            $this->view->display($template = __DIR__ . '/../../../templates/admin/update.html');
+            $this->view->display($template = __DIR__ . '/../../../templates/admin/edit.html');
         }
     }
 }
