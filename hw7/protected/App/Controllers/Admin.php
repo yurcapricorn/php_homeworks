@@ -22,7 +22,17 @@ class Admin extends Controller
     }
 
     /**
-     * saves object into Db
+     * edit action
+     */
+    public function actionEdit()
+    {
+        if (!empty($_GET['id'])) {
+            $this->view->article = Article::findById((int)$_GET['id']);
+            $this->view->display($template = __DIR__ . '/../../../templates/admin/edit.html');
+        }
+    }
+    /**
+     * save action
      */
     public function actionSave()
     {
@@ -37,16 +47,5 @@ class Admin extends Controller
         }
         $article->save();
         header('Location: /Admin/');
-    }
-
-    /**
-     * edit action
-     */
-    public function actionEdit()
-    {
-        if (!empty($_GET['id'])) {
-            $this->view->article = Article::findById((int)$_GET['id']);
-            $this->view->display($template = __DIR__ . '/../../../templates/admin/edit.html');
-        }
     }
 }
