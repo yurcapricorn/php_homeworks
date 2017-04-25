@@ -17,22 +17,6 @@ class Admin extends Controller
      * default action
      */
     public function actionDefault(){
-        $this->actionAllNews();
-    }
-    /**
-     * All news
-     */
-    public function actionAllNews()
-    {
-        $news = new News();
-        $news->actionAll();
-    }
-
-    /**
-     * Main admin panel
-     */
-    public function actionEdit()
-    {
         $this->view->articles = Article::findAll();
         if (empty($this->view->articles)) {
             throw new NoPageException('no articles in database');
