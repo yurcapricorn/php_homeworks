@@ -26,7 +26,7 @@ class Admin extends Controller
     public function actionEdit()
     {
         $this->view->article = Article::findById((int)$_GET['id']);
-        $this->view->display($template = __DIR__ . '/../../../templates/admin/edit.html');
+        $this->view->display(__DIR__ . '/../../../templates/admin/edit.html');
     }
 
     /**
