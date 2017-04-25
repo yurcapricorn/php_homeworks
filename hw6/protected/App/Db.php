@@ -9,7 +9,7 @@ namespace App;
 class Db
 {
     /**
-     * singleton
+     * Trait Singleton
      */
     use \App\Singleton;
 

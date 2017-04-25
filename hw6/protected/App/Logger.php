@@ -8,11 +8,14 @@ namespace App;
  */
 class Logger
 {
+    /**
+     * Trait Singleton
+     */
     use Singleton;
 
     /**
-     * @param mixed $level
-     * @param string $message
+     * @param $level
+     * @param $message
      * @param array $context
      */
     public function log($level, $message, array $context = []){
