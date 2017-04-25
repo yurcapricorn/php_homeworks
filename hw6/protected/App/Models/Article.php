@@ -4,21 +4,18 @@ namespace App\Models;
 
 /**
  * Class Article
- * @property string table
- * @property int id
- * @property int author_id
- * @property string title
- * @property string lead
  * @package App\Models
  */
 class Article extends Model
 {
+    /**
+     * table
+     */
     protected const TABLE = 'news';
 
     /**
      * @param $value
      * @return $this
-     * @throws \UnexpectedValueException
      */
     public function setId($value)
     {
@@ -33,7 +30,6 @@ class Article extends Model
     /**
      * @param $value
      * @return $this
-     * @throws \UnexpectedValueException
      */
     public function setAuthor_id($value)
     {
@@ -48,7 +44,6 @@ class Article extends Model
     /**
      * @param $value
      * @return $this
-     * @throws \UnexpectedValueException
      */
     public function setTitle($value)
     {
@@ -62,7 +57,6 @@ class Article extends Model
     /**
      * @param $value
      * @return $this
-     * @throws \UnexpectedValueException
      */
     public function setLead($value)
     {
@@ -74,9 +68,8 @@ class Article extends Model
     }
 
     /**
-     * returns Class Author record from DB
      * @param $key
-     * @return Author|bool
+     * @return Article|bool
      */
     public function __get($key)
     {

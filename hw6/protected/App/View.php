@@ -9,11 +9,11 @@ namespace App;
 class View implements \Countable, \Iterator
 {
     /**
-     * @use magictrait
+     * Trait MagicTrait
      */
     use MagicTrait;
     /**
-     * @use iterator
+     * Trait Iterator
      */
     use Iterator;
 

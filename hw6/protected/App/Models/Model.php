@@ -8,16 +8,21 @@ use App\MagicTrait;
 
 /**
  * Class Model
- * Maintains complex requests to Db class
- * @property int $id
- * @property string TABLE
  * @package App\Models
  */
 abstract class Model implements \Iterator, \Countable
 {
+    /**
+     * Trait MagicTrait
+     */
     use MagicTrait;
+    /**
+     * Trait Iterator
+     */
     use Iterator;
-
+    /**
+     * table
+     */
     protected const TABLE = null;
 
     /**

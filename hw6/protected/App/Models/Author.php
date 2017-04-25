@@ -9,13 +9,19 @@ namespace App\Models;
 class Author extends Model
 {
     /**
-     * @var $table
-     * @var $email
-     * @var $name
-     * @var $surname
+     * table
      */
     const TABLE = 'authors';
+    /**
+     * @var string $email
+     */
     public $email;
+    /**
+     * @var string $name
+     */
     public $name;
+    /**
+     * @var string $surname
+     */
     public $surname;
 }
