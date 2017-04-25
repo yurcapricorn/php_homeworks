@@ -20,7 +20,4 @@ return [
     function (Article $model) {
         return $model->updBtn();
     },
-    function (Article $model) {
-        return $model->delBtn();
-    },
 ];

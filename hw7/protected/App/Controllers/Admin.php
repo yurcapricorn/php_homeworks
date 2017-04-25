@@ -4,7 +4,6 @@ namespace App\Controllers;
 
 use App\Controller;
 use App\Models\Article;
-use App\NoPageException;
 
 /**
  * Controller Admin
@@ -17,11 +16,7 @@ class Admin extends Controller
      */
     public function actionDefault()
     {
-        $articles = Article::findAll();
-        if (empty($articles)) {
-            throw new NoPageException('no articles in database');
-        }
-        $this->view->articles = $articles;
+        $this->view->articles = Article::findAll();
         $this->view->display(__DIR__ . '/../../../templates/admin/default.html');
     }
 
@@ -32,9 +27,6 @@ class Admin extends Controller
     {
         if (!empty($_GET['id'])) {
             $article = Article::findById((int)$_GET['id']);
-            if (empty($article)) {
-                throw new NoPageException('updating article not found');
-            }
         } else {
             $article = new Article();
         }
@@ -42,7 +34,6 @@ class Admin extends Controller
             $article->fill($_POST);
             $article->save();
         } catch (\Exception $e) {
-            throw new \Exception('something wrong with data save');
         }
         header('Location: /Admin/');
     }
@@ -54,34 +45,7 @@ class Admin extends Controller
     {
         if (!empty($_GET['id'])) {
             $this->view->article = Article::findById((int)$_GET['id']);
-            if (empty($this->view->article)) {
-                throw new NoPageException('updating article not found');
-            } else {
-                $this->view->display($template = __DIR__ . '/../../../templates/admin/update.html');
-            }
+            $this->view->display($template = __DIR__ . '/../../../templates/admin/update.html');
         }
-    }
-
-    /**
-     * delete
-     */
-    public function actionDelete()
-    {
-        if (!empty($_GET['id'])) {
-            $article = Article::findById($_GET['id']);
-            if (empty($article)) {
-                throw new NoPageException('removing article not found');
-            }
-            $article->delete();
-        }
-        header('Location: /Admin/');
-    }
-
-    /**
-     * insert action
-     */
-    public function actionInsert()
-    {
-        $this->view->display(__DIR__ . '/../../../templates/admin/insert.html');
     }
 }
