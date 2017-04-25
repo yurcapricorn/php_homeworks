@@ -9,7 +9,7 @@ namespace App;
 trait Singleton
 {
     /**
-     * keeps instance of class
+     * keeps instance of object
      * @var object
      */
     protected static $instance;
