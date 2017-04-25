@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Controller;
-use App\Logger;
 use App\Models\Article;
 use App\NoPageException;
 
@@ -16,13 +15,51 @@ class Admin extends Controller
     /**
      * default action
      */
-    public function actionDefault(){
-        $this->view->articles = Article::findAll();
-        if (empty($this->view->articles)) {
+    public function actionDefault()
+    {
+        $articles = Article::findAll();
+        if (empty($articles)) {
             throw new NoPageException('no articles in database');
         }
-        $template = __DIR__ . '/../../../templates/admin/edit.html';
-        $this->view->display($template);
+        $this->view->articles = $articles;
+        $this->view->display(__DIR__ . '/../../../templates/admin/default.html');
+    }
+
+    /**
+     * saves object into Db
+     */
+    public function actionSave()
+    {
+        if (!empty($_GET['id'])) {
+            $article = Article::findById((int)$_GET['id']);
+            if (empty($article)) {
+                throw new NoPageException('updating article not found');
+            }
+        } else {
+            $article = new Article();
+        }
+        try {
+            $article->fill($_POST);
+            $article->save();
+        } catch (\Exception $e) {
+            throw new \Exception('something wrong with data save');
+        }
+        header('Location: /Admin/');
+    }
+
+    /**
+     * update action
+     */
+    public function actionUpdate()
+    {
+        if (!empty($_GET['id'])) {
+            $this->view->article = Article::findById((int)$_GET['id']);
+            if (empty($this->view->article)) {
+                throw new NoPageException('updating article not found');
+            } else {
+                $this->view->display($template = __DIR__ . '/../../../templates/admin/update.html');
+            }
+        }
     }
 
     /**
@@ -37,55 +74,14 @@ class Admin extends Controller
             }
             $article->delete();
         }
-        header('Location: /Admin/Edit/');
-    }
-
-    /**
-     * saves object into Db
-     */
-    public function actionSave()
-    {
-        if (!empty($_GET['id'])) {
-            $article = Article::findById($_GET['id']);
-            if (empty($article)) {
-                throw new NoPageException('updating article not found');
-            }
-        } else {
-            $article = new Article();
-        }
-        try {
-            $article->fill($_POST);
-        } catch (\Yurcapricorn\Multiexception\App\MultiException $e) {
-            foreach($e->getErrors() as $error){
-                $logger = Logger::instance();
-                $logger->log($error->getMessage());
-            }
-        }
-        $article->save();
-        header('Location: /Admin/Edit/');
-    }
-
-    /**
-     * update action
-     */
-    public function actionUpdate()
-    {
-        if (!empty($_GET['id'])) {
-
-            $this->view->article = Article::findById((int)$_GET['id']);
-            if (empty($this->view->article)) {
-                throw new NoPageException('updating article not found');
-            } else {
-                $this->view->display($template = __DIR__ . '/../../../templates/admin/update.html');
-            }
-        }
+        header('Location: /Admin/');
     }
 
     /**
      * insert action
      */
-        public function actionInsert()
-        {
-            $this->view->display(__DIR__ . '/../../../templates/admin/insert.html');
-        }
+    public function actionInsert()
+    {
+        $this->view->display(__DIR__ . '/../../../templates/admin/insert.html');
     }
+}
