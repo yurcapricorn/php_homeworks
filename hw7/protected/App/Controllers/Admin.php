@@ -14,6 +14,12 @@ use App\NoPageException;
 class Admin extends Controller
 {
     /**
+     * default action
+     */
+    public function actionDefault(){
+        $this->actionAllNews();
+    }
+    /**
      * All news
      */
     public function actionAllNews()
