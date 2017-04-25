@@ -14,7 +14,6 @@
     <th>LEAD</th>
     <th>AUTHOR</th>
     <th>UPDATE</th>
-    <th>DELETE</th>
     <?php foreach($articles as $article){ ?>
     <tr><td>
         <?= $article->id; ?>
@@ -29,7 +28,6 @@
             <?= $article->author->name . ' ' . $article->author->surname; ?>
         </td>
         <td><a href=" <?php echo '/admin/Edit/?id=' . $article->id; ?> "> EDIT </a></td>
-        <td><a href=" <?php echo '/admin/delete.php?id=' . $article->id; ?> "> DELETE </a></td>
     <tr>
         <?php }; ?>
     </tr>
