@@ -53,7 +53,7 @@ abstract class Model
             return false;
         }
         if (empty($data)) {
-            return NULL;
+            return null;
         }
         return $data[0];
     }
