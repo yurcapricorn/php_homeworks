@@ -24,7 +24,6 @@ class Db
      */
     public function __construct()
     {
-        require_once __DIR__ . '/Config.php';
         $config = Config::instance();
         $this->dbh = new \PDO('mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['name'],
             $config->data['db']['user'], $config->data['db']['pass']);
