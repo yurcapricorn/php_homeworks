@@ -2,7 +2,7 @@
 
 namespace App;
 
-require_once __DIR__ . '/Singleton.php';
+require_once __DIR__ . '/../autoload.php';
 
 /**
  * Class Db
@@ -25,7 +25,6 @@ class Db
      */
     public function __construct()
     {
-        require_once __DIR__ . '/Config.php';
         $config = Config::instance();
         $this->dbh = new \PDO('mysql:host=' . $config->data['db']['host'] . ';dbname=' . $config->data['db']['name'],
             $config->data['db']['user'], $config->data['db']['pass']);
@@ -41,11 +40,7 @@ class Db
     public function query($query, $class = \stdClass::class, $params = [])
     {
         $sth = $this->dbh->prepare($query);
-        if (empty($params)) {
-            $res = $sth->execute();
-        } else {
-            $res = $sth->execute($params);
-        }
+        $res = $sth->execute($params);
         if ($res === false) {
             return false;
         }
@@ -61,19 +56,15 @@ class Db
     public function execute($query, $params = [])
     {
         $sth = $this->dbh->prepare($query);
-        if (!empty($params)) {
-            $res = $sth->execute($params);
-        } else {
-            $res = $sth->execute();
-        }
-        return $res;
+        return $sth->execute($params);
     }
 
     /**
      * method to use PDO::lastInsertId() with protected Db field $dbh
      * @return string
      */
-    public function lastDbInsertId(){
+    public function lastDbInsertId()
+    {
         return $this->dbh->lastInsertId();
     }
 }

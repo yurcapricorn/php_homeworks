@@ -145,7 +145,6 @@ abstract class Model
     {
         $sql = 'DELETE FROM ' . static::TABLE . ' WHERE id=:id';
         $db = Db::instance();
-
         $args = [':id' => $this->id];
         return $db->execute($sql, $args);
     }
