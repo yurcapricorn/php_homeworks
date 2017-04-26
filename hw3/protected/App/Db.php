@@ -40,11 +40,7 @@ class Db
     public function query($query, $class = \stdClass::class, $params = [])
     {
         $sth = $this->dbh->prepare($query);
-        if (empty($params)) {
-            $res = $sth->execute();
-        } else {
-            $res = $sth->execute($params);
-        }
+        $res = $sth->execute($params);
         if ($res === false) {
             return false;
         }
@@ -60,12 +56,7 @@ class Db
     public function execute($query, $params = [])
     {
         $sth = $this->dbh->prepare($query);
-        if (!empty($params)) {
-            $res = $sth->execute($params);
-        } else {
-            $res = $sth->execute();
-        }
-        return $res;
+        return $sth->execute($params);
     }
 
     /**

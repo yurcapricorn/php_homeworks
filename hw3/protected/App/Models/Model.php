@@ -11,6 +11,9 @@ use App\Db;
  */
 abstract class Model
 {
+    /**
+     * table
+     */
     protected const TABLE = null;
     /**
      * @var int id
