@@ -9,12 +9,16 @@ require_once __DIR__ . '/../Db.php';
 /**
  * Class Model
  * @package App\Models
- * @property string table
- * @property int id
  */
 abstract class Model
 {
+    /**
+     * table
+     */
     protected const TABLE = null;
+    /**
+     * @var int $id
+     */
     public $id;
 
     /**

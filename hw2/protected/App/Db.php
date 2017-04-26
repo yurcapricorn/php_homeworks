@@ -6,10 +6,8 @@ require_once __DIR__ . '/Singleton.php';
 
 /**
  * Class Db
- * @package App
  * Maintains database connection
- * has methods query and execute
- * keeps PDO in field $dbh
+ * @package App
  */
 class Db
 {

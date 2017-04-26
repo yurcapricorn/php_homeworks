@@ -7,16 +7,19 @@ require_once __DIR__ . '/Model.php';
 /**
  * Class Article
  * @package App\Models
- * @property string table
- * @property string title
- * @property string lead
- * @property int author_id
- * @property int id
  */
 class Article extends Model
 {
+    /**
+     * table
+     */
     protected const TABLE = 'news';
+    /**
+     * @var string $title
+     */
     public $title;
+    /**
+     * @var string $lead
+     */
     public $lead;
-    public $author_id;
 }
