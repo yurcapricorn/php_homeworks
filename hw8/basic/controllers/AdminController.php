@@ -117,7 +117,7 @@ class AdminController extends \yii\web\Controller
         if (\Yii::$app->request->isPost){
             $article = Article::findOne($id);
             $file = UploadedFile::getInstance($model, 'image');
-            if ($article->saveImage($model->uploadFile($file, $article->image)) ){
+            if ($article->saveImage($model->uploadFile($file, $article->image)) === true){
                 return $this->redirect(['view', 'id' => $article->id ] );
             }
         }
