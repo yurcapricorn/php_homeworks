@@ -42,7 +42,7 @@ class Category extends \yii\db\ActiveRecord
     }
 
     /**
-     * get articles
+     * gets articles by category $id
      * @param $id
      * @return mixed
      */

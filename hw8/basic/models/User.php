@@ -8,10 +8,7 @@ use yii\web\IdentityInterface;
  *
  * @property integer $id
  * @property string $name
- * @property string $email
  * @property string $password
- * @property integer $isAdmin
- * @property string $photo
  */
 class User extends \yii\db\ActiveRecord implements IdentityInterface
 {
@@ -101,15 +98,6 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
     /**
-     * @param $email
-     * @return array|null|\yii\db\ActiveRecord
-     */
-    public static function findByEmail($email)
-    {
-        return User::find()->where(['email' => $email])->one();
-    }
-
-    /**
      * @param $password
      * @return bool
      */
@@ -127,26 +115,11 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
     /**
-     * @return string
-     */
-    public function getImage()
-    {
-        return $this->photo;
-    }
-
-    /**
+     * get user name
      * @return string
      */
     public function getUserName()
     {
         return $this->name;
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getArticles()
-    {
-        return $this->hasMany(Article::className(), ['user_id' => 'id']);
     }
 }

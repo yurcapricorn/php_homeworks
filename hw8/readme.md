@@ -1,15 +1,67 @@
 hello! I'm a readme file.
-
-
 ________________________________
-
 bugfixing
 
 
 ________________________________
 h\w_8 progress:
 
+Web application is to assist design patterns and basic OOP principles memorising
+Created using basic package of YII2
 
+-MVC represented:
+    -Controllers:
+        -AdminController
+        -AuthorController
+        -CategoryController
+        -SiteController
+        -UserController
+    -Models:
+        -Article
+        -Author
+        -Category
+        -Image
+        -LoginForm
+        -User
+    -Views:
+        -for site main page(index page, view page(one article), author page, error page)
+        -for admin panel(crud actions pages for article, user, author, category)
+-Admin panel represented by:
+    -Controllers:
+        -AdminController
+        -AuthorController
+        -CategoryController
+        -UserController
+    Models:
+        -Article
+        -Author
+        -Category
+        -Image
+        -User
+    Views:
+        -for admin panel(crud action pages for article, user, author, category)
+Database consists of 4 tables:
+    -Article table
+    -Author table
+    -Category table
+    -User table
+Migrations:
+    -m170504_135030_create_article_table.php
+    -m170504_135051_create_user_table.php
+    -m170506_165035_create_category_table.php
+    -m170507_093942_create_author_table.php
+Models:
+    -Article
+    -Author
+    -Category
+    -Image
+    -LoginForm
+    -User
+Relations:
+    Article relates to:
+        -Category
+        -Author
+        -Image
 _________________________________
 h\w_8:
 

@@ -43,6 +43,11 @@ class Author extends \yii\db\ActiveRecord
         ];
     }
 
+    /**
+     * gets Articles by author $id
+     * @param $id
+     * @return mixed
+     */
     public static function getArticles($id)
     {
         // build a DB query to get all articles
