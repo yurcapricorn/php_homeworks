@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Controller;
-use App\Models\Article;
 
 /**
  * Controller Index
@@ -12,12 +11,11 @@ use App\Models\Article;
 class Index extends Controller
 {
     /**
-     * Default
+     * Default action
      */
     protected function actionDefault()
     {
-        $this->view->articles = Article::findAll();
-        $this->view->display(__DIR__ . '/../../../templates/news/index.php');
+        $this->actionNews('Default');
     }
 
     /**

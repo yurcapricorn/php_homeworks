@@ -21,11 +21,16 @@
         ?>
     </h2>
 
-    <p><?php
+    <p>
+        <?php
             echo $article->lead ;
         ?>
     </p>
 
+</div>
+
+<div>
+    <a href="/News/Default"> <button> ALL NEWS </button> </a>
 </div>
 
 </body>

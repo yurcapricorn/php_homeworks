@@ -31,7 +31,7 @@ class Article extends Model
     {
         $this->title = $data['title'] ?? $this->title;
         $this->lead = $data['lead'] ?? $this->lead;
-        $this->author_id = $data['author_id'] ?? $this->author_id;
+        $this->author_id = (int)$data['author_id'] ?? $this->author_id;
         return $this;
     }
 
@@ -42,7 +42,7 @@ class Article extends Model
      */
     public function __get($key)
     {
-        if ('author' === $key) {
+        if ('author' === $key && isset($this->author)) {
             return Author::findById($this->author_id);
         }
     }
@@ -52,7 +52,8 @@ class Article extends Model
      * @param $key
      * @return bool
      */
-    public function __isset($key){
+    public function __isset($key)
+    {
         if ('author' === $key) {
             return isset($this->author_id);
         }

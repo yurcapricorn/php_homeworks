@@ -30,12 +30,11 @@ Class Controller
      */
     public function action($action)
     {
-        if (true === $this->access($action)) {
-            $action = 'action' . $action;
-            $this->$action();
-        } else {
+        if (false === $this->access($action)) {
             die('Access denied!');
         }
+        $action = 'action' . $action;
+        $this->$action();
     }
 
     /**

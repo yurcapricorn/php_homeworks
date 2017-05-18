@@ -12,7 +12,7 @@ use App\Models\Article;
 class News extends Controller
 {
     /**
-     * all news
+     * Default action all news
      */
     public function actionDefault()
     {
@@ -25,7 +25,7 @@ class News extends Controller
      */
     public function actionOne()
     {
-        $this->view->article = Article::findById($_GET['id']);
+        $this->view->article = Article::findById((int)$_GET['id']);
         $this->view->display(__DIR__ . '/../../../templates/news/one.php');
     }
 }

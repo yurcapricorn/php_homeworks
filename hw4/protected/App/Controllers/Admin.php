@@ -25,7 +25,7 @@ class Admin extends Controller
      */
     public function actionEdit()
     {
-        $this->view->article = Article::findById($_GET['id']);
+        $this->view->article = Article::findById((int)$_GET['id']);
         $this->view->display(__DIR__ . '/../../../templates/admin/edit.php');
     }
 
@@ -37,7 +37,7 @@ class Admin extends Controller
         if (empty($_GET)) {
             $article = new Article();
         } else {
-            $article = Article::findById($_GET['id']);
+            $article = Article::findById((int)$_GET['id']);
         }
         $article->fill($_POST)->save();
         header('Location: /Admin/');

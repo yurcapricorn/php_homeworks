@@ -15,9 +15,7 @@
         <a href="<?php echo '/News/One/?id=' . $article->id; ?>  ">
             <h2><?php echo $article->title; ?></h2>
         </a>
-        <h3><?php if (!empty($article->author_id)){
-            echo $article->author->name . ' ' . $article->author->surname;
-            }?>
+        <h3><?= $article->author->name . ' ' . $article->author->surname; ?>
         </h3>
         <div><?php echo $article->lead; ?></div>
     </article>
