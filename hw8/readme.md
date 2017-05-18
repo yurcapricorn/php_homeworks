@@ -89,6 +89,7 @@ Relations:
 Database copy: yii2.sql
 
 username: user
+
 password: password
 
 _________________________________
