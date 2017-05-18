@@ -11,10 +11,7 @@
 
 <div>
     <h1>
-        <a href="
-            <?php
-                echo 'news/article.php?id=' . $article->id;
-            ?>
+        <a href=" <?= '/news/article.php?id=' . $article->id; ?>
         ">
             <?php
                 echo $article->title;
