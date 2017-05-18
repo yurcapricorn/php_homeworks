@@ -20,6 +20,8 @@
     <th>ID</th>
     <th>TITLE</th>
     <th>LEAD</th>
+    <th>AUTHOR</th>
+    <th>EDIT</th>
     <th>DELETE</th>
     <?php foreach($articles as $article){ ?>
     <tr><td>
@@ -31,29 +33,24 @@
         <td>
             <?= $article->lead; ?>
         </td>
-        <td><a href=" <?php echo '/admin/delete.php?id=' . $article->id; ?> "> <button>DELETE</button> </a></td>
+        <td>
+            <?= $article->author->name . ' ' . $article->author->surname; ?>
+        </td>
+        <td><a href="<?='/admin/edit.php?id=' . $article->id; ?> "> <button>EDIT</button> </a></td>
+        <td><a href="<?='/admin/delete.php?id=' . $article->id; ?> "> <button>DELETE</button> </a></td>
     <tr>
         <?php }; ?>
     </tr>
 </table>
 
+<br>
 <div class="inputform" align="center"> <h2> ADD FORM </h2>
     <form>
-        <p><input title="title" name="title" type="text" size="65" required/><strong> <br> Type new article title here</strong></p>
-        <p><textarea title="lead" name="lead" rows="10" cols="70" required></textarea><strong> <br> Type new article lead here</strong></p>
+        <p><textarea title="title" name="title" rows="3" cols="150" required > Article Title </textarea>
+        <p><textarea title="lead" name="lead" rows="20" cols="150" required > Article Lead </textarea>
+        <p><input title="author_id" name="author_id" value="author id"/></p>
         <p class="form-submit">
             <input type="submit" formmethod="POST" formaction="/admin/add.php" value="ADD">
-        </p>
-    </form>
-</div>
-
-<div class="inputform" align="center"> <h2> EDIT FORM </h2>
-    <form>
-        <p><input title="id" name="id" type="number" required/><strong> <br> type edited article ID here </strong></p>
-        <p><input title="title" name="title" type="text" size="65" required/><strong> <br> type edited article title here </strong></p>
-        <p><textarea title="lead" name="lead" rows="10" cols="70" required></textarea><strong> <br> type edited article lead here </strong></p>
-        <p class="form-submit">
-            <input type="submit" formmethod="POST" formaction="/admin/edit.php" value="EDIT">
         </p>
     </form>
 </div>

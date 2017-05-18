@@ -32,10 +32,8 @@ class Article extends Model
      */
     public function __get($key)
     {
-        if ($key === 'author') {
-            if (!empty($this->author_id)) {
-                return Author::findById($this->author_id);
-            }
+        if ($key === 'author' && isset($this->author)) {
+            return Author::findById((int)$this->author_id);
         }
     }
 
@@ -49,5 +47,18 @@ class Article extends Model
         if ($key === 'author') {
             return isset($this->author_id);
         }
+    }
+
+    /**
+     * fills article with data
+     * @param $data
+     * @return $this
+     */
+    public function fill($data)
+    {
+        $this->title = $data['title'] ?? $this->title;
+        $this->lead = $data['lead'] ?? $this->lead;
+        $this->author_id = (int)$data['author_id'] ?? $this->author_id;
+        return $this;
     }
 }

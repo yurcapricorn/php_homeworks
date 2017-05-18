@@ -2,9 +2,12 @@
 
 require_once __DIR__ . '/../protected/App/Models/Article.php';
 
-$article = \App\Models\Article::findById((int)$_POST['id']);
-$article->title = $_POST['title'];
-$article->lead = $_POST['lead'];
-$article->save();
-
-header('Location: /admin/index.php');
+if(empty($_POST)){
+    $view = new \App\View();
+    $view->article = \App\Models\Article::findById((int)$_GET['id']);
+    $view->display(__DIR__ . '/templates/edit.php');
+} else {
+    $article = \App\Models\Article::findById((int)$_GET['id']);
+    $article->fill($_POST)->save();
+    header('Location: /admin/index.php');
+}

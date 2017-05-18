@@ -10,14 +10,12 @@ namespace App\Models;
 class Author extends Model
 {
     const TABLE = 'authors';
-    /**
-     * @var string $mail
-     */
-    public $email;
+
     /**
      * @var string $name
      */
     public $name;
+
     /**
      * @var string $surname
      */
