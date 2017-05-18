@@ -62,6 +62,9 @@ Relations:
         -Category
         -Author
         -Image
+        
+Database copy: yii2.sql
+
 _________________________________
 h\w_8:
 
