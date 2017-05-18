@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 18, 2017 at 03:58 PM
+-- Generation Time: May 18, 2017 at 10:50 PM
 -- Server version: 5.7.16
 -- PHP Version: 7.1.0
 
@@ -148,7 +148,6 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 ('m170504_135030_create_article_table', 1494090265),
 ('m170504_135051_create_user_table', 1494090266),
 ('m170506_165035_create_category_table', 1494090266),
-('m170507_085500_create_category_article_table', 1494147450),
 ('m170507_093942_create_author_table', 1494150105);
 
 -- --------------------------------------------------------
