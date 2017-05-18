@@ -94,6 +94,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
     /**
+     * password validator
      * @param $password
      * @return bool
      */
@@ -103,6 +104,7 @@ class User extends \yii\db\ActiveRecord implements IdentityInterface
     }
 
     /**
+     * create user
      * @return bool
      */
     public function create()

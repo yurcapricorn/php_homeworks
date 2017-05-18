@@ -5,11 +5,11 @@ bugfixing
 
 ________________________________
 h\w_8 progress:
-
+"
 Web application is to assist design patterns and basic OOP principles memorising
 Created using basic package of YII2
 
--MVC represented:
+-MVC representedby:
     -Controllers:
         -AdminController
         -AuthorController
@@ -67,6 +67,7 @@ Database copy: yii2.sql
 
 username: user
 password: password
+"
 _________________________________
 h\w_8:
 
