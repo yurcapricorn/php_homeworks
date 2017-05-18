@@ -2,8 +2,6 @@
 
 namespace App\Models;
 
-require_once __DIR__ . '/../../autoload.php';
-
 /**
  * Class Article
  * @package App\Models
@@ -11,44 +9,52 @@ require_once __DIR__ . '/../../autoload.php';
 class Article extends Model
 {
     protected const TABLE = 'news';
+    /**
+     * @var $author_id
+     */
     public $author_id;
+    /**
+     * @var $title
+     */
     public $title;
+    /**
+     * @var $lead
+     */
     public $lead;
 
     /**
-     * Article constructor.
-     * fills instance with data available
-     * @param array $arr
+     * fills article with data
+     * @param $data
+     * @return $this
      */
-    public function __construct(array $arr = [])
+    public function fill($data)
     {
-        if (empty($arr)) {
-            return;
-        }
-        $article = new Article();
-        if (!empty($arr['id'])) {
-            $this->id = $arr['id'];
-            $article = Article::findById($arr['id']);
-        }
-        $this->title = $arr['title'] ?? $article->title;
-        $this->lead = $arr['lead'] ?? $article->lead;
-        $this->author_id = $arr['author_id'] ?? $article->author_id;
-//        $this->title = !empty($arr['title']) ? $arr['title'] : $article->title;
-//        $this->lead = !empty($arr['lead']) ? $arr['lead'] : $article->lead;
-//        $this->author_id = !empty($arr['author_id']) ? $arr['author_id'] : $article->author_id;
+        $this->title = $data['title'] ?? $this->title;
+        $this->lead = $data['lead'] ?? $this->lead;
+        $this->author_id = $data['author_id'] ?? $this->author_id;
+        return $this;
     }
 
     /**
-     * returns Class Author record from DB
+     * get magic method
      * @param $key
      * @return Author|bool
      */
     public function __get($key)
     {
-        if ($key === 'author') {
-            if (!empty($this->author_id)) {
-                return Author::findById($this->author_id);
-            }
+        if ('author' === $key) {
+            return Author::findById($this->author_id);
+        }
+    }
+
+    /**
+     * isset magic method
+     * @param $key
+     * @return bool
+     */
+    public function __isset($key){
+        if ('author' === $key) {
+            return isset($this->author_id);
         }
     }
 }

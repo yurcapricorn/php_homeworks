@@ -2,9 +2,6 @@
 
 namespace App\Models;
 
-require_once __DIR__ . '/Model.php';
-
-
 /**
  * Class Author
  * @package App\Models
@@ -12,7 +9,12 @@ require_once __DIR__ . '/Model.php';
 class Author extends Model
 {
     const TABLE = 'authors';
-    public $email;
+    /**
+     * @var $name
+     */
     public $name;
+    /**
+     * @var $surname
+     */
     public $surname;
 }

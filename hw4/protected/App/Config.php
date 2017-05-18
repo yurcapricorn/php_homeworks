@@ -2,8 +2,6 @@
 
 namespace App;
 
-require_once __DIR__ . '\Singleton.php';
-
 /**
  * Class Config
  * keeps DB connection parameters
@@ -11,7 +9,10 @@ require_once __DIR__ . '\Singleton.php';
  */
 class Config
 {
-    use \App\Singleton;
+    /**
+     * Singleton
+     */
+    use Singleton;
     /**
      * @var array
      */

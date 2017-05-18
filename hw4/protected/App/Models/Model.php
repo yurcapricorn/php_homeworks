@@ -4,19 +4,16 @@ namespace App\Models;
 
 use App\Db;
 
-require_once __DIR__ . '/../Db.php';
-
 /**
  * Class Model
- * Maintains complex requests to Db class
  * @package App\Models
  */
 abstract class Model
 {
-    /**
-     * keeps database table name
-     */
     protected const TABLE = null;
+    /**
+     * @var $id
+     */
     public $id;
 
     /**
@@ -64,7 +61,6 @@ abstract class Model
 
     /**
      * insert method
-     * takes public object fields except 'id'
      * @return bool
      */
     public function insert()
@@ -90,7 +86,6 @@ abstract class Model
 
     /**
      * update method
-     * takes public object fields
      * @return bool
      */
     public function update()

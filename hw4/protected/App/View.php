@@ -9,7 +9,7 @@ namespace App;
  */
 class View implements \Countable, \Iterator
 {
-    use \App\SomeMagic;
+    use MagicTrait;
 
     /**
      * function render
@@ -24,9 +24,7 @@ class View implements \Countable, \Iterator
             $$key = $value;
         }
         include $template;
-        $data = ob_get_contents();
-        ob_end_clean();
-        return $data;
+        return ob_get_clean();
     }
 
     /**

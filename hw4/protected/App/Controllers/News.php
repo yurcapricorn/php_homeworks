@@ -2,36 +2,30 @@
 
 namespace App\Controllers;
 
+use App\Controller;
 use App\Models\Article;
-
-require_once __DIR__ . '/../../autoload.php';
 
 /**
  * Controller News
  * @package App\Controllers
  */
-class News
+class News extends Controller
 {
-    use Base;
-
     /**
-     * news main page
+     * all news
      */
-    public function actionAll()
+    public function actionDefault()
     {
-        $this->view->articles = Article::findLastEntries();
-        $template = __DIR__ . '/../../../news/all.html';
-        $this->view->display($template);
+        $this->view->articles = Article::findAll();
+        $this->view->display(__DIR__ . '/../../../templates/news/index.php');
     }
 
     /**
-     * one article page
-     * @param array $url = []
+     * one article
      */
     public function actionOne()
     {
-        $this->view->article =Article::findById($_GET['id']);
-        $template = __DIR__ . '/../../../news/one.html';
-        $this->view->display($template);
+        $this->view->article = Article::findById($_GET['id']);
+        $this->view->display(__DIR__ . '/../../../templates/news/one.php');
     }
 }

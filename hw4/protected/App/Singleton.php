@@ -10,6 +10,7 @@ trait Singleton
 {
     /**
      * keeps instance of class
+     * @var $instance
      */
     protected static $instance;
 

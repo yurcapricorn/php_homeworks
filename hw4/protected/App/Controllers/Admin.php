@@ -2,38 +2,44 @@
 
 namespace App\Controllers;
 
+use App\Controller;
+use App\Models\Article;
+
 /**
  * Controller Admin
  * @package App\Controllers
  */
-class Admin
+class Admin extends Controller
 {
-    use Base;
-
     /**
-     * displays last news
+     * displays main panel
      */
-    public function actionAllNews()
+    public function actionDefault()
     {
-        $news = new News();
-        $news->actionAll();
+        $this->view->articles = Article::findAll();
+        $this->view->display(__DIR__ . '/../../../templates/admin/index.php');
     }
 
     /**
-     * Edits article in Db
+     * Displays edit form with data
      */
     public function actionEdit()
     {
-        $template = __DIR__ . '/../../../admin/edit.html';
-        $this->view->display($template);
+        $this->view->article = Article::findById($_GET['id']);
+        $this->view->display(__DIR__ . '/../../../templates/admin/edit.php');
     }
 
     /**
-     * saves object into Db
+     * saves article into Database
      */
     public function actionSave()
     {
-        $article = new \App\Models\Article($_POST);
-        $article->save();
+        if (empty($_GET)) {
+            $article = new Article();
+        } else {
+            $article = Article::findById($_GET['id']);
+        }
+        $article->fill($_POST)->save();
+        header('Location: /Admin/');
     }
 }
