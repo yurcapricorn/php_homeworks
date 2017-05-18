@@ -23,13 +23,13 @@ abstract class Controller
     }
 
     /**
-     * @param $name
+     * @param $action
      */
-    public function action($name)
+    public function action($action)
     {
-        if ($this->access($name)) {
-            $name = 'action' . $name;
-            $this->$name();
+        if ($this->access($action)) {
+            $action = 'action' . $action;
+            $this->$action();
         } else {
             die('Access denied!');
         }
