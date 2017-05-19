@@ -50,7 +50,7 @@
         <p><textarea title="lead" name="lead" rows="20" cols="150" required > Article Lead </textarea>
         <p><input title="author_id" name="author_id" value="author id"/></p>
         <p class="form-submit">
-            <input type="submit" formmethod="POST" formaction="/admin/add.php" value="ADD">
+            <input type="submit" formmethod="POST" formaction="/admin/save.php" value="ADD">
         </p>
     </form>
 </div>
