@@ -2389,3 +2389,11 @@ Uncatched error: Class '\App\Controllers\favicon.ico' not found
 time: 07-59-57 : 25-04-2017
 C:\OpenServerUltimate\OpenServer\domains\php_homeworks\hw6\public\index.php line 14
 Uncatched error: Class '\App\Controllers\favicon.ico' not found
+
+time: 08-12-36 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\protected\App\Models\Model.php line 33
+Uncatched error: 
+
+time: 08-13-56 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\protected\App\Models\Model.php line 33
+Uncatched error: 

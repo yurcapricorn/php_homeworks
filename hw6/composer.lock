@@ -71,12 +71,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "880856b23335f7328085f9b0409738f71f077af1"
+                "reference": "0dbc6b87dcdfd72b2069b35e56d51d23a1cd5a25"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/880856b23335f7328085f9b0409738f71f077af1",
-                "reference": "880856b23335f7328085f9b0409738f71f077af1",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/0dbc6b87dcdfd72b2069b35e56d51d23a1cd5a25",
+                "reference": "0dbc6b87dcdfd72b2069b35e56d51d23a1cd5a25",
                 "shasum": ""
             },
             "require": {
@@ -126,7 +126,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-04-21 00:13:40"
+            "time": "2017-05-12 13:59:34"
         },
         {
             "name": "yurcapricorn/multiexception",

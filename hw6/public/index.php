@@ -10,8 +10,9 @@ if (!empty($parts[1])) {
     $controllerName = 'Index';
 }
 $controllerClassName = '\\App\\Controllers\\' . $controllerName;
+
 try {
-$controller = new $controllerClassName;
+    $controller = new $controllerClassName;
     if (!empty($parts[2])) {
         $controller->action($parts[2]);
     } else {

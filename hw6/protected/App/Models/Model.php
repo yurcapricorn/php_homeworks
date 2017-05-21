@@ -20,21 +20,16 @@ abstract class Model implements \Iterator, \Countable
      * Trait Iterator
      */
     use Iterator;
-    /**
-     * table
-     */
     protected const TABLE = null;
 
     /**
-     * method fill()
+     * fill method
      * @param array $arr
+     * @return $this
      * @throws \Yurcapricorn\Multiexception\App\MultiException
      */
     public function fill(array $arr = [])
     {
-        if (empty($arr)) {
-            return;
-        }
         $errors = new \Yurcapricorn\Multiexception\App\MultiException();
         foreach ($arr as $key => $val) {
             try {
@@ -47,6 +42,7 @@ abstract class Model implements \Iterator, \Countable
         if (!empty($errors->getErrors())) {
             throw $errors;
         }
+        return $this;
     }
 
     /**

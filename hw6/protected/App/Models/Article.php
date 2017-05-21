@@ -34,7 +34,7 @@ class Article extends Model
     public function setAuthor_id($value)
     {
         $value = (int)$value;
-        if ($value <= 0) {
+        if ($value < 0) {
             throw new \UnexpectedValueException('author_id must be positive!');
         }
         $this->data['author_id'] = $value;

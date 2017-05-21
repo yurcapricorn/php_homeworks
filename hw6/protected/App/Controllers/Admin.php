@@ -39,8 +39,7 @@ class Admin extends Controller
         } else {
             $article = new Article();
         }
-        $article->fill($_POST);
-        $article->save();
+        $article->fill($_POST)->save();
         header('Location: /Admin/');
     }
 }
