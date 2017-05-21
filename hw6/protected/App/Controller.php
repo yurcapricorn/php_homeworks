@@ -26,7 +26,7 @@ abstract class Controller
      */
     public function action($name)
     {
-        if ($this->access($name)) {
+        if (true === $this->access($name)) {
             $name = 'action' . $name;
             $this->$name();
         } else {

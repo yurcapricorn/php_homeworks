@@ -16,14 +16,10 @@ class News extends Controller
      * all news
      * @throws NoPageException
      */
-    public function actionAll()
+    public function actionDefault()
     {
         $this->view->articles = Article::findAll();
-        if (empty($this->view->articles)) {
-            throw new NoPageException('no articles in database');
-        }
-        $template = __DIR__ . '/../../../templates/news/all.html';
-        $this->view->displayTwig($template);
+        $this->view->displayTwig(__DIR__ . '/../../../templates/news/default.html');
     }
 
     /**
@@ -32,14 +28,11 @@ class News extends Controller
      */
     public function actionOne()
     {
-        if (empty($_GET['id'])) {
-            throw new NoPageException('No id specified');
-        }
-        $this->view->article = Article::findById($_GET['id']);
-        if (empty($this->view->article)) {
+        $article = Article::findById((int)$_GET['id']);
+        if (empty($article)) {
             throw new NoPageException('page ' . $_GET['id'] . ' not found');
         }
-        $template = __DIR__ . '/../../../templates/news/one.html';
-        $this->view->displayTwig($template);
+        $this->view->article = $article;
+        $this->view->displayTwig($template = __DIR__ . '/../../../templates/news/one.html');
     }
 }

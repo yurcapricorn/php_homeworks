@@ -21,7 +21,7 @@ h\w_6 progress:
 
 -twig - done
 
--swiftmailer - done (mail box is banned by spam bot after 2nd letter)
+-swiftmailer - done
 
 -MagicTrait applied to App\Models\Model, all properties now kept in data array
 

@@ -15,8 +15,7 @@ class Index extends Controller
      */
     protected function actionDefault()
     {
-        $news = new News();
-        $news->actionAll();
+        $this->actionNews('Default');
     }
 
     /**
