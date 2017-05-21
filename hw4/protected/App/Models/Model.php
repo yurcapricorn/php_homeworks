@@ -34,9 +34,6 @@ abstract class Model
      */
     public static function findById(int $id)
     {
-        if (empty($id)) {
-            return false;
-        }
         $db = Db::instance();
         $sql = 'SELECT * FROM ' . static::TABLE . ' WHERE id=:id';
         $data = $db->query($sql, static::class, [':id' => $id]);

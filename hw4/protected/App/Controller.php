@@ -2,8 +2,6 @@
 
 namespace App;
 
-use App\View;
-
 /**
  * Base Controller
  * @package App
