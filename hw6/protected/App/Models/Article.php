@@ -17,20 +17,6 @@ class Article extends Model
      * @param $value
      * @return $this
      */
-    public function setId($value)
-    {
-        $value = (int)$value;
-        if ($value <= 0) {
-            throw new \UnexpectedValueException('id must be positive!');
-        }
-        $this->data['id'] = $value;
-        return $this;
-    }
-
-    /**
-     * @param $value
-     * @return $this
-     */
     public function setAuthor_id($value)
     {
         $value = (int)$value;
