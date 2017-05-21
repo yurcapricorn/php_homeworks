@@ -33,6 +33,6 @@ class News extends Controller
             throw new NoPageException('page ' . $_GET['id'] . ' not found');
         }
         $this->view->article = $article;
-        $this->view->displayTwig($template = __DIR__ . '/../../../templates/news/one.html');
+        $this->view->displayTwig(__DIR__ . '/../../../templates/news/one.html');
     }
 }
