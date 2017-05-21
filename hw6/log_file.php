@@ -2397,3 +2397,27 @@ Uncatched error:
 time: 08-13-56 : 21-05-2017
 C:\OpenServer\domains\php_homeworks\hw6\protected\App\Models\Model.php line 33
 Uncatched error: 
+
+time: 08-38-42 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\vendor\twig\twig\lib\Twig\Loader\Filesystem.php line 226
+Uncatched error: Unable to find template "default.html" (looked into: C:/OpenServer/domains/php_homeworks/hw6/protected/App/Controllers/../../../templates/news).
+
+time: 12-06-55 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\templates\news\one.html line 24
+Uncatched error: Unknown "path" function.
+
+time: 12-07-14 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\templates\news\one.html line 24
+Uncatched error: Unknown "path" function.
+
+time: 12-07-18 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\templates\news\one.html line 24
+Uncatched error: Unknown "path" function.
+
+time: 12-07-21 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\templates\news\one.html line 24
+Uncatched error: Unknown "path" function.
+
+time: 12-10-23 : 21-05-2017
+C:\OpenServer\domains\php_homeworks\hw6\vendor\twig\twig\lib\Twig\Environment.php line 246
+Uncatched error: Cache can only be a string, false, or a Twig_CacheInterface implementation.
