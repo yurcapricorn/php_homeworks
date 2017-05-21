@@ -42,7 +42,7 @@ class Article extends Model
      */
     public function __get($key)
     {
-        if ('author' === $key && isset($this->author)) {
+        if ('author' === $key) {
             return Author::findById($this->author_id);
         }
     }
