@@ -12,12 +12,12 @@
     <section>
         <?php foreach ($articles as $article) : ?>
     <article>
-        <a href="<?php echo '/News/One/?id=' . $article->id; ?>  ">
-            <h2><?php echo $article->title; ?></h2>
+        <a href="<?= '/News/One/?id=' . $article->id; ?>  ">
+            <h2><?= $article->title; ?></h2>
         </a>
         <h3><?= $article->author->name . ' ' . $article->author->surname; ?>
         </h3>
-        <div><?php echo $article->lead; ?></div>
+        <div><?= $article->lead; ?></div>
     </article>
     <hr>
 <?php endforeach; ?>
