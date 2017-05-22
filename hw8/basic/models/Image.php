@@ -10,8 +10,14 @@ use yii\base\Model;
  */
 class Image extends Model
 {
+    /**
+     * @var $image
+     */
     public $image;
-
+    /**
+     * @var string $folder
+     */
+    protected static $folder = __DIR__ . '/../web/uploads/';
     /**
      * rules
      * @return array
@@ -19,18 +25,17 @@ class Image extends Model
     public function rules()
     {
         return [
-            [['image'], 'required'],
-            [['image'], 'file', 'extensions' => 'jpg,png,gif']
+            [['image'], 'file', 'skipOnEmpty' => false, 'extensions' => 'jpg,png,gif']
         ];
     }
 
     /**
      * upload file method
-     * @param \yii\web\UploadedFile $file
+     * @param $file
      * @param $currentimage
      * @return string
      */
-    public function uploadFile(\yii\web\UploadedFile $file, $currentimage)
+    public function uploadFile($file, $currentimage)
     {
         $this->image = $file;
         if ($this->validate()) {
@@ -40,43 +45,13 @@ class Image extends Model
     }
 
     /**
-     * get folder method
-     * @return string
-     */
-    protected static function getFolder()
-    {
-        return \Yii::getAlias('@web') . 'uploads/';
-    }
-
-    /**
-     * file name generator
-     * @return string
-     */
-    protected function generateFilename()
-    {
-        return strtolower(md5(uniqid($this->image->baseName)) . '.' . $this->image->extension);
-    }
-
-    /**
      * delete current image
      * @param $currentimage
      */
     public static function deleteCurrentImage($currentimage)
     {
-        if (static::fileExists($currentimage)) {
-            unlink(static::getFolder() . $currentimage);
-        }
-    }
-
-    /**
-     * file exists check
-     * @param $currentimage
-     * @return bool
-     */
-    protected static function fileExists($currentimage)
-    {
         if (!empty($currentimage)) {
-            return file_exists(static::getFolder() . $currentimage);
+            unlink(static::$folder . $currentimage);
         }
     }
 
@@ -86,8 +61,8 @@ class Image extends Model
      */
     protected function saveImage()
     {
-        $filename = $this->generateFilename();
-        $this->image->saveAs($this->getFolder() . $filename);
+        $filename = strtolower(md5(uniqid($this->image->baseName)) . '.' . $this->image->extension);
+        $this->image->saveAs(static::$folder . $filename);
         return $filename;
     }
 }
