@@ -1,12 +1,3 @@
-** hello! I'm a readme file! **
-
-to do:
-1. improve error templates - done! (with cats)
-2. include log_file path into config_file - done!
-3. make exception messages to be included into error templates - done!
-_______________________________________________________________________________________________________
-h/w_5
-
 1. Добавьте в свой проект класс исключений, возникающих при работе с базой данных. 
 Придумайте - где их можно бросать? Как вариант - нет соединения с БД, ошибка в запросе.
 
