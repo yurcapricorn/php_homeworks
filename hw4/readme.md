@@ -1,17 +1,3 @@
-hello! I'm a readme file! **
-
--bugfixing
-
-Пункт 1 не выполнен, не соответствует заданию
-
--fixed: method action($action) implemented in \App\Controller Class
-
-https://github.com/yurcapricorn/php_homeworks/blob/master/hw4/protected/App/Controllers/Front.php#L15
-Какая-то ерунда, зачем повторять? Почему вы не наследуетесь от своего базового контроллера?
-
--fixed: All controllers extend \App\Controller
-
-___________________________________________________________________________________________________________
 1. Напишите класс базового контроллера.
 
 2. Вынесите в него метод action($action) и примените его.
