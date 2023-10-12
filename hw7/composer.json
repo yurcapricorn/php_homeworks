@@ -1,0 +1,11 @@
+{
+  "minimum-stability": "dev",
+  "require": {
+    "psr/log": "1.0.2",
+    "phpunit/php-timer": "1.0.9",
+    "twig/twig": "2.x-dev",
+    "swiftmailer/swiftmailer": "5.x",
+    "phpunit/phpunit": "6.1.0",
+    "yurcapricorn/multiexception": "x"
+  }
+}

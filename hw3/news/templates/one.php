@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Article</title>
+</head>
+<body>
+
+<div>
+    <h1>
+        <?php
+            echo $article->title;
+        ?>
+    </h1>
+
+    <h2>
+        <?php
+            if (!empty($article->author_id)){
+                echo $article->author->name . ' ' . $article->author->surname;
+            }
+        ?>
+    </h2>
+
+    <p><?php
+            echo $article->lead ;
+        ?>
+    </p>
+
+</div>
+
+<div>
+    <a href="/index.php"> <button> ALL NEWS </button> </a>
+</div>
+
+</body>
+</html>

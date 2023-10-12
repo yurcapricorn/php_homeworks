@@ -1,0 +1,7 @@
+{
+  "minimum-stability": "dev",
+  "require": {
+    "twig/twig": "2.x-dev",
+    "yurcapricorn/multiexception": "x"
+  }
+}

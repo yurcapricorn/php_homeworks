@@ -1,0 +1,89 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    memcached:
+      image: memcached:alpine
+      container_name: lemp3-memcached
+
+    mailhog:
+      image: mailhog/mailhog:latest
+      container_name: lemp3-mailhog
+      ports:
+        - "8001:8025"
+        
+    mariadb:
+      image: mariadb:10.1
+      container_name: lemp3-mariadb
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - MYSQL_ROOT_PASSWORD=pass
+        - MYSQL_DATABASE=database
+        - MYSQL_USER=user
+        - MYSQL_PASSWORD=pass
+      ports:
+        - "8003:3306"
+
+    postgres:
+      image: postgres:9.6-alpine
+      container_name: lemp3-postgres
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - POSTGRES_USER=pass
+        - POSTGRES_PASSWORD=user
+        - POSTGRES_DB=pass
+
+    elasticsearch:
+      image: elasticsearch:5.4-alpine
+      container_name: lemp3-elasticsearch
+
+    redis:
+      image: redis:alpine
+      container_name: lemp3-redis
+
+    mysql:
+      image: mysql
+      container_name: lemp3-mysql
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - MYSQL_ROOT_PASSWORD=password
+      ports:
+        - "3306:3306"
+
+    webserver:
+      image: nginx:alpine
+      container_name: lemp3-webserver
+      working_dir: /application
+      volumes:
+          - .:/application
+          - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+       - "8000:80"
+
+    php-fpm:
+      build: phpdocker/php-fpm
+      container_name: lemp3-php-fpm
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php/7.1/fpm/conf.d/99-overrides.ini
+
+    pma:
+      image: phpmyadmin/phpmyadmin
+      restart: always
+      links:
+        - mysql:mysql
+      ports:
+        - "8183:80"
+      environment:
+        - PMA_HOST=mysql
+        - MYSQL_USERNAME=root
+        - MYSQL_ROOT_PASSWORD=password

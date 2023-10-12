@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin-panel</title>
+</head>
+<body>
+
+<table border="1">
+<?php foreach($models as $model){ ?>
+        <tr>
+        <?php foreach($functions as $function){ ?>
+            <td> <?php echo $function($model ); ?> </td>
+        <?php } ?>
+        </tr>
+    <?php } ?>
+</table>
+
+</body>
+</html>

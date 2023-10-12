@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin-panel</title>
+
+</head>
+<body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin-panel</title>
+</head>
+<body>
+
+<h1 align="center">Admin Panel</h1>
+
+    <table border="solid">
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>LEAD</th>
+        <th>DELETE</th>
+        <?php foreach($data as $article){ ?>
+        <tr><td>
+            <?= $article->id; ?>
+        </td>
+        <td>
+            <?= $article->title; ?>
+        </td>
+        <td>
+            <?= $article->lead; ?>
+        </td>
+            <td><a href=" <?php echo '/admin/delete.php?id=' . $article->id; ?> "> <button>DELETE</button> </a></td>
+        <tr>
+        <?php }; ?>
+        </tr>
+    </table>
+
+<div class="insert" align="center">
+    <h2> ADD FORM </h2>
+    <form>
+        <p><input title="title" name="title" type="text" size="65" required/><strong> <br> Insert new article title here</strong></p>
+        <p><textarea title="lead" name="lead" rows="10" cols="70" required></textarea><strong> <br> Insert new article lead here</strong></p>
+        <p class="form-submit">
+            <input type="submit" formmethod="POST" formaction="/admin/add.php" value="ADD">
+        </p>
+    </form>
+</div>
+
+<div class="edit" align="center">
+    <h2> EDIT FORM </h2>
+    <form>
+        <p><input title="id" name="id" type="number" required/><strong> <br> type editying article id here </strong></p>
+        <p><input title="title" name="title" type="text" size="65" required/><strong> <br> type editying article title here </strong></p>
+        <p><textarea title="lead" name="lead" rows="10" cols="70" required></textarea><strong> <br> type editying article lead here </strong></p>
+        <p class="form-submit">
+            <input type="submit" formmethod="POST" formaction="/admin/edit.php" value="EDIT">
+        </p>
+    </form>
+</div>
+
+</body>
+</html>
